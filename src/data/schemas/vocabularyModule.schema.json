@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "vocabularyModule.schema.json",
+  "title": "Vocabulary Module Schema",
+  "description": "JSON Schema для валидации модулей словаря (A1, A2, B1, etc.)",
+  "type": "object",
+  "required": ["moduleId", "name", "collections"],
+  "properties": {
+    "moduleId": {
+      "type": "string",
+      "enum": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "description": "Идентификатор модуля (уровень сложности)"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Название модуля"
+    },
+    "description": {
+      "type": "string",
+      "description": "Описание модуля (опционально)"
+    },
+    "collections": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Массив подборок слов",
+      "items": {
+        "$ref": "#/definitions/Collection"
+      }
+    }
+  },
+  "definitions": {
+    "Word": {
+      "type": "object",
+      "required": ["id", "english", "translation", "category"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Уникальный идентификатор слова"
+        },
+        "english": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Английское слово или фраза"
+        },
+        "translation": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Перевод на русский язык"
+        },
+        "definition": {
+          "type": "string",
+          "description": "Определение на английском (опционально)"
+        },
+        "example": {
+          "type": "string",
+          "description": "Пример использования (опционально)"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["phrases", "verbs", "nouns", "adjectives"],
+          "description": "Основная категория слова"
+        },
+        "subcategory": {
+          "type": "string",
+          "description": "Подкатегория для более тонкой классификации (опционально)"
+        },
+        "tags": {
+          "type": "array",
+          "description": "Массив тегов для множественных связей с подборками (опционально)",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "irregularForms": {
+          "type": "object",
+          "description": "Три формы неправильного глагола (опционально, только для irregularVerbs)",
+          "properties": {
+            "past": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Вторая форма (Past Simple), например 'was/were'"
+            },
+            "pastParticiple": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Третья форма (Past Participle), например 'been'"
+            }
+          },
+          "required": ["past", "pastParticiple"],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "CategoryData": {
+      "type": "object",
+      "description": "Объект категорий, где ключ - название категории, значение - массив слов",
+      "patternProperties": {
+        "^(phrases|verbs|nouns|adjectives)$": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/definitions/Word"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Collection": {
+      "type": "object",
+      "required": ["id", "name", "categories"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Идентификатор подборки (только строчные буквы, цифры и дефисы)"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Название подборки"
+        },
+        "description": {
+          "type": "string",
+          "description": "Описание подборки (опционально)"
+        },
+        "categories": {
+          "$ref": "#/definitions/CategoryData"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
+

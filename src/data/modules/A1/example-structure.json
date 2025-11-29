@@ -1,0 +1,94 @@
+{
+  "moduleId": "A1",
+  "name": "Beginner Level",
+  "description": "Базовый уровень английского языка",
+  "collections": [
+    {
+      "id": "travelling",
+      "name": "Travelling",
+      "description": "Слова и фразы для путешествий",
+      "categories": {
+        "phrases": [
+          {
+            "id": "where-airport",
+            "english": "Where is the airport?",
+            "translation": "Где аэропорт?",
+            "category": "phrases",
+            "tags": ["travelling", "common", "A1"]
+          },
+          {
+            "id": "need-taxi",
+            "english": "I need a taxi",
+            "translation": "Мне нужна такси",
+            "category": "phrases",
+            "tags": ["travelling", "common", "A1"]
+          }
+        ],
+        "verbs": [
+          {
+            "id": "ask-1",
+            "english": "to ask",
+            "translation": "спрашивать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": ["travelling", "basic-verbs", "common", "A1"]
+          },
+          {
+            "id": "book-1",
+            "english": "to book",
+            "translation": "бронировать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": ["travelling", "common", "A1"]
+          }
+        ],
+        "nouns": [
+          {
+            "id": "passport-1",
+            "english": "passport",
+            "translation": "паспорт",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": ["travelling", "common", "A1"]
+          }
+        ],
+        "adjectives": [
+          {
+            "id": "comfortable-1",
+            "english": "comfortable",
+            "translation": "удобный",
+            "category": "adjectives",
+            "subcategory": "descriptiveAdjectives",
+            "tags": ["travelling", "common", "A1"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "basic-verbs",
+      "name": "Basic English Verbs",
+      "description": "Основные английские глаголы уровня A1",
+      "categories": {
+        "verbs": [
+          {
+            "id": "go-1",
+            "english": "to go",
+            "translation": "идти, ехать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "tags": ["basic-verbs", "common", "A1"]
+          },
+          {
+            "id": "come-1",
+            "english": "to come",
+            "translation": "приходить",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "tags": ["basic-verbs", "common", "A1"]
+          }
+        ]
+      }
+    }
+  ]
+}
+

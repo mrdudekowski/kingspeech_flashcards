@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS переменные с поддержкой темной темы через light-dark() */
+:root {
+  --bg-primary: light-dark(#ffffff, #1a1a1a);
+  --bg-secondary: light-dark(#f8fafc, #0f172a);
+  --bg-gradient-start: light-dark(#dbeafe, #1e293b);
+  --bg-gradient-end: light-dark(#e0e7ff, #0f172a);
+  --text-primary: light-dark(#1f2937, #f9fafb);
+  --text-secondary: light-dark(#4b5563, #d1d5db);
+  --text-tertiary: light-dark(#6b7280, #9ca3af);
+  --border-color: light-dark(rgba(229, 231, 235, 0.5), rgba(75, 85, 99, 0.3));
+  --card-bg: light-dark(rgba(255, 255, 255, 0.9), rgba(30, 41, 59, 0.9));
+}
+
+/* Базовые стили для темной темы */
+@layer base {
+  body {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+}
+
+/* Стили для анимации переворота карточки */
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-x-180 {
+    transform: rotateX(180deg);
+  }
+}
+
+/* Glass-morphism утилиты с поддержкой темной темы через light-dark() */
+@layer utilities {
+  .glass {
+    background: light-dark(
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.2)
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid light-dark(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    );
+  }
+  
+  .glass-strong {
+    background: light-dark(
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0.3)
+    );
+    backdrop-filter: blur(20px);
+    border: 1px solid light-dark(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.15)
+    );
+  }
+}
+

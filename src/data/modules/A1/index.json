@@ -1,0 +1,2648 @@
+{
+  "moduleId": "A1",
+  "name": "Beginner Level",
+  "description": "Базовый уровень английского языка - основные слова и фразы для начинающих",
+  "collections": [
+    {
+      "id": "basic-verbs",
+      "name": "Basic English Verbs",
+      "description": "Основные английские глаголы уровня A1",
+      "categories": {
+        "verbs": [
+          {
+            "id": "play-1",
+            "english": "play",
+            "translation": "играть",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "watch-1",
+            "english": "watch",
+            "translation": "смотреть",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "listen-1",
+            "english": "listen",
+            "translation": "слушать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "talk-1",
+            "english": "talk",
+            "translation": "говорить",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "work-1",
+            "english": "work",
+            "translation": "работать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "like-1",
+            "english": "like",
+            "translation": "нравиться",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "live-1",
+            "english": "live",
+            "translation": "жить",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "clean-1",
+            "english": "clean",
+            "translation": "убирать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "open-1",
+            "english": "open",
+            "translation": "открывать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "close-1",
+            "english": "close",
+            "translation": "закрывать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "help-1",
+            "english": "help",
+            "translation": "помогать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "start-1",
+            "english": "start",
+            "translation": "начинать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "finish-1",
+            "english": "finish",
+            "translation": "заканчивать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "visit-1",
+            "english": "visit",
+            "translation": "навещать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "call-1",
+            "english": "call",
+            "translation": "звонить",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "look-1",
+            "english": "look",
+            "translation": "смотреть",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "walk-1",
+            "english": "walk",
+            "translation": "идти пешком",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "wait-1",
+            "english": "wait",
+            "translation": "ждать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "cook-1",
+            "english": "cook",
+            "translation": "готовить",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "dance-1",
+            "english": "dance",
+            "translation": "танцевать",
+            "category": "verbs",
+            "subcategory": "regularVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "be-1",
+            "english": "be",
+            "translation": "быть",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "was/were",
+              "pastParticiple": "been"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "auxiliaryVerbs",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "have-1",
+            "english": "have",
+            "translation": "иметь",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "had",
+              "pastParticiple": "had"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "auxiliaryVerbs",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "do-1",
+            "english": "do",
+            "translation": "делать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "did",
+              "pastParticiple": "done"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "auxiliaryVerbs",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "go-1",
+            "english": "go",
+            "translation": "идти / ехать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "went",
+              "pastParticiple": "gone"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "see-1",
+            "english": "see",
+            "translation": "видеть",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "saw",
+              "pastParticiple": "seen"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "say-1",
+            "english": "say",
+            "translation": "говорить",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "said",
+              "pastParticiple": "said"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "get-1",
+            "english": "get",
+            "translation": "получать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "got",
+              "pastParticiple": "got"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "make-1",
+            "english": "make",
+            "translation": "делать / готовить",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "made",
+              "pastParticiple": "made"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "take-1",
+            "english": "take",
+            "translation": "брать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "took",
+              "pastParticiple": "taken"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "come-1",
+            "english": "come",
+            "translation": "приходить",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "came",
+              "pastParticiple": "come"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "give-1",
+            "english": "give",
+            "translation": "давать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "gave",
+              "pastParticiple": "given"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "eat-1",
+            "english": "eat",
+            "translation": "есть",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "ate",
+              "pastParticiple": "eaten"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "daily-life",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "drink-1",
+            "english": "drink",
+            "translation": "пить",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "drank",
+              "pastParticiple": "drunk"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "daily-life",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "sleep-1",
+            "english": "sleep",
+            "translation": "спать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "slept",
+              "pastParticiple": "slept"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "daily-life",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "read-1",
+            "english": "read",
+            "translation": "читать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "read",
+              "pastParticiple": "read"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "buy-1",
+            "english": "buy",
+            "translation": "покупать",
+            "category": "verbs",
+            "subcategory": "irregularVerbs",
+            "irregularForms": {
+              "past": "bought",
+              "pastParticiple": "bought"
+            },
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "irregular-verbs"
+            ]
+          },
+          {
+            "id": "can-1",
+            "english": "can",
+            "translation": "мочь / уметь",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "cant-1",
+            "english": "can't",
+            "translation": "не мочь",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "must-1",
+            "english": "must",
+            "translation": "должен",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "mustnt-1",
+            "english": "mustn't",
+            "translation": "нельзя",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "should-1",
+            "english": "should",
+            "translation": "следует",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "shouldnt-1",
+            "english": "shouldn't",
+            "translation": "не следует",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "will-1",
+            "english": "will",
+            "translation": "буду (в будущем времени)",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "wont-1",
+            "english": "won't",
+            "translation": "не буду",
+            "category": "verbs",
+            "subcategory": "modalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "modal-verbs"
+            ]
+          },
+          {
+            "id": "get-up-1",
+            "english": "get up",
+            "translation": "вставать",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "daily-life",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "go-out-1",
+            "english": "go out",
+            "translation": "выходить",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "come-in-1",
+            "english": "come in",
+            "translation": "входить",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "look-for-1",
+            "english": "look for",
+            "translation": "искать",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "turn-on-1",
+            "english": "turn on",
+            "translation": "включать",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "turn-off-1",
+            "english": "turn off",
+            "translation": "выключать",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "put-on-1",
+            "english": "put on",
+            "translation": "надевать",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "take-off-1",
+            "english": "take off",
+            "translation": "снимать (одежду)",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "wake-up-1",
+            "english": "wake up",
+            "translation": "просыпаться",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "daily-life",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "sit-down-1",
+            "english": "sit down",
+            "translation": "садиться",
+            "category": "verbs",
+            "subcategory": "phrasalVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1",
+              "phrasal-verbs"
+            ]
+          },
+          {
+            "id": "did-1",
+            "english": "did",
+            "translation": "сделал (вопросы/отрицания в Past Simple)",
+            "category": "verbs",
+            "subcategory": "auxiliaryVerbs",
+            "tags": [
+              "basic-verbs",
+              "common",
+              "A1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "daily-life",
+      "name": "Daily Life",
+      "description": "Слова и фразы для повседневной жизни",
+      "categories": {
+        "nouns": [
+          {
+            "id": "book-1",
+            "english": "book",
+            "translation": "книга",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "chair-1",
+            "english": "chair",
+            "translation": "стул",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "car-1",
+            "english": "car",
+            "translation": "машина",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "friend-1",
+            "english": "friend",
+            "translation": "друг",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "house-1",
+            "english": "house",
+            "translation": "дом",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "apple-1",
+            "english": "apple",
+            "translation": "яблоко",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "dog-1",
+            "english": "dog",
+            "translation": "собака",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "teacher-1",
+            "english": "teacher",
+            "translation": "учитель",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "city-1",
+            "english": "city",
+            "translation": "город",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "day-1",
+            "english": "day",
+            "translation": "день",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "bag-1",
+            "english": "bag",
+            "translation": "сумка",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "phone-1",
+            "english": "phone",
+            "translation": "телефон",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "table-1",
+            "english": "table",
+            "translation": "стол",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "pen-1",
+            "english": "pen",
+            "translation": "ручка",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "window-1",
+            "english": "window",
+            "translation": "окно",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "cat-1",
+            "english": "cat",
+            "translation": "кот",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "ball-1",
+            "english": "ball",
+            "translation": "мяч",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "bike-1",
+            "english": "bike",
+            "translation": "велосипед",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "family-1",
+            "english": "family",
+            "translation": "семья",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collectiveNouns"
+            ]
+          },
+          {
+            "id": "school-1",
+            "english": "school",
+            "translation": "школа",
+            "category": "nouns",
+            "subcategory": "countableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "water-1",
+            "english": "water",
+            "translation": "вода",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "milk-1",
+            "english": "milk",
+            "translation": "молоко",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "coffee-1",
+            "english": "coffee",
+            "translation": "кофе",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "tea-1",
+            "english": "tea",
+            "translation": "чай",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "bread-1",
+            "english": "bread",
+            "translation": "хлеб",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "rice-1",
+            "english": "rice",
+            "translation": "рис",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "sugar-1",
+            "english": "sugar",
+            "translation": "сахар",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "money-1",
+            "english": "money",
+            "translation": "деньги",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "time-1",
+            "english": "time",
+            "translation": "время",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "homework-1",
+            "english": "homework",
+            "translation": "домашнее задание",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "music-1",
+            "english": "music",
+            "translation": "музыка",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "cheese-1",
+            "english": "cheese",
+            "translation": "сыр",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "juice-1",
+            "english": "juice",
+            "translation": "сок",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "meat-1",
+            "english": "meat",
+            "translation": "мясо",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "love-1",
+            "english": "love",
+            "translation": "любовь",
+            "category": "nouns",
+            "subcategory": "uncountableNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "books-1",
+            "english": "books",
+            "translation": "книги",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "chairs-1",
+            "english": "chairs",
+            "translation": "стулья",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "cars-1",
+            "english": "cars",
+            "translation": "машины",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "friends-1",
+            "english": "friends",
+            "translation": "друзья",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "houses-1",
+            "english": "houses",
+            "translation": "дома",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "apples-1",
+            "english": "apples",
+            "translation": "яблоки",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food"
+            ]
+          },
+          {
+            "id": "dogs-1",
+            "english": "dogs",
+            "translation": "собаки",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "teachers-1",
+            "english": "teachers",
+            "translation": "учителя",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "cities-1",
+            "english": "cities",
+            "translation": "города",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "days-1",
+            "english": "days",
+            "translation": "дни",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "bags-1",
+            "english": "bags",
+            "translation": "сумки",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "phones-1",
+            "english": "phones",
+            "translation": "телефоны",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "tables-1",
+            "english": "tables",
+            "translation": "столы",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "pens-1",
+            "english": "pens",
+            "translation": "ручки",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "windows-1",
+            "english": "windows",
+            "translation": "окна",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "children-1",
+            "english": "children",
+            "translation": "дети",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "people-1",
+            "english": "people",
+            "translation": "люди",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "men-1",
+            "english": "men",
+            "translation": "мужчины",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "women-1",
+            "english": "women",
+            "translation": "женщины",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "feet-1",
+            "english": "feet",
+            "translation": "ноги (ступни)",
+            "category": "nouns",
+            "subcategory": "pluralNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "london-1",
+            "english": "London",
+            "translation": "Лондон",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "paris-1",
+            "english": "Paris",
+            "translation": "Париж",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "moscow-1",
+            "english": "Moscow",
+            "translation": "Москва",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "anna-1",
+            "english": "Anna",
+            "translation": "Анна",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "tom-1",
+            "english": "Tom",
+            "translation": "Том",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "russia-1",
+            "english": "Russia",
+            "translation": "Россия",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "england-1",
+            "english": "England",
+            "translation": "Англия",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "english-1",
+            "english": "English",
+            "translation": "английский язык",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "monday-1",
+            "english": "Monday",
+            "translation": "понедельник",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "january-1",
+            "english": "January",
+            "translation": "январь",
+            "category": "nouns",
+            "subcategory": "properNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "class-1",
+            "english": "class",
+            "translation": "класс (группа учеников)",
+            "category": "nouns",
+            "subcategory": "collectiveNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          },
+          {
+            "id": "team-1",
+            "english": "team",
+            "translation": "команда",
+            "category": "nouns",
+            "subcategory": "collectiveNouns",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1"
+            ]
+          }
+        ],
+        "phrases": [
+          {
+            "id": "have-breakfast-1",
+            "english": "have breakfast",
+            "translation": "завтракать",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "have-lunch-1",
+            "english": "have lunch",
+            "translation": "обедать",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "have-dinner-1",
+            "english": "have dinner",
+            "translation": "ужинать",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "have-shower-1",
+            "english": "have a shower",
+            "translation": "принимать душ",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "have-bath-1",
+            "english": "have a bath",
+            "translation": "принимать ванну",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "do-homework-1",
+            "english": "do homework",
+            "translation": "делать домашнее задание",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "brush-teeth-1",
+            "english": "brush your teeth",
+            "translation": "чистить зубы",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "go-to-school-1",
+            "english": "go to school",
+            "translation": "идти в школу",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "go-to-work-1",
+            "english": "go to work",
+            "translation": "идти на работу",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "go-home-1",
+            "english": "go home",
+            "translation": "идти домой",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "play-football-1",
+            "english": "play football",
+            "translation": "играть в футбол",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "play-tennis-1",
+            "english": "play tennis",
+            "translation": "играть в теннис",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "play-games-1",
+            "english": "play games",
+            "translation": "играть в игры",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "listen-to-music-1",
+            "english": "listen to music",
+            "translation": "слушать музыку",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "watch-tv-1",
+            "english": "watch TV",
+            "translation": "смотреть телевизор",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "drink-water-1",
+            "english": "drink water",
+            "translation": "пить воду",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "drink-milk-1",
+            "english": "drink milk",
+            "translation": "пить молоко",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "drink-coffee-1",
+            "english": "drink coffee",
+            "translation": "пить кофе",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "eat-apple-1",
+            "english": "eat an apple",
+            "translation": "есть яблоко",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "eat-bread-1",
+            "english": "eat bread",
+            "translation": "есть хлеб",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "eat-rice-1",
+            "english": "eat rice",
+            "translation": "есть рис",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "food",
+              "collocations"
+            ]
+          },
+          {
+            "id": "read-book-1",
+            "english": "read a book",
+            "translation": "читать книгу",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "open-door-1",
+            "english": "open the door",
+            "translation": "открывать дверь",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "close-door-1",
+            "english": "close the door",
+            "translation": "закрывать дверь",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "clean-house-1",
+            "english": "clean the house",
+            "translation": "убирать дом",
+            "category": "phrases",
+            "subcategory": "collocations",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "collocations"
+            ]
+          },
+          {
+            "id": "thank-you-1",
+            "english": "Thank you!",
+            "translation": "Спасибо!",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "youre-welcome-1",
+            "english": "You're welcome.",
+            "translation": "Пожалуйста.",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "please-1",
+            "english": "Please.",
+            "translation": "Пожалуйста.",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "sorry-1",
+            "english": "Sorry.",
+            "translation": "Извини(те).",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "excuse-me-1",
+            "english": "Excuse me.",
+            "translation": "Извините.",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "hello-1",
+            "english": "Hello!",
+            "translation": "Здравствуйте!",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "hi-1",
+            "english": "Hi!",
+            "translation": "Привет!",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "goodbye-1",
+            "english": "Goodbye!",
+            "translation": "До свидания!",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "how-are-you-1",
+            "english": "How are you?",
+            "translation": "Как дела?",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "im-fine-1",
+            "english": "I'm fine, thank you.",
+            "translation": "Хорошо, спасибо.",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "nice-to-meet-you-1",
+            "english": "Nice to meet you.",
+            "translation": "Рад(а) познакомиться.",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "see-you-1",
+            "english": "See you!",
+            "translation": "Увидимся!",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "good-morning-1",
+            "english": "Good morning",
+            "translation": "Доброе утро",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "good-afternoon-1",
+            "english": "Good afternoon",
+            "translation": "Добрый день",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "good-evening-1",
+            "english": "Good evening",
+            "translation": "Добрый вечер",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "i-dont-understand-1",
+            "english": "I don't understand.",
+            "translation": "Я не понимаю.",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "can-you-repeat-1",
+            "english": "Can you repeat, please?",
+            "translation": "Повторите, пожалуйста.",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "yes-1",
+            "english": "Yes",
+            "translation": "Да",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "no-1",
+            "english": "No",
+            "translation": "Нет",
+            "category": "phrases",
+            "subcategory": "expressions",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "expressions"
+            ]
+          },
+          {
+            "id": "my-name-is-1",
+            "english": "My name is…",
+            "translation": "Меня зовут…",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "whats-your-name-1",
+            "english": "What's your name?",
+            "translation": "Как тебя зовут?",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "where-are-you-from-1",
+            "english": "Where are you from?",
+            "translation": "Откуда ты?",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "im-from-1",
+            "english": "I'm from…",
+            "translation": "Я из…",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "how-old-are-you-1",
+            "english": "How old are you?",
+            "translation": "Сколько тебе лет?",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "im-years-old-1",
+            "english": "I'm … years old.",
+            "translation": "Мне … лет.",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "i-live-in-1",
+            "english": "I live in…",
+            "translation": "Я живу в…",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "whats-this-1",
+            "english": "What's this?",
+            "translation": "Что это?",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "how-much-is-it-1",
+            "english": "How much is it?",
+            "translation": "Сколько это стоит?",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "i-like-1",
+            "english": "I like…",
+            "translation": "Мне нравится…",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "i-dont-like-1",
+            "english": "I don't like…",
+            "translation": "Мне не нравится…",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "do-you-like-1",
+            "english": "Do you like…?",
+            "translation": "Тебе нравится…?",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "yes-i-do-1",
+            "english": "Yes, I do.",
+            "translation": "Да.",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "no-i-dont-1",
+            "english": "No, I don't.",
+            "translation": "Нет.",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "i-can-1",
+            "english": "I can…",
+            "translation": "Я умею… / Я могу…",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "i-cant-1",
+            "english": "I can't…",
+            "translation": "Я не умею… / Я не могу…",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "what-time-is-it-1",
+            "english": "What time is it?",
+            "translation": "Который час?",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "its-oclock-1",
+            "english": "It's … o'clock.",
+            "translation": "… часов.",
+            "category": "phrases",
+            "subcategory": "phrasesCommon",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases"
+            ]
+          },
+          {
+            "id": "can-you-help-me-1",
+            "english": "Can you help me, please?",
+            "translation": "Вы можете мне помочь, пожалуйста?",
+            "category": "phrases",
+            "subcategory": "phrasesFormal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "formal-phrases"
+            ]
+          },
+          {
+            "id": "do-you-speak-english-1",
+            "english": "Do you speak English?",
+            "translation": "Вы говорите по-английски?",
+            "category": "phrases",
+            "subcategory": "phrasesFormal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "formal-phrases"
+            ]
+          },
+          {
+            "id": "bye-1",
+            "english": "Bye!",
+            "translation": "Пока!",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          },
+          {
+            "id": "whats-up-1",
+            "english": "What's up?",
+            "translation": "Как дела?",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          },
+          {
+            "id": "cool-1",
+            "english": "Cool!",
+            "translation": "Круто!",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          },
+          {
+            "id": "yeah-1",
+            "english": "Yeah!",
+            "translation": "Да!",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          },
+          {
+            "id": "nope-1",
+            "english": "Nope!",
+            "translation": "Нет!",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          },
+          {
+            "id": "lets-go-1",
+            "english": "Let's go!",
+            "translation": "Поехали!",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          },
+          {
+            "id": "oh-no-1",
+            "english": "Oh no!",
+            "translation": "О нет!",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          },
+          {
+            "id": "wow-1",
+            "english": "Wow!",
+            "translation": "Ух ты!",
+            "category": "phrases",
+            "subcategory": "phrasesInformal",
+            "tags": [
+              "daily-life",
+              "common",
+              "A1",
+              "common-phrases",
+              "informal-phrases"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "irregular-verbs",
+      "name": "Irregular Verbs",
+      "description": "Неправильные глаголы уровня A1",
+      "categories": {
+        "verbs": []
+      }
+    },
+    {
+      "id": "modal-verbs",
+      "name": "Modal Verbs",
+      "description": "Модальные глаголы уровня A1",
+      "categories": {
+        "verbs": []
+      }
+    },
+    {
+      "id": "phrasal-verbs",
+      "name": "Phrasal Verbs",
+      "description": "Фразовые глаголы уровня A1",
+      "categories": {
+        "verbs": []
+      }
+    },
+    {
+      "id": "expressions",
+      "name": "Expressions",
+      "description": "Выражения и фразы для общения уровня A1",
+      "categories": {
+        "phrases": []
+      }
+    },
+    {
+      "id": "collocations",
+      "name": "Collocations",
+      "description": "Коллокации - устойчивые словосочетания уровня A1",
+      "categories": {
+        "phrases": []
+      }
+    },
+    {
+      "id": "common-phrases",
+      "name": "Common Phrases",
+      "description": "Обычные фразы для повседневного общения уровня A1",
+      "categories": {
+        "phrases": []
+      }
+    },
+    {
+      "id": "formal-phrases",
+      "name": "Formal Phrases",
+      "description": "Формальные фразы для официального общения уровня A1",
+      "categories": {
+        "phrases": []
+      }
+    },
+    {
+      "id": "informal-phrases",
+      "name": "Informal Phrases",
+      "description": "Неформальные фразы для дружеского общения уровня A1",
+      "categories": {
+        "phrases": []
+      }
+    }
+  ]
+}
