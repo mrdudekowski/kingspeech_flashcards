@@ -12,6 +12,7 @@ import {
   selectCurrentWordStatus,
   selectIsReviewingCard,
 } from './flashcardsSlice';
+import { selectCurrentSubcategory } from '@/features/vocabulary/vocabularySlice';
 import { WORD_SUBCATEGORIES } from '@/app/constants';
 
 function Flashcard() {
@@ -21,6 +22,7 @@ function Flashcard() {
   const displayMode = useAppSelector(selectDisplayMode);
   const wordStatus = useAppSelector(selectCurrentWordStatus);
   const isReviewingCard = useAppSelector(selectIsReviewingCard);
+  const currentSubcategory = useAppSelector(selectCurrentSubcategory);
   const showEnglishOnFront = displayMode === 'english-first';
 
   const handleFlip = () => {
@@ -45,7 +47,9 @@ function Flashcard() {
 
   // Проверяем, является ли карточка неправильным глаголом
   const isIrregularVerb = currentCard?.subcategory === WORD_SUBCATEGORIES.IRREGULAR_VERBS;
-  const hasIrregularForms = isIrregularVerb && currentCard?.irregularForms;
+  // Формы показываем только если пользователь находится в категории Irregular Verbs
+  const isInIrregularVerbsCategory = currentSubcategory === WORD_SUBCATEGORIES.IRREGULAR_VERBS;
+  const hasIrregularForms = isIrregularVerb && currentCard?.irregularForms && isInIrregularVerbsCategory;
 
   if (!currentCard) {
     return (

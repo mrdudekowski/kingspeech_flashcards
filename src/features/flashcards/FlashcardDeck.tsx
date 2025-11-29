@@ -25,14 +25,14 @@ import {
   selectIsSessionComplete,
   resetAllWordStatuses,
 } from './flashcardsSlice';
-import { selectCurrentCategoryWords } from '@/features/vocabulary/vocabularySlice';
+import { selectCurrentSubcategoryWords } from '@/features/vocabulary/vocabularySlice';
 import Flashcard from './Flashcard';
 import FlashcardActions from './FlashcardActions';
 import { useFlashcardHotkeys } from './useFlashcardHotkeys';
 
 function FlashcardDeck() {
   const dispatch = useAppDispatch();
-  const categoryWords = useAppSelector(selectCurrentCategoryWords);
+  const categoryWords = useAppSelector(selectCurrentSubcategoryWords);
   const cardIndex = useAppSelector(selectCardIndex);
   const totalCards = useAppSelector(selectTotalCards);
   const progress = useAppSelector(selectProgress);
