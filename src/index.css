@@ -55,15 +55,29 @@
       rgba(255, 255, 255, 0.1)
     );
   }
+
+  .glass-card {
+    background-color: #1a1a1a1e;
+    border-radius: 16px;
+    border: 1px solid light-dark(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    );
+  }
+
+  .glass-card:hover {
+    border-color: #77a7ff75;
+    box-shadow: 0 1px 12px #2036647e;
+  }
   
   .glass-strong {
     background: light-dark(
-      rgba(255, 255, 255, 0.2),
+      rgba(22, 45, 80, 0.2),
       rgba(0, 0, 0, 0.3)
     );
     backdrop-filter: blur(20px);
     border: 1px solid light-dark(
-      rgba(255, 255, 255, 0.3),
+      rgba(150, 167, 219, 0.2),
       rgba(255, 255, 255, 0.15)
     );
   }

@@ -17,9 +17,9 @@ function RootLayout() {
           <div className="flex items-center justify-between">
             <Link
               to={ROUTES.HOME}
-              className="text-2xl font-bold text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-2xl font-bold text-gray-800 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
             >
-              📚 English Learning App
+              📚 English Learning
             </Link>
             <div className="flex gap-4">
               <Link
