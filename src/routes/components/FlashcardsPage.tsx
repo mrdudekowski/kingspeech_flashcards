@@ -100,7 +100,7 @@ function FlashcardsPage() {
       <div className="mb-6 glass-strong rounded-xl p-4 shadow-lg">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-800 mb-2">
+            <h1 className="text-2xl font-bold text-white mb-2">
               Изучение карточек
             </h1>
             <div className="text-sm text-gray-600">
