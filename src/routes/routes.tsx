@@ -38,12 +38,8 @@ export const router = createBrowserRouter([
         path: ROUTES.FLASHCARDS,
         element: <FlashcardsPage />,
       },
-      // TODO: Добавить роут для Quiz на следующем этапе
-      // {
-      //   path: ROUTES.QUIZ,
-      //   element: <QuizPage />,
-      // },
     ],
   },
-]);
-
+], {
+  basename: '/kingspeech_flashcards', // Добавьте эту строку
+});
