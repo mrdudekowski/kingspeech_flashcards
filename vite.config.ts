@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [react()],
+  base: '/kingspeech_flashcards/', // Добавьте эту строку
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -17,4 +18,3 @@ export default defineConfig({
     open: true,
   },
 })
-
