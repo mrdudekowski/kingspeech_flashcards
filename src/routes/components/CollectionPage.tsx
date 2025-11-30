@@ -109,7 +109,7 @@ function CollectionPage() {
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
               Слова в подборке ({collectionWords.length}):
             </p>
-            <div className="max-h-64 overflow-y-auto space-y-2">
+            <div className="max-h-64 overflow-y-auto scrollbar-hide space-y-2">
               {collectionWords.slice(0, 20).map((word) => (
                 <div
                   key={word.id}
