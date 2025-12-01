@@ -2,17 +2,14 @@
  * Типы для модуля flashcards
  */
 
-import type { Word } from '@/shared/types';
+import type { Word, WordStatus as SharedWordStatus } from '@/shared/types';
+
+export type WordStatus = SharedWordStatus;
 
 /**
  * Состояние flashcards
  */
 export type FlashcardDisplayMode = 'english-first' | 'translation-first';
-
-/**
- * Статус изучения слова
- */
-export type WordStatus = 'new' | 'studied' | 'needs-review' | 'difficult';
 
 /**
  * Элемент очереди для повторения карточки

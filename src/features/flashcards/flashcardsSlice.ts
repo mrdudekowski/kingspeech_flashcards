@@ -31,6 +31,9 @@ const flashcardsSlice = createSlice({
   reducers: {
     // Установка карточек
     setCards: (state, action: PayloadAction<Word[]>) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('🎴 [flashcardsSlice] setCards вызван с', action.payload.length, 'карточками');
+      }
       state.cards = action.payload;
       state.currentCardIndex = 0;
       state.isFlipped = false;
@@ -46,6 +49,9 @@ const flashcardsSlice = createSlice({
           state.wordStatuses[word.id] = 'new';
         }
       });
+      if (process.env.NODE_ENV === 'development') {
+        console.log('✅ [flashcardsSlice] setCards завершен. cards.length:', state.cards.length);
+      }
     },
 
     // Переход к следующей карточке
@@ -311,6 +317,13 @@ const flashcardsSlice = createSlice({
         state.wordStatuses[word.id] = 'new';
       });
     },
+
+    hydrateWordStatuses: (state, action: PayloadAction<Record<string, WordStatus>>) => {
+      const incoming = action.payload;
+      Object.entries(incoming).forEach(([wordId, status]) => {
+        state.wordStatuses[wordId] = status;
+      });
+    },
   },
 });
 
@@ -331,6 +344,7 @@ export const {
   markWordNeedsReview,
   resetWordStatus,
   resetAllWordStatuses,
+  hydrateWordStatuses,
 } = flashcardsSlice.actions;
 
 // ============================================
@@ -362,16 +376,18 @@ export const selectCardIndex = (state: RootState): number => {
 
 // Общее количество карточек
 export const selectTotalCards = (state: RootState): number => {
-  return state.flashcards.cards.length;
+  const length = state.flashcards.cards.length;
+  if (process.env.NODE_ENV === 'development') {
+    console.log('🔢 [selectTotalCards] Вызван, возвращаю:', length, 'cards:', state.flashcards.cards.slice(0, 2).map(c => c?.id));
+  }
+  return length;
 };
 
 // Прогресс изучения (процент) - с учетом повторений
 export const selectProgress = (state: RootState): number => {
   const { cards, wordStatuses } = state.flashcards;
   if (cards.length === 0) return 0;
-  const studiedCount = Object.values(wordStatuses).filter(
-    (status) => status === 'studied'
-  ).length;
+  const studiedCount = cards.filter((card) => wordStatuses[card.id] === 'studied').length;
   return Math.round((studiedCount / cards.length) * 100);
 };
 
@@ -434,23 +450,23 @@ export const selectCurrentWordStatus = (state: RootState): WordStatus => {
 
 // Количество изученных слов
 export const selectStudiedWordsCount = (state: RootState): number => {
-  return Object.values(state.flashcards.wordStatuses).filter(
-    (status) => status === 'studied'
-  ).length;
+  const { cards, wordStatuses } = state.flashcards;
+  return cards.filter((card) => wordStatuses[card.id] === 'studied').length;
 };
 
 // Количество слов, требующих повторения (включая сложные)
 export const selectNeedsReviewWordsCount = (state: RootState): number => {
-  return Object.values(state.flashcards.wordStatuses).filter(
-    (status) => status === 'needs-review' || status === 'difficult'
-  ).length;
+  const { cards, wordStatuses } = state.flashcards;
+  return cards.filter((card) => {
+    const status = wordStatuses[card.id];
+    return status === 'needs-review' || status === 'difficult';
+  }).length;
 };
 
 // Количество сложных слов
 export const selectDifficultWordsCount = (state: RootState): number => {
-  return Object.values(state.flashcards.wordStatuses).filter(
-    (status) => status === 'difficult'
-  ).length;
+  const { cards, wordStatuses } = state.flashcards;
+  return cards.filter((card) => wordStatuses[card.id] === 'difficult').length;
 };
 
 // Текущая карточка из очереди повторения?

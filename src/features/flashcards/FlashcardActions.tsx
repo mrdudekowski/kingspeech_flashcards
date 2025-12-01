@@ -13,28 +13,47 @@ import {
   selectCurrentWordStatus,
   nextCard,
 } from './flashcardsSlice';
+import {
+  markWordStudied as markWordStudiedProgress,
+  setWordStatus as setWordStatusProgress,
+} from '@/features/progress/progressSlice';
+import type { WordStatus } from '@/shared/types';
 
 function FlashcardActions() {
   const dispatch = useAppDispatch();
   const currentCard = useAppSelector(selectCurrentCard);
   const currentCardFlippedOnce = useAppSelector(selectCurrentCardFlippedOnce);
   const currentStatus = useAppSelector(selectCurrentWordStatus);
+  const wordReviewCounts = useAppSelector((state) => state.flashcards.wordReviewCounts);
 
   // Кнопки доступны только когда карточка была перевернута хотя бы раз
   const isDisabled = !currentCardFlippedOnce || !currentCard;
 
   const handleMarkStudied = () => {
     if (!currentCard || isDisabled) return;
+    
+    // Существующий код для flashcards
     dispatch(markWordStudied(currentCard.id));
-    // Автоматически переходим к следующей карточке
     dispatch(nextCard());
+    
+    // Новый код для progress
+    dispatch(markWordStudiedProgress(currentCard.id));
   };
 
   const handleMarkNeedsReview = () => {
     if (!currentCard || isDisabled) return;
+    const currentCount = wordReviewCounts[currentCard.id] ?? 0;
+    const newCount = currentCount + 1;
+    const nextStatus: WordStatus = newCount >= 3 ? 'difficult' : 'needs-review';
     dispatch(markWordNeedsReview(currentCard.id));
     // Автоматически переходим к следующей карточке
     dispatch(nextCard());
+    dispatch(
+      setWordStatusProgress({
+        wordId: currentCard.id,
+        status: nextStatus,
+      })
+    );
   };
 
   if (!currentCard) {

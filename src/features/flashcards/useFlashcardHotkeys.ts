@@ -17,11 +17,17 @@ import {
   selectCurrentCard,
   selectCurrentCardFlippedOnce,
 } from './flashcardsSlice';
+import {
+  markWordStudied as markWordStudiedProgress,
+  setWordStatus as setWordStatusProgress,
+} from '@/features/progress/progressSlice';
+import type { WordStatus } from '@/shared/types';
 
 export function useFlashcardHotkeys() {
   const dispatch = useAppDispatch();
   const currentCard = useAppSelector(selectCurrentCard);
   const currentCardFlippedOnce = useAppSelector(selectCurrentCardFlippedOnce);
+  const wordReviewCounts = useAppSelector((state) => state.flashcards.wordReviewCounts);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -57,8 +63,17 @@ export function useFlashcardHotkeys() {
       // Отметить как требующее повторения (ArrowLeft или A)
       if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
         event.preventDefault();
+        const currentCount = wordReviewCounts[currentCard.id] ?? 0;
+        const newCount = currentCount + 1;
+        const nextStatus: WordStatus = newCount >= 3 ? 'difficult' : 'needs-review';
         dispatch(markWordNeedsReview(currentCard.id));
         dispatch(nextCard());
+        dispatch(
+          setWordStatusProgress({
+            wordId: currentCard.id,
+            status: nextStatus,
+          })
+        );
         return;
       }
 
@@ -67,6 +82,7 @@ export function useFlashcardHotkeys() {
         event.preventDefault();
         dispatch(markWordStudied(currentCard.id));
         dispatch(nextCard());
+        dispatch(markWordStudiedProgress(currentCard.id));
         return;
       }
     };
@@ -76,6 +92,6 @@ export function useFlashcardHotkeys() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [dispatch, currentCard, currentCardFlippedOnce]);
+  }, [dispatch, currentCard, currentCardFlippedOnce, wordReviewCounts]);
 }
 

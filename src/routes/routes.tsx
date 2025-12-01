@@ -11,35 +11,38 @@ import ModulePage from './components/ModulePage';
 import CollectionPage from './components/CollectionPage';
 import FlashcardsPage from './components/FlashcardsPage';
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: ROUTES.HOME,
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: ROUTES.MODULE,
+          element: <ModuleLayout />,
+          children: [
+            {
+              index: true,
+              element: <ModulePage />,
+            },
+            {
+              path: ':collectionId',
+              element: <CollectionPage />,
+            },
+          ],
+        },
+        {
+          path: ROUTES.FLASHCARDS,
+          element: <FlashcardsPage />,
+        },
+      ],
+    },
+  ],
   {
-    path: ROUTES.HOME,
-    element: <RootLayout />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
-      {
-        path: ROUTES.MODULE,
-        element: <ModuleLayout />,
-        children: [
-          {
-            index: true,
-            element: <ModulePage />,
-          },
-          {
-            path: ':collectionId',
-            element: <CollectionPage />,
-          },
-        ],
-      },
-      {
-        path: ROUTES.FLASHCARDS,
-        element: <FlashcardsPage />,
-      },
-    ],
-  },
-], {
-  basename: '/kingspeech_flashcards', // Добавьте эту строку
-});
+    basename: '/kingspeech_flashcards',
+  }
+);

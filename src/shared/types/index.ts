@@ -33,6 +33,11 @@ export interface Word {
 }
 
 /**
+ * Статус изучения слова
+ */
+export type WordStatus = 'new' | 'studied' | 'needs-review' | 'difficult';
+
+/**
  * Категория слов внутри подборки
  */
 export interface CategoryData {

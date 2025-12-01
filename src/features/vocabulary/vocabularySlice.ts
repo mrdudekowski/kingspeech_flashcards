@@ -204,22 +204,53 @@ export const selectAllWordsInModule = createSelector([selectVocabularyData], (vo
 export const selectCurrentCollectionWords = createSelector(
   [selectCurrentCollectionData, selectAllWordsInModule, selectCurrentCollectionId],
   (collectionData, allWords, currentCollection) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔄 [selectCurrentCollectionWords] Пересчет:', {
+        hasCollectionData: !!collectionData,
+        currentCollection,
+        allWordsCount: allWords.length,
+      });
+    }
+    
     // Если нет подборки, возвращаем пустой массив
-    if (!currentCollection || !collectionData) return [];
+    if (!currentCollection || !collectionData) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('⏭️ [selectCurrentCollectionWords] Нет подборки или данных, возвращаем []');
+      }
+      return [];
+    }
 
     // Пытаемся найти слова по тегам (без фильтрации по категории)
     const taggedWords = getWordsForCollection(allWords, currentCollection);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔍 [selectCurrentCollectionWords] Слова по тегам:', taggedWords.length);
+    }
 
     // Если нашли слова с тегами, возвращаем их
     if (taggedWords.length > 0) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('✅ [selectCurrentCollectionWords] Возвращаем слова по тегам:', taggedWords.length);
+      }
       return taggedWords;
     }
 
     // Fallback: собираем все слова из всех категорий подборки
     const allCollectionWords: Word[] = [];
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔍 [selectCurrentCollectionWords] Fallback: собираем слова из categories');
+      console.log('📋 [selectCurrentCollectionWords] collectionData.categories:', Object.keys(collectionData.categories));
+    }
+    
     Object.values(collectionData.categories).forEach((words) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('📦 [selectCurrentCollectionWords] Категория содержит:', words.length, 'слов');
+      }
       allCollectionWords.push(...words);
     });
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ [selectCurrentCollectionWords] Fallback: возвращаем', allCollectionWords.length, 'слов из всех категорий');
+    }
     return allCollectionWords;
   }
 );
@@ -232,11 +263,38 @@ export const selectCurrentCollectionWords = createSelector(
 export const selectCurrentCategoryWords = createSelector(
   [selectCurrentCollectionWords, selectCurrentCategory],
   (collectionWords, currentCategory) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔄 [selectCurrentCategoryWords] Пересчет:', {
+        category: currentCategory,
+        collectionWordsCount: collectionWords.length,
+        firstWord: collectionWords[0] ? { id: collectionWords[0].id, category: collectionWords[0].category } : null,
+      });
+    }
+    
     if (!currentCategory) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('⏭️ [selectCurrentCategoryWords] category не установлена, возвращаем все слова подборки');
+      }
       return collectionWords;
     }
 
-    return collectionWords.filter((word) => word.category === currentCategory);
+    const filtered = collectionWords.filter((word) => {
+      const matches = word.category === currentCategory;
+      if (process.env.NODE_ENV === 'development' && collectionWords.length > 0 && collectionWords.length < 10) {
+        console.log(`  🔍 [selectCurrentCategoryWords] Слово "${word.english}" (${word.category}) === ${currentCategory}? ${matches}`);
+      }
+      return matches;
+    });
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ [selectCurrentCategoryWords] Отфильтровано:', filtered.length, 'из', collectionWords.length);
+      if (filtered.length === 0 && collectionWords.length > 0) {
+        console.warn('⚠️ [selectCurrentCategoryWords] ВНИМАНИЕ: После фильтрации 0 слов! Проверьте соответствие категорий.');
+        console.warn('  Доступные категории в словах:', [...new Set(collectionWords.map(w => w.category))]);
+        console.warn('  Искомая категория:', currentCategory);
+      }
+    }
+    return filtered;
   }
 );
 
@@ -244,9 +302,22 @@ export const selectCurrentCategoryWords = createSelector(
 export const selectCurrentSubcategoryWords = createSelector(
   [selectCurrentCategoryWords, selectCurrentSubcategory],
   (categoryWords, currentSubcategory) => {
-    if (!currentSubcategory) return categoryWords;
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔄 [selectCurrentSubcategoryWords] Пересчет для subcategory:', currentSubcategory, 'words count:', categoryWords.length);
+    }
+    
+    if (!currentSubcategory) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('⏭️ [selectCurrentSubcategoryWords] subcategory не установлена, возвращаем все слова категории');
+      }
+      return categoryWords;
+    }
 
-    return categoryWords.filter((word) => word.subcategory === currentSubcategory);
+    const filtered = categoryWords.filter((word) => word.subcategory === currentSubcategory);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ [selectCurrentSubcategoryWords] Отфильтровано:', filtered.length, 'из', categoryWords.length);
+    }
+    return filtered;
   }
 );
 

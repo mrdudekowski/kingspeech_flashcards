@@ -69,3 +69,17 @@
   }
 }
 
+/* Анимация для кнопки перемешать */
+@keyframes shufflePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.shuffle-animate {
+  animation: shufflePulse 0.3s ease-in-out;
+}
+
