@@ -5,8 +5,17 @@
 
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '@/shared/hooks/redux';
-import { selectVocabularyData, setCurrentCollection } from '@/features/vocabulary/vocabularySlice';
-import { selectCurrentModuleProgress, selectCurrentModuleStats } from '@/features/progress/progressSlice';
+import {
+  selectAllWordsInModule,
+  selectVocabularyData,
+  setCurrentCollection,
+} from '@/features/vocabulary/vocabularySlice';
+import {
+  resetWordsProgress,
+  selectCurrentModuleProgress,
+  selectCurrentModuleStats,
+} from '@/features/progress/progressSlice';
+import { resetWordStatusesForIds } from '@/features/flashcards/flashcardsSlice';
 
 function ModulePage() {
   const { moduleId } = useParams<{ moduleId: string }>();
@@ -15,10 +24,36 @@ function ModulePage() {
   const vocabularyData = useAppSelector(selectVocabularyData);
   const moduleProgress = useAppSelector(selectCurrentModuleProgress);
   const moduleStats = useAppSelector(selectCurrentModuleStats);
+  const moduleWords = useAppSelector(selectAllWordsInModule);
 
   const handleCollectionSelect = (collectionId: string) => {
     dispatch(setCurrentCollection(collectionId));
     navigate(`/module/${moduleId}/${collectionId}`);
+  };
+
+  const handleResetModuleProgress = () => {
+    if (!moduleWords || moduleWords.length === 0) {
+      return;
+    }
+
+    if (
+      !window.confirm(
+        'Сбросить прогресс по всему модулю? Все отметки изучения для всех подборок и категорий будут удалены.'
+      )
+    ) {
+      return;
+    }
+
+    const wordIds = moduleWords
+      .map((word) => word.id)
+      .filter((id): id is string => Boolean(id));
+
+    if (wordIds.length === 0) {
+      return;
+    }
+
+    dispatch(resetWordsProgress({ wordIds }));
+    dispatch(resetWordStatusesForIds(wordIds));
   };
 
   if (!vocabularyData) {
@@ -82,6 +117,14 @@ function ModulePage() {
                 </div>
               </div>
             </div>
+
+            <button
+              onClick={handleResetModuleProgress}
+              disabled={!moduleWords || moduleWords.length === 0}
+              className="mt-6 w-full px-4 py-2 rounded-lg text-sm font-semibold transition-colors bg-white dark:bg-slate-700 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/40 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Сбросить прогресс модуля
+            </button>
             
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-6">
               Модуль {vocabularyData.moduleId}

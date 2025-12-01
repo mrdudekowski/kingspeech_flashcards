@@ -13,6 +13,7 @@ import {
   setActiveProfile,
   clearProgress,
   setWordStatus,
+  resetWordsProgress,
 } from '@/features/progress/progressSlice';
 
 // Простой дебаунс для сохранения прогресса,
@@ -29,7 +30,8 @@ export const progressMiddleware: Middleware = (store) => (next) => (action) => {
     saveQuizResult.match(action) ||
     setActiveProfile.match(action) ||
     clearProgress.match(action) ||
-    setWordStatus.match(action);
+    setWordStatus.match(action) ||
+    resetWordsProgress.match(action);
 
   if (shouldSave) {
     if (saveTimeoutId !== undefined) {

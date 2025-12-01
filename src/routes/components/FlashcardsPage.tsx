@@ -32,32 +32,32 @@ function FlashcardsPage() {
   const currentCategory = useAppSelector(selectCurrentCategory);
   
   // Диагностика: проверяем currentCategory в Redux
-  useEffect(() => {
+    useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
-    console.log('🔍 [FlashcardsPage] currentCategory в Redux:', currentCategory);
-    console.log('🔍 [FlashcardsPage] category из URL:', category);
-    console.log('🔍 [FlashcardsPage] Совпадают?', currentCategory === category);
-  }, [currentCategory, category]);
+      console.log('🔍 [FlashcardsPage] currentCategory в Redux:', currentCategory);
+      console.log('🔍 [FlashcardsPage] category из URL:', category);
+      console.log('🔍 [FlashcardsPage] Совпадают?', currentCategory === category);
+    }, [currentCategory, category]);
   
   // Диагностика: проверяем состояние vocabulary
-  useEffect(() => {
+    useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
-    console.log('🔍 [FlashcardsPage] Диагностика состояния vocabulary:', {
-      moduleId,
-      collectionId,
-      category,
-      currentModule: vocabularyData?.moduleId,
-      currentCollection: collectionData?.id,
-      currentCategory,
-      hasVocabularyData: !!vocabularyData,
-      hasCollectionData: !!collectionData,
-      collectionCategories: collectionData ? Object.keys(collectionData.categories) : [],
-    });
-  }, [moduleId, collectionId, category, vocabularyData, collectionData, currentCategory]);
+      console.log('🔍 [FlashcardsPage] Диагностика состояния vocabulary:', {
+        moduleId,
+        collectionId,
+        category,
+        currentModule: vocabularyData?.moduleId,
+        currentCollection: collectionData?.id,
+        currentCategory,
+        hasVocabularyData: !!vocabularyData,
+        hasCollectionData: !!collectionData,
+        collectionCategories: collectionData ? Object.keys(collectionData.categories) : [],
+      });
+    }, [moduleId, collectionId, category, vocabularyData, collectionData, currentCategory]);
   
   // Логируем состояние для дебага (всегда вызываем useEffect, но логируем только в dev)
   useEffect(() => {

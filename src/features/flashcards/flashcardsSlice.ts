@@ -306,6 +306,24 @@ const flashcardsSlice = createSlice({
       }
     },
 
+    // Сбросить статусы слов по списку ID
+    resetWordStatusesForIds: (state, action: PayloadAction<string[]>) => {
+      const wordIds = action.payload;
+      if (!wordIds || wordIds.length === 0) {
+        return;
+      }
+
+      wordIds.forEach((wordId) => {
+        if (!wordId) {
+          return;
+        }
+        state.wordStatuses[wordId] = 'new';
+        delete state.wordReviewCounts[wordId];
+        state.reviewQueue = state.reviewQueue.filter((item) => item.wordId !== wordId);
+        delete state.difficultWordsGuessedOnce[wordId];
+      });
+    },
+
     // Сбросить все статусы
     resetAllWordStatuses: (state) => {
       state.wordStatuses = {};
@@ -354,6 +372,7 @@ export const {
   markWordStudied,
   markWordNeedsReview,
   resetWordStatus,
+  resetWordStatusesForIds,
   resetAllWordStatuses,
   hydrateWordStatuses,
   toggleSpotlight,

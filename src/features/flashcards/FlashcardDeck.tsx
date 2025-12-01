@@ -23,10 +23,10 @@ import {
   selectNeedsReviewWordsCount,
   selectDifficultWordsCount,
   selectIsSessionComplete,
-  resetAllWordStatuses,
+  resetWordStatusesForIds,
   hydrateWordStatuses,
 } from './flashcardsSlice';
-import { selectWordStatuses } from '@/features/progress/progressSlice';
+import { resetWordsProgress, selectWordStatuses } from '@/features/progress/progressSlice';
 import type { WordStatus } from '@/shared/types';
 import { selectCurrentSubcategoryWords } from '@/features/vocabulary/vocabularySlice';
 import Flashcard from './Flashcard';
@@ -58,17 +58,17 @@ function FlashcardDeck() {
   });
   
   // Диагностика: проверяем состояние cards в Redux
-  useEffect(() => {
+    useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
-    console.log('📊 [FlashcardDeck] Состояние cards в Redux:', {
-      cardsLength: cards.length,
-      cardIndex,
-      totalCards,
-      currentCard: cards[cardIndex] ? { id: cards[cardIndex].id, english: cards[cardIndex].english } : null,
-    });
-  }, [cards, cardIndex, totalCards]);
+      console.log('📊 [FlashcardDeck] Состояние cards в Redux:', {
+        cardsLength: cards.length,
+        cardIndex,
+        totalCards,
+        currentCard: cards[cardIndex] ? { id: cards[cardIndex].id, english: cards[cardIndex].english } : null,
+      });
+    }, [cards, cardIndex, totalCards]);
   const progress = useAppSelector(selectProgress);
   const hasNext = useAppSelector(selectHasNextCard);
   const hasPrev = useAppSelector(selectHasPrevCard);
@@ -226,27 +226,46 @@ function FlashcardDeck() {
   };
 
   const handleResetProgress = () => {
-    if (window.confirm('Вы уверены, что хотите сбросить весь прогресс изучения? Все отметки будут удалены.')) {
-      dispatch(resetAllWordStatuses());
+    if (!categoryWords || categoryWords.length === 0) {
+      return;
     }
+
+    if (
+      !window.confirm(
+        'Сбросить прогресс только для текущей категории? Отметки изучения этих слов будут удалены.'
+      )
+    ) {
+      return;
+    }
+
+    const wordIds = categoryWords
+      .map((word) => word.id)
+      .filter((id): id is string => Boolean(id));
+
+    if (wordIds.length === 0) {
+      return;
+    }
+
+    dispatch(resetWordsProgress({ wordIds }));
+    dispatch(resetWordStatusesForIds(wordIds));
   };
 
   // Диагностика: логируем состояние для отладки
-  useEffect(() => {
+    useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
-    console.log('🔍 [FlashcardDeck] Диагностика:', {
-      categoryWordsCount: categoryWords.length,
-      cardIndex,
-      totalCards,
+      console.log('🔍 [FlashcardDeck] Диагностика:', {
+        categoryWordsCount: categoryWords.length,
+        cardIndex,
+        totalCards,
       categoryWordsSample: categoryWords.slice(0, 3).map((w) => ({
         id: w.id,
         english: w.english,
         category: w.category,
       })),
-    });
-  }, [categoryWords, cardIndex, totalCards]);
+      });
+    }, [categoryWords, cardIndex, totalCards]);
 
   // КРИТИЧНО: Проверяем cards из Redux, а не categoryWords!
   // categoryWords может быть пустым из-за race condition, но cards уже установлены через setCards

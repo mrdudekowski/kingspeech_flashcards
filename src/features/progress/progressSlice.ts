@@ -210,9 +210,29 @@ const progressSlice = createSlice({
       state.isLoading = action.payload;
     },
 
-    // Очистить весь прогресс
+    // Очистить весь прогресс активного профиля
     clearProgress: (state) => {
       state.profiles[state.activeProfileId] = createEmptyProfile();
+    },
+
+    // Сброс прогресса выбранных слов (по ID)
+    resetWordsProgress: (state, action: PayloadAction<{ wordIds: string[] }>) => {
+      const profile = getActiveProfile(state);
+      const { wordIds } = action.payload;
+
+      if (!wordIds || wordIds.length === 0) {
+        return;
+      }
+
+      wordIds.forEach((wordId) => {
+        if (!wordId) {
+          return;
+        }
+        delete profile.wordProgress[wordId];
+        delete profile.wordStatuses[wordId];
+      });
+
+      profile.statistics.totalWordsStudied = Object.keys(profile.wordProgress).length;
     },
 
     // Смена активного профиля
@@ -243,6 +263,7 @@ export const {
   loadProgress,
   setLoading,
   clearProgress,
+  resetWordsProgress,
   setActiveProfile,
   setWordStatus,
 } = progressSlice.actions;
