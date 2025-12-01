@@ -355,6 +355,75 @@ export const selectCurrentModuleProgress = createSelector(
 );
 
 /**
+ * Статистика текущего модуля
+ * Возвращает объект с количеством изученных, сложных и изучаемых слов для всего модуля
+ */
+export const selectCurrentModuleStats = createSelector(
+  [selectAllWordsInModule, selectWordProgress, selectCurrentModule],
+  (
+    allWords: Word[],
+    wordProgress: Record<string, WordProgress>,
+    currentModule: string | null
+  ): {
+    total: number;
+    studied: number;
+    difficult: number;
+    studying: number;
+    progress: number;
+  } => {
+    // Защита от undefined/null
+    if (!currentModule || !allWords || allWords.length === 0) {
+      return {
+        total: 0,
+        studied: 0,
+        difficult: 0,
+        studying: 0,
+        progress: 0,
+      };
+    }
+    if (!wordProgress) {
+      return {
+        total: allWords.length,
+        studied: 0,
+        difficult: 0,
+        studying: allWords.length,
+        progress: 0,
+      };
+    }
+
+    let studied = 0;
+    let difficult = 0;
+    let studying = 0;
+
+    allWords.forEach((word) => {
+      if (!word || !word.id) return;
+      const progress = wordProgress[word.id];
+      if (progress) {
+        if (progress.masteryLevel >= 1) {
+          studied++;
+        } else if (progress.masteryLevel === 0 && progress.incorrectAnswers > progress.correctAnswers) {
+          difficult++;
+        } else if (progress.masteryLevel === 0) {
+          studying++;
+        }
+      } else {
+        studying++; // Новое слово, еще не изучалось
+      }
+    });
+
+    const progress = Math.round((studied / allWords.length) * 100);
+
+    return {
+      total: allWords.length,
+      studied,
+      difficult,
+      studying,
+      progress,
+    };
+  }
+);
+
+/**
  * Статистика текущей категории
  * Возвращает объект с количеством изученных, сложных и изучаемых слов
  */

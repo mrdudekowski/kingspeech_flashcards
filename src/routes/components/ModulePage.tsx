@@ -6,7 +6,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '@/shared/hooks/redux';
 import { selectVocabularyData, setCurrentCollection } from '@/features/vocabulary/vocabularySlice';
-import { selectCurrentModuleProgress } from '@/features/progress/progressSlice';
+import { selectCurrentModuleProgress, selectCurrentModuleStats } from '@/features/progress/progressSlice';
 
 function ModulePage() {
   const { moduleId } = useParams<{ moduleId: string }>();
@@ -14,6 +14,7 @@ function ModulePage() {
   const dispatch = useAppDispatch();
   const vocabularyData = useAppSelector(selectVocabularyData);
   const moduleProgress = useAppSelector(selectCurrentModuleProgress);
+  const moduleStats = useAppSelector(selectCurrentModuleStats);
 
   const handleCollectionSelect = (collectionId: string) => {
     dispatch(setCurrentCollection(collectionId));
@@ -51,7 +52,38 @@ function ModulePage() {
                 />
               </div>
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-400">
+            
+            {/* Статистика модуля */}
+            <div className="mt-6">
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="glass rounded-lg p-3">
+                  <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Всего слов</div>
+                  <div className="text-lg font-bold text-gray-800 dark:text-gray-100">
+                    {moduleStats.total}
+                  </div>
+                </div>
+                <div className="glass rounded-lg p-3">
+                  <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Изучено</div>
+                  <div className="text-lg font-bold text-green-600 dark:text-green-400">
+                    {moduleStats.studied}
+                  </div>
+                </div>
+                <div className="glass rounded-lg p-3">
+                  <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Изучается</div>
+                  <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                    {moduleStats.studying}
+                  </div>
+                </div>
+                <div className="glass rounded-lg p-3">
+                  <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Сложные</div>
+                  <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                    {moduleStats.difficult}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-xs text-gray-500 dark:text-gray-400 mt-6">
               Модуль {vocabularyData.moduleId}
             </div>
           </div>

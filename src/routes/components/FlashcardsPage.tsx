@@ -3,7 +3,7 @@
  */
 
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useMemo } from 'react';
+import { useEffect, useRef } from 'react';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux';
 import {
   loadVocabularyModule,
@@ -16,7 +16,6 @@ import {
   selectCurrentCategory,
 } from '@/features/vocabulary/vocabularySlice';
 import FlashcardDeck from '@/features/flashcards/FlashcardDeck';
-import { selectCurrentCategoryProgress, selectCurrentCategoryStats } from '@/features/progress/progressSlice';
 import type { ModuleId, WordCategory } from '@/app/constants';
 
 function FlashcardsPage() {
@@ -75,39 +74,6 @@ function FlashcardsPage() {
     }
   }, [moduleId, collectionId, category, currentCategory, vocabularyData, loading, collectionData]);
   
-  // Селекторы прогресса - используем мемоизацию через useMemo для избежания лишних ре-рендеров
-  const categoryProgress = useAppSelector((state) => {
-    if (!currentCategory) {
-      return 0;
-    }
-    try {
-      return selectCurrentCategoryProgress(state);
-    } catch (error) {
-      console.error('❌ [FlashcardsPage] Ошибка в selectCurrentCategoryProgress:', error);
-      return 0;
-    }
-  });
-  
-  // Мемоизируем пустой объект для categoryStats, чтобы избежать предупреждений Redux
-  const emptyStats = useMemo(() => ({
-    total: 0,
-    studied: 0,
-    difficult: 0,
-    studying: 0,
-    progress: 0,
-  }), []);
-  
-  const categoryStats = useAppSelector((state) => {
-    if (!currentCategory) {
-      return emptyStats;
-    }
-    try {
-      return selectCurrentCategoryStats(state);
-    } catch (error) {
-      console.error('❌ [FlashcardsPage] Ошибка в selectCurrentCategoryStats:', error);
-      return emptyStats;
-    }
-  });
 
   // Загружаем модуль при монтировании
   useEffect(() => {
@@ -266,52 +232,6 @@ function FlashcardsPage() {
             ← Назад
           </button>
         </div>
-
-        {/* Прогресс категории */}
-        {category && (
-          <div className="border-t border-gray-200 dark:border-slate-600 pt-4">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                Прогресс категории
-              </span>
-              <span className="text-lg font-bold text-blue-600 dark:text-blue-400">
-                {categoryProgress}%
-              </span>
-            </div>
-            <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden mb-4">
-              <div
-                className="bg-blue-500 dark:bg-blue-600 h-full transition-all duration-300 rounded-full"
-                style={{ width: `${categoryProgress}%` }}
-              />
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-              <div className="glass rounded-lg p-3">
-                <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Всего слов</div>
-                <div className="text-lg font-bold text-gray-800 dark:text-gray-100">
-                  {categoryStats.total}
-                </div>
-              </div>
-              <div className="glass rounded-lg p-3">
-                <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Изучено</div>
-                <div className="text-lg font-bold text-green-600 dark:text-green-400">
-                  {categoryStats.studied}
-                </div>
-              </div>
-              <div className="glass rounded-lg p-3">
-                <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Изучается</div>
-                <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
-                  {categoryStats.studying}
-                </div>
-              </div>
-              <div className="glass rounded-lg p-3">
-                <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Сложные</div>
-                <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
-                  {categoryStats.difficult}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Колода карточек */}
