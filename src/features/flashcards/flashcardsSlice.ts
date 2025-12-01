@@ -23,6 +23,7 @@ const initialState: FlashcardsState = {
   wordReviewCounts: {},
   newCardsSinceLastReview: 0,
   newCardsBeforeReview: 2, // Показывать 2 новые карточки, затем 1 повторение
+  spotlightActive: false, // Подсказка spotlight неактивна по умолчанию
 };
 
 const flashcardsSlice = createSlice({
@@ -43,6 +44,7 @@ const flashcardsSlice = createSlice({
       state.totalCardsProcessed = 0;
       state.isReviewingCard = false;
       state.newCardsSinceLastReview = 0;
+      state.spotlightActive = false; // Сбрасываем spotlight при установке новых карточек
       // Инициализируем статусы для новых слов (только если их еще нет)
       action.payload.forEach((word) => {
         if (!(word.id in state.wordStatuses)) {
@@ -59,6 +61,7 @@ const flashcardsSlice = createSlice({
       state.totalCardsProcessed += 1;
       state.isFlipped = false;
       state.currentCardFlippedOnce = false;
+      state.spotlightActive = false; // Сбрасываем spotlight при переходе к следующей карточке
 
       // Проверяем очередь повторений: есть ли карточки, готовые к показу?
       const readyForReview = state.reviewQueue.filter(
@@ -134,6 +137,7 @@ const flashcardsSlice = createSlice({
       if (state.currentCardIndex > 0) {
         state.currentCardIndex -= 1;
         state.isFlipped = false; // Сбрасываем переворот при переходе
+        state.spotlightActive = false; // Сбрасываем spotlight при переходе к предыдущей карточке
         // Не сбрасываем currentCardFlippedOnce, так как пользователь может вернуться к уже перевернутой карточке
         // Но если карточка еще не была перевернута, флаг останется false
       }
@@ -142,6 +146,7 @@ const flashcardsSlice = createSlice({
     // Переворот карточки
     flipCard: (state) => {
       state.isFlipped = !state.isFlipped;
+      state.spotlightActive = false; // Сбрасываем spotlight при перевороте карточки
       // Отмечаем, что карточка была перевернута хотя бы раз
       if (!state.currentCardFlippedOnce) {
         state.currentCardFlippedOnce = true;
@@ -197,6 +202,7 @@ const flashcardsSlice = createSlice({
       state.difficultWordsGuessedOnce = {};
       state.wordReviewCounts = {};
       state.newCardsSinceLastReview = 0;
+      state.spotlightActive = false; // Сбрасываем spotlight при сбросе карточек
     },
 
     // Переключение порядка отображения сторон карточки
@@ -324,6 +330,11 @@ const flashcardsSlice = createSlice({
         state.wordStatuses[wordId] = status;
       });
     },
+
+    // Переключение подсказки spotlight (подсветка первой буквы)
+    toggleSpotlight: (state) => {
+      state.spotlightActive = !state.spotlightActive;
+    },
   },
 });
 
@@ -345,6 +356,7 @@ export const {
   resetWordStatus,
   resetAllWordStatuses,
   hydrateWordStatuses,
+  toggleSpotlight,
 } = flashcardsSlice.actions;
 
 // ============================================
@@ -492,6 +504,11 @@ export const selectIsSessionComplete = (state: RootState): boolean => {
 // Количество карточек в очереди повторения
 export const selectReviewQueueLength = (state: RootState): number => {
   return state.flashcards.reviewQueue.length;
+};
+
+// Активна ли подсказка spotlight
+export const selectSpotlightActive = (state: RootState): boolean => {
+  return state.flashcards.spotlightActive;
 };
 
 // ============================================

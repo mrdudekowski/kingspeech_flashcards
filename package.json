@@ -11,6 +11,9 @@
     "check-duplicates": "tsx src/scripts/check-duplicates.ts"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.1",
     "@reduxjs/toolkit": "^2.0.1",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",

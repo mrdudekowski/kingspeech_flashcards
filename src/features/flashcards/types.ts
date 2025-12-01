@@ -37,5 +37,6 @@ export interface FlashcardsState {
   wordReviewCounts: Record<string, number>; // Количество раз, когда каждое слово было отмечено для повторения
   newCardsSinceLastReview: number; // Счетчик новых карточек с последнего повторения
   newCardsBeforeReview: number; // Сколько новых карточек показывать перед повторением (по умолчанию 2)
+  spotlightActive: boolean; // Активна ли подсказка spotlight (подсветка первой буквы)
 }
 

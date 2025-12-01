@@ -16,6 +16,7 @@ import {
 import {
   markWordStudied as markWordStudiedProgress,
   setWordStatus as setWordStatusProgress,
+  updateWordProgress,
 } from '@/features/progress/progressSlice';
 import type { WordStatus } from '@/shared/types';
 
@@ -36,8 +37,14 @@ function FlashcardActions() {
     dispatch(markWordStudied(currentCard.id));
     dispatch(nextCard());
     
-    // Новый код для progress
+    // Обновляем прогресс: отмечаем слово как изученное и учитываем правильный ответ
     dispatch(markWordStudiedProgress(currentCard.id));
+    dispatch(
+      updateWordProgress({
+        wordId: currentCard.id,
+        isCorrect: true,
+      })
+    );
   };
 
   const handleMarkNeedsReview = () => {

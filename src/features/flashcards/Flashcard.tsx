@@ -3,17 +3,22 @@
  * Поддерживает переворот с анимацией
  */
 
+import { useState, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux';
 import {
   flipCard,
+  toggleSpotlight,
   selectCurrentCard,
   selectIsFlipped,
   selectDisplayMode,
   selectCurrentWordStatus,
   selectIsReviewingCard,
+  selectSpotlightActive,
 } from './flashcardsSlice';
 import { selectCurrentSubcategory } from '@/features/vocabulary/vocabularySlice';
 import { WORD_SUBCATEGORIES } from '@/app/constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 function Flashcard() {
   const dispatch = useAppDispatch();
@@ -23,7 +28,72 @@ function Flashcard() {
   const wordStatus = useAppSelector(selectCurrentWordStatus);
   const isReviewingCard = useAppSelector(selectIsReviewingCard);
   const currentSubcategory = useAppSelector(selectCurrentSubcategory);
+  const spotlightActive = useAppSelector(selectSpotlightActive);
   const showEnglishOnFront = displayMode === 'english-first';
+  
+  // Состояние для анимации исчезновения буквы
+  const [showLetter, setShowLetter] = useState(false);
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+
+  // Управление показом буквы с анимацией
+  useEffect(() => {
+    if (spotlightActive) {
+      setShowLetter(true);
+      setIsAnimatingOut(false);
+    } else {
+      // Запускаем анимацию исчезновения
+      setIsAnimatingOut(true);
+      const timer = setTimeout(() => {
+        setShowLetter(false);
+        setIsAnimatingOut(false);
+      }, 300); // Время анимации исчезновения
+      return () => clearTimeout(timer);
+    }
+  }, [spotlightActive]);
+
+  // Получаем полное слово ответа (слова, которое НЕ видно на текущей стороне)
+  const getAnswerWord = (): string => {
+    if (!currentCard) return '';
+    // Ответ - это слово на противоположной стороне от той, что видна сейчас
+    let answer: string;
+    if (isFlipped) {
+      // Если карточка перевернута, показываем букву с лицевой стороны (той, что была видна до переворота)
+      answer = showEnglishOnFront ? currentCard.english : currentCard.translation;
+    } else {
+      // Если карточка не перевернута, показываем букву с обратной стороны (той, что будет видна после переворота)
+      answer = showEnglishOnFront ? currentCard.translation : currentCard.english;
+    }
+    return answer || '';
+  };
+
+  // Рендеринг подсказки с первой буквой и подчеркиваниями
+  const renderSpotlightHint = (): JSX.Element => {
+    const answerWord = getAnswerWord();
+    if (!answerWord || answerWord.length === 0) {
+      return <></>;
+    }
+
+    const firstLetter = answerWord[0].toLowerCase();
+    const remainingLetters = answerWord.length - 1;
+    // Создаем подчеркивания с пробелами между ними: "_ _ _"
+    const underscores = remainingLetters > 0 ? '_ '.repeat(remainingLetters).trim() : '';
+
+    return (
+      <span className="text-[1.575rem] font-bold text-yellow-400 dark:text-yellow-300 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] animate-levitation">
+        {firstLetter}
+        {remainingLetters > 0 && (
+          <span className="text-yellow-400 dark:text-yellow-300 opacity-70">
+            {underscores}
+          </span>
+        )}
+      </span>
+    );
+  };
+
+  const handleSpotlightClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Предотвращаем переворот карточки при клике на кнопку
+    dispatch(toggleSpotlight());
+  };
 
   const handleFlip = () => {
     dispatch(flipCard());
@@ -79,6 +149,26 @@ function Flashcard() {
               {statusBadge.text}
             </div>
           )}
+          {/* Кнопка spotlight и буква-подсказка */}
+          <div className="absolute top-4 left-4 flex items-center gap-3">
+            <button
+              onClick={handleSpotlightClick}
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                spotlightActive
+                  ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-950 shadow-lg shadow-yellow-400/50'
+                  : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
+              }`}
+              title="Подсказка: показать первую букву ответа"
+            >
+              <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
+            </button>
+            {/* Буква-подсказка с анимацией */}
+            {showLetter && (
+              <div className={`spotlight-letter ${isAnimatingOut ? 'animate-spotlight-out' : 'animate-spotlight-in'}`}>
+                {renderSpotlightHint()}
+              </div>
+            )}
+          </div>
           <div className="text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
               {showEnglishOnFront ? 'Английский' : 'Перевод'}
@@ -118,6 +208,26 @@ function Flashcard() {
               {statusBadge.text}
             </div>
           )}
+          {/* Кнопка spotlight и буква-подсказка */}
+          <div className="absolute top-4 left-4 flex items-center gap-3">
+            <button
+              onClick={handleSpotlightClick}
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                spotlightActive
+                  ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-950 shadow-lg shadow-yellow-400/50'
+                  : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
+              }`}
+              title="Подсказка: показать первую букву ответа"
+            >
+              <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
+            </button>
+            {/* Буква-подсказка с анимацией */}
+            {showLetter && (
+              <div className={`spotlight-letter ${isAnimatingOut ? 'animate-spotlight-out' : 'animate-spotlight-in'}`}>
+                {renderSpotlightHint()}
+              </div>
+            )}
+          </div>
           <div className="text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
               {showEnglishOnFront ? 'Перевод' : 'Английский'}

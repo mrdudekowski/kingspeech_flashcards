@@ -83,3 +83,47 @@
   animation: shufflePulse 0.3s ease-in-out;
 }
 
+/* Анимации для spotlight подсказки */
+@keyframes spotlightIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes spotlightOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(10px);
+  }
+}
+
+@keyframes levitation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-spotlight-in {
+  animation: spotlightIn 0.3s ease-out forwards;
+}
+
+.animate-spotlight-out {
+  animation: spotlightOut 0.3s ease-in forwards;
+}
+
+.animate-levitation {
+  animation: levitation 2s ease-in-out infinite;
+}
+

@@ -89,24 +89,20 @@ const progressSlice = createSlice({
       const profile = getActiveProfile(state);
       const wordId = action.payload;
       const now = new Date().toISOString();
-      
-      // Если слово уже есть в прогрессе - обновляем
+
+      // Если слово уже есть в прогрессе - обновляем только даты
       if (profile.wordProgress[wordId]) {
         profile.wordProgress[wordId].studiedAt = now;
         profile.wordProgress[wordId].lastReviewedAt = now;
-        profile.wordProgress[wordId].masteryLevel = Math.min(
-          profile.wordProgress[wordId].masteryLevel + 1,
-          5
-        );
       } else {
-        // Создаем новый прогресс для слова
+        // Создаем базовый прогресс для слова без изменения счетчиков
         profile.wordProgress[wordId] = {
           wordId,
           studiedAt: now,
-          correctAnswers: 1,
+          correctAnswers: 0,
           incorrectAnswers: 0,
           lastReviewedAt: now,
-          masteryLevel: 1,
+          masteryLevel: 0,
         };
       }
       profile.wordStatuses[wordId] = 'studied';
@@ -116,31 +112,21 @@ const progressSlice = createSlice({
       
       // Сохраняем предыдущую дату изучения для расчета streak
       const previousLastStudyDate = profile.statistics.lastStudyDate;
-      
-      // Обновляем дату последнего изучения
-      profile.statistics.lastStudyDate = now;
-      
-      // Обновляем streak
+
+      // Обновляем streak на основе ПРЕДЫДУЩЕЙ даты изучения
       if (previousLastStudyDate) {
-        // Проверяем, была ли предыдущая дата сегодня
-        const previousDate = new Date(previousLastStudyDate);
-        const today = new Date(now);
-        previousDate.setHours(0, 0, 0, 0);
-        today.setHours(0, 0, 0, 0);
-        
-        // Если уже изучали сегодня - не увеличиваем streak
-        if (previousDate.getTime() !== today.getTime()) {
-          // Первое изучение сегодня - обновляем streak
-          profile.statistics.studyStreak = calculateStreak(
-            now,
-            profile.statistics.studyStreak
-          );
-        }
-        // Если уже изучали сегодня - streak уже правильный, не меняем
+        const newStreak = calculateStreak(
+          previousLastStudyDate,
+          profile.statistics.studyStreak
+        );
+        profile.statistics.studyStreak = newStreak;
       } else {
         // Первое изучение вообще - начинаем streak
         profile.statistics.studyStreak = 1;
       }
+
+      // Обновляем дату последнего изучения уже после пересчета streak
+      profile.statistics.lastStudyDate = now;
     },
 
     // Обновить прогресс слова (правильные/неправильные ответы)

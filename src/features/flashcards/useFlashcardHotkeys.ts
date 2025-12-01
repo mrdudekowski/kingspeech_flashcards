@@ -20,6 +20,7 @@ import {
 import {
   markWordStudied as markWordStudiedProgress,
   setWordStatus as setWordStatusProgress,
+  updateWordProgress,
 } from '@/features/progress/progressSlice';
 import type { WordStatus } from '@/shared/types';
 
@@ -74,6 +75,12 @@ export function useFlashcardHotkeys() {
             status: nextStatus,
           })
         );
+        dispatch(
+          updateWordProgress({
+            wordId: currentCard.id,
+            isCorrect: false,
+          })
+        );
         return;
       }
 
@@ -83,6 +90,12 @@ export function useFlashcardHotkeys() {
         dispatch(markWordStudied(currentCard.id));
         dispatch(nextCard());
         dispatch(markWordStudiedProgress(currentCard.id));
+        dispatch(
+          updateWordProgress({
+            wordId: currentCard.id,
+            isCorrect: true,
+          })
+        );
         return;
       }
     };
