@@ -7,39 +7,20 @@ import type { ModuleId } from '@/app/constants';
 import { AVAILABLE_MODULES } from '@/app/constants';
 import type { VocabularyModule, Collection, Word } from '@/shared/types';
 
-// Статический импорт всех модулей для Vite
-// Vite требует статические пути для импортов
+// Статический импорт корневого модуля A1 для Vite
+// Коллекции этого модуля подхватываем автоматически через import.meta.glob
 import A1Module from '@/data/modules/A1/index.json';
 
-// Статический импорт всех коллекций A1
-import A1BasicVerbs from '@/data/modules/A1/collections/basic-verbs.json';
-import A1DailyLife from '@/data/modules/A1/collections/daily-life.json';
-import A1IrregularVerbs from '@/data/modules/A1/collections/irregular-verbs.json';
-import A1ModalVerbs from '@/data/modules/A1/collections/modal-verbs.json';
-import A1PhrasalVerbs from '@/data/modules/A1/collections/phrasal-verbs.json';
-import A1Expressions from '@/data/modules/A1/collections/expressions.json';
-import A1Collocations from '@/data/modules/A1/collections/collocations.json';
-import A1CommonPhrases from '@/data/modules/A1/collections/common-phrases.json';
-import A1FormalPhrases from '@/data/modules/A1/collections/formal-phrases.json';
-import A1InformalPhrases from '@/data/modules/A1/collections/informal-phrases.json';
-import A1ClothesAccessories from '@/data/modules/A1/collections/clothes-accessories.json';
-
 /**
- * Маппинг коллекций A1 по их ID
+ * Автоматическая загрузка всех JSON-коллекций A1.
+ * Vite импортирует все файлы из папки collections, дальше мы находим нужную коллекцию по её id.
+ * Single Source of Truth: id живёт внутри JSON-файла и в index.json, без отдельного маппинга в коде.
  */
-const A1_COLLECTIONS_MAP: Record<string, Collection> = {
-  'basic-verbs': A1BasicVerbs as unknown as Collection,
-  'daily-life': A1DailyLife as unknown as Collection,
-  'irregular-verbs': A1IrregularVerbs as unknown as Collection,
-  'modal-verbs': A1ModalVerbs as unknown as Collection,
-  'phrasal-verbs': A1PhrasalVerbs as unknown as Collection,
-  'expressions': A1Expressions as unknown as Collection,
-  'collocations': A1Collocations as unknown as Collection,
-  'common-phrases': A1CommonPhrases as unknown as Collection,
-  'formal-phrases': A1FormalPhrases as unknown as Collection,
-  'informal-phrases': A1InformalPhrases as unknown as Collection,
-  'clothes-accessories': A1ClothesAccessories as unknown as Collection,
-};
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore - import.meta.glob типизируется Vite, TS этого по умолчанию не знает
+const A1_COLLECTIONS_FILES = import.meta.glob('@/data/modules/A1/collections/*.json', {
+  eager: true,
+});
 
 /**
  * Маппинг модулей для быстрого доступа
@@ -255,7 +236,22 @@ function validateWord(word: unknown): word is Word {
 }
 
 /**
- * Загружает коллекции из файлов для модуля A1
+ * Находит данные коллекции A1 по её id среди всех JSON-файлов в папке collections.
+ */
+function findA1CollectionDataById(collectionId: string): Collection | null {
+  for (const mod of Object.values(A1_COLLECTIONS_FILES)) {
+    // Для JSON Vite кладёт данные в default-экспорт
+    const data = (mod as any).default ?? mod;
+    if (data && typeof data === 'object' && (data as any).id === collectionId) {
+      return data as Collection;
+    }
+  }
+  return null;
+}
+
+/**
+ * Загружает коллекции из файлов для модуля A1.
+ * Больше не требует ручного маппинга коллекций в коде — всё берётся из файлов.
  */
 async function loadA1Collections(moduleMeta: { collections: Array<{ id: string; file?: string }> }): Promise<Collection[]> {
   const loadedCollections: Collection[] = [];
@@ -264,13 +260,13 @@ async function loadA1Collections(moduleMeta: { collections: Array<{ id: string; 
     let collection: Collection;
 
     if (collectionMeta.file) {
-      // Загружаем коллекцию из файла
+      // Загружаем коллекцию из соответствующего JSON-файла
       const collectionId = collectionMeta.id;
-      const collectionData = A1_COLLECTIONS_MAP[collectionId];
+      const collectionData = findA1CollectionDataById(collectionId);
 
       if (!collectionData) {
         throw new VocabularyLoadError(
-          `Коллекция "${collectionId}" не найдена в маппинге`,
+          `Коллекция "${collectionId}" не найдена среди файлов A1/collections`,
           'A1'
         );
       }
