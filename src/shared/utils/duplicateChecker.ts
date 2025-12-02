@@ -29,14 +29,16 @@ function getAllWords(module: VocabularyModule): Array<{ word: Word; location: st
   const words: Array<{ word: Word; location: string }> = [];
 
   module.collections.forEach((collection) => {
-    Object.entries(collection.categories).forEach(([category, categoryWords]) => {
-      categoryWords.forEach((word) => {
-        words.push({
-          word,
-          location: `${module.moduleId}/${collection.id}/${category}`,
+    if (collection.categories) {
+      Object.entries(collection.categories).forEach(([category, categoryWords]) => {
+        categoryWords.forEach((word) => {
+          words.push({
+            word,
+            location: `${module.moduleId}/${collection.id}/${category}`,
+          });
         });
       });
-    });
+    }
   });
 
   return words;
@@ -120,15 +122,17 @@ export function checkDuplicates(module: VocabularyModule): DuplicateCheckResult 
   // Проверка слов, которые встречаются в разных категориях одной коллекции
   const wordInCategoryMap = new Map<string, Map<string, Word>>();
   module.collections.forEach((collection) => {
-    Object.entries(collection.categories).forEach(([category, categoryWords]) => {
-      categoryWords.forEach((word) => {
-        const key = `${collection.id}|${word.id}`;
-        if (!wordInCategoryMap.has(key)) {
-          wordInCategoryMap.set(key, new Map());
-        }
-        wordInCategoryMap.get(key)!.set(category, word);
+    if (collection.categories) {
+      Object.entries(collection.categories).forEach(([category, categoryWords]) => {
+        categoryWords.forEach((word) => {
+          const key = `${collection.id}|${word.id}`;
+          if (!wordInCategoryMap.has(key)) {
+            wordInCategoryMap.set(key, new Map());
+          }
+          wordInCategoryMap.get(key)!.set(category, word);
+        });
       });
-    });
+    }
   });
 
   // Проверяем, есть ли слова с одинаковым ID в разных категориях одной коллекции

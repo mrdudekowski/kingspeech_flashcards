@@ -28,7 +28,7 @@ import {
 } from './flashcardsSlice';
 import { resetWordsProgress, selectWordStatuses } from '@/features/progress/progressSlice';
 import type { WordStatus } from '@/shared/types';
-import { selectCurrentSubcategoryWords } from '@/features/vocabulary/vocabularySlice';
+import { selectWordsForFlashcards } from '@/features/vocabulary/vocabularySlice';
 import Flashcard from './Flashcard';
 import FlashcardActions from './FlashcardActions';
 import { useFlashcardHotkeys } from './useFlashcardHotkeys';
@@ -38,11 +38,11 @@ function FlashcardDeck() {
   
   // Логируем вызов селектора
   if (process.env.NODE_ENV === 'development') {
-    console.log('🔄 [FlashcardDeck] Вызываю selectCurrentSubcategoryWords...');
+    console.log('🔄 [FlashcardDeck] Вызываю selectWordsForFlashcards...');
   }
-  const categoryWords = useAppSelector(selectCurrentSubcategoryWords);
+  const categoryWords = useAppSelector(selectWordsForFlashcards);
   if (process.env.NODE_ENV === 'development') {
-    console.log('✅ [FlashcardDeck] selectCurrentSubcategoryWords вернул:', categoryWords.length, 'слов');
+    console.log('✅ [FlashcardDeck] selectWordsForFlashcards вернул:', categoryWords.length, 'слов');
   }
   const cardIndex = useAppSelector(selectCardIndex);
   const totalCards = useAppSelector(selectTotalCards);

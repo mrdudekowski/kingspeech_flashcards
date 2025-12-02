@@ -1,0 +1,207 @@
+{
+  "id": "common-phrases",
+  "name": "Common Phrases",
+  "description": "Обычные фразы для повседневного общения уровня A1",
+  "categories": {
+    "phrases": [
+      {
+        "id": "my-name-is-1",
+        "english": "My name is…",
+        "translation": "Меня зовут…",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "whats-your-name-1",
+        "english": "What's your name?",
+        "translation": "Как тебя зовут?",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "where-are-you-from-1",
+        "english": "Where are you from?",
+        "translation": "Откуда ты?",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "im-from-1",
+        "english": "I'm from…",
+        "translation": "Я из…",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "how-old-are-you-1",
+        "english": "How old are you?",
+        "translation": "Сколько тебе лет?",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "im-years-old-1",
+        "english": "I'm … years old.",
+        "translation": "Мне … лет.",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "i-live-in-1",
+        "english": "I live in…",
+        "translation": "Я живу в…",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "whats-this-1",
+        "english": "What's this?",
+        "translation": "Что это?",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "how-much-is-it-1",
+        "english": "How much is it?",
+        "translation": "Сколько это стоит?",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "i-like-1",
+        "english": "I like…",
+        "translation": "Мне нравится…",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "i-dont-like-1",
+        "english": "I don't like…",
+        "translation": "Мне не нравится…",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "do-you-like-1",
+        "english": "Do you like…?",
+        "translation": "Тебе нравится…?",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "yes-i-do-1",
+        "english": "Yes, I do.",
+        "translation": "Да.",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "no-i-dont-1",
+        "english": "No, I don't.",
+        "translation": "Нет.",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "i-can-1",
+        "english": "I can…",
+        "translation": "Я умею… / Я могу…",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "i-cant-1",
+        "english": "I can't…",
+        "translation": "Я не умею… / Я не могу…",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "what-time-is-it-1",
+        "english": "What time is it?",
+        "translation": "Который час?",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      },
+      {
+        "id": "its-oclock-1",
+        "english": "It's … o'clock.",
+        "translation": "… часов.",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "common",
+          "common-phrases"
+        ]
+      }
+    ]
+  }
+}

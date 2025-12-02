@@ -195,6 +195,7 @@ function CollectionPage() {
     console.log('🏁 [CollectionPage] handleCategorySelect завершена');
   };
 
+
   if (!collectionData) {
     return (
       <div className="text-center py-8">

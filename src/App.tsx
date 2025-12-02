@@ -219,7 +219,7 @@ function App() {
                         collections: vocabularyData.collections.map((c) => ({
                           id: c.id,
                           name: c.name,
-                          categoriesCount: Object.keys(c.categories).length,
+                          categoriesCount: c.categories ? Object.keys(c.categories).length : 0,
                         })),
                       }
                     : null,

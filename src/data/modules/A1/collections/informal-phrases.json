@@ -1,0 +1,105 @@
+{
+  "id": "informal-phrases",
+  "name": "Informal Phrases",
+  "description": "Неформальные фразы для дружеского общения уровня A1",
+  "categories": {
+    "phrases": [
+      {
+        "id": "bye-1",
+        "english": "Bye!",
+        "translation": "Пока!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      },
+      {
+        "id": "whats-up-1",
+        "english": "What's up?",
+        "translation": "Как дела?",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      },
+      {
+        "id": "cool-1",
+        "english": "Cool!",
+        "translation": "Круто!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      },
+      {
+        "id": "yeah-1",
+        "english": "Yeah!",
+        "translation": "Да!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      },
+      {
+        "id": "nope-1",
+        "english": "Nope!",
+        "translation": "Нет!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      },
+      {
+        "id": "lets-go-1",
+        "english": "Let's go!",
+        "translation": "Поехали!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      },
+      {
+        "id": "oh-no-1",
+        "english": "Oh no!",
+        "translation": "О нет!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      },
+      {
+        "id": "wow-1",
+        "english": "Wow!",
+        "translation": "Ух ты!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "informal-phrases"
+        ]
+      }
+    ]
+  }
+}

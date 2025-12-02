@@ -1,0 +1,449 @@
+{
+  "id": "clothes-accessories",
+  "name": "Clothes and accessories",
+  "description": "Одежда и аксессуары",
+  "categories": {
+    "nouns": [
+      {
+        "id": "cuff-1",
+        "english": "cuff",
+        "translation": "манжета",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shirt-parts"
+        ]
+      },
+      {
+        "id": "collar-1",
+        "english": "collar",
+        "translation": "воротник",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shirt-parts"
+        ]
+      },
+      {
+        "id": "sleeve-1",
+        "english": "sleeve",
+        "translation": "рукав",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shirt-parts"
+        ]
+      },
+      {
+        "id": "button-1",
+        "english": "button",
+        "translation": "пуговица",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shirt-parts"
+        ]
+      },
+      {
+        "id": "shirt-1",
+        "english": "shirt",
+        "translation": "рубашка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "t-shirt-1",
+        "english": "t-shirt",
+        "translation": "футболка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "blouse-1",
+        "english": "blouse",
+        "translation": "блузка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "suit-1",
+        "english": "suit",
+        "translation": "костюм",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "uniform-1",
+        "english": "uniform",
+        "translation": "форма",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "jacket-1",
+        "english": "jacket",
+        "translation": "куртка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "raincoat-1",
+        "english": "raincoat",
+        "translation": "дождевик",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "sweater-1",
+        "english": "sweater",
+        "translation": "свитер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "jumper-1",
+        "english": "jumper",
+        "translation": "свитер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "coat-1",
+        "english": "coat",
+        "translation": "пальто",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "zipper-1",
+        "english": "zipper",
+        "translation": "молния",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "zip-1",
+        "english": "zip",
+        "translation": "молния",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "hood-1",
+        "english": "hood",
+        "translation": "капюшон",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "pocket-1",
+        "english": "pocket",
+        "translation": "карман",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "outerwear-shirts"
+        ]
+      },
+      {
+        "id": "pants-1",
+        "english": "pants",
+        "translation": "брюки",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "trousers-1",
+        "english": "trousers",
+        "translation": "брюки",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "jeans-1",
+        "english": "jeans",
+        "translation": "джинсы",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "shorts-1",
+        "english": "shorts",
+        "translation": "шорты",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "skirt-1",
+        "english": "skirt",
+        "translation": "юбка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "leggings-1",
+        "english": "leggings",
+        "translation": "леггинсы",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "pantyhose-1",
+        "english": "pantyhose",
+        "translation": "колготки",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "tights-1",
+        "english": "tights",
+        "translation": "колготки",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "lower-clothing"
+        ]
+      },
+      {
+        "id": "bra-1",
+        "english": "bra",
+        "translation": "бюстгальтер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "panties-1",
+        "english": "panties",
+        "translation": "трусики",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "knickers-1",
+        "english": "knickers",
+        "translation": "трусики",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "boxer-shorts-1",
+        "english": "boxer shorts",
+        "translation": "боксеры",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "jockey-shorts-1",
+        "english": "jockey shorts",
+        "translation": "трусы (узкие)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "pajamas-1",
+        "english": "pajamas",
+        "translation": "пижама",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "pyjamas-1",
+        "english": "pyjamas",
+        "translation": "пижама",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "bathrobe-1",
+        "english": "bathrobe",
+        "translation": "халат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "dressing-gown-1",
+        "english": "dressing gown",
+        "translation": "халат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "underwear-homewear"
+        ]
+      },
+      {
+        "id": "socks-1",
+        "english": "socks",
+        "translation": "носки",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shoes-accessories"
+        ]
+      },
+      {
+        "id": "tie-1",
+        "english": "tie",
+        "translation": "галстук",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shoes-accessories"
+        ]
+      },
+      {
+        "id": "boots-1",
+        "english": "boots",
+        "translation": "сапоги",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shoes-accessories"
+        ]
+      },
+      {
+        "id": "sneakers-1",
+        "english": "sneakers",
+        "translation": "кроссовки",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shoes-accessories"
+        ]
+      },
+      {
+        "id": "shoes-1",
+        "english": "shoes",
+        "translation": "ботинки",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "tags": [
+          "common",
+          "shoes-accessories"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "id": "expressions",
+  "name": "Expressions",
+  "description": "Выражения и фразы для общения уровня A1",
+  "categories": {
+    "phrases": [
+      {
+        "id": "thank-you-1",
+        "english": "Thank you!",
+        "translation": "Спасибо!",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "youre-welcome-1",
+        "english": "You're welcome.",
+        "translation": "Пожалуйста.",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "please-1",
+        "english": "Please.",
+        "translation": "Пожалуйста.",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "sorry-1",
+        "english": "Sorry.",
+        "translation": "Извини(те).",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "excuse-me-1",
+        "english": "Excuse me.",
+        "translation": "Извините.",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "hello-1",
+        "english": "Hello!",
+        "translation": "Здравствуйте!",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "hi-1",
+        "english": "Hi!",
+        "translation": "Привет!",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "goodbye-1",
+        "english": "Goodbye!",
+        "translation": "До свидания!",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "how-are-you-1",
+        "english": "How are you?",
+        "translation": "Как дела?",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "im-fine-1",
+        "english": "I'm fine, thank you.",
+        "translation": "Хорошо, спасибо.",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "nice-to-meet-you-1",
+        "english": "Nice to meet you.",
+        "translation": "Рад(а) познакомиться.",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "see-you-1",
+        "english": "See you!",
+        "translation": "Увидимся!",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "good-morning-1",
+        "english": "Good morning",
+        "translation": "Доброе утро",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "good-afternoon-1",
+        "english": "Good afternoon",
+        "translation": "Добрый день",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "good-evening-1",
+        "english": "Good evening",
+        "translation": "Добрый вечер",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "i-dont-understand-1",
+        "english": "I don't understand.",
+        "translation": "Я не понимаю.",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "can-you-repeat-1",
+        "english": "Can you repeat, please?",
+        "translation": "Повторите, пожалуйста.",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "yes-1",
+        "english": "Yes",
+        "translation": "Да",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      },
+      {
+        "id": "no-1",
+        "english": "No",
+        "translation": "Нет",
+        "category": "phrases",
+        "subcategory": "expressions",
+        "tags": [
+          "common",
+          "common-phrases",
+          "expressions"
+        ]
+      }
+    ]
+  }
+}

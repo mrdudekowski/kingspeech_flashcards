@@ -10,19 +10,23 @@ import {
   setCurrentModule,
   setCurrentCollection,
   setCurrentCategory,
+  setCurrentSubcategory,
   selectVocabularyData,
   selectLoading,
   selectCurrentCollectionData,
   selectCurrentCategory,
+  selectCurrentSubcategory,
 } from '@/features/vocabulary/vocabularySlice';
 import FlashcardDeck from '@/features/flashcards/FlashcardDeck';
-import type { ModuleId, WordCategory } from '@/app/constants';
+import type { ModuleId, WordCategory, WordSubcategory } from '@/app/constants';
+import { WORD_CATEGORIES, WORD_SUBCATEGORIES } from '@/app/constants';
 
 function FlashcardsPage() {
-  const { moduleId, collectionId, category } = useParams<{
+  const { moduleId, collectionId, category, subcategory } = useParams<{
     moduleId: string;
     collectionId?: string;
     category?: string;
+    subcategory?: string;
   }>();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
@@ -30,6 +34,10 @@ function FlashcardsPage() {
   const loading = useAppSelector(selectLoading);
   const collectionData = useAppSelector(selectCurrentCollectionData);
   const currentCategory = useAppSelector(selectCurrentCategory);
+  const currentSubcategory = useAppSelector(selectCurrentSubcategory);
+  
+  // Проверяем, находимся ли мы в режиме Irregular Verbs
+  const isIrregularVerbsMode = collectionId === 'irregular-verbs';
   
   // Диагностика: проверяем currentCategory в Redux
     useEffect(() => {
@@ -50,14 +58,16 @@ function FlashcardsPage() {
         moduleId,
         collectionId,
         category,
+        subcategory,
         currentModule: vocabularyData?.moduleId,
         currentCollection: collectionData?.id,
         currentCategory,
+        currentSubcategory,
         hasVocabularyData: !!vocabularyData,
         hasCollectionData: !!collectionData,
-        collectionCategories: collectionData ? Object.keys(collectionData.categories) : [],
+        collectionCategories: collectionData?.categories ? Object.keys(collectionData.categories) : [],
       });
-    }, [moduleId, collectionId, category, vocabularyData, collectionData, currentCategory]);
+    }, [moduleId, collectionId, category, subcategory, vocabularyData, collectionData, currentCategory, currentSubcategory]);
   
   // Логируем состояние для дебага (всегда вызываем useEffect, но логируем только в dev)
   useEffect(() => {
@@ -84,7 +94,7 @@ function FlashcardsPage() {
 
   // Устанавливаем выбранные значения
   // КРИТИЧНО: Проверяем, что значения действительно изменились, чтобы избежать циклов
-  const prevParamsRef = useRef({ moduleId, collectionId, category });
+  const prevParamsRef = useRef({ moduleId, collectionId, category, subcategory });
   const currentModule = useAppSelector((state) => state.vocabulary.currentModule);
   const currentCollection = useAppSelector((state) => state.vocabulary.currentCollection);
   
@@ -93,25 +103,38 @@ function FlashcardsPage() {
     const hasChanged = 
       prevParams.moduleId !== moduleId ||
       prevParams.collectionId !== collectionId ||
-      prevParams.category !== category;
+      prevParams.category !== category ||
+      prevParams.subcategory !== subcategory;
     
-    if (!hasChanged) {
+    // Для Irregular Verbs всегда проверяем состояние, даже если параметры не изменились
+    // (на случай, если состояние было сброшено или установлено неправильно)
+    const shouldCheckIrregularVerbs = isIrregularVerbsMode && (
+      currentCollection !== 'irregular-verbs' ||
+      currentCategory !== WORD_CATEGORIES.VERBS ||
+      currentSubcategory !== WORD_SUBCATEGORIES.IRREGULAR_VERBS
+    );
+    
+    if (!hasChanged && !shouldCheckIrregularVerbs) {
       console.log('⏭️ [FlashcardsPage] Параметры не изменились, пропускаем обновление');
       return; // Параметры не изменились, пропускаем обновление
     }
     
     console.log('🔄 [FlashcardsPage] useEffect установки параметров вызван');
-    console.log('📋 [FlashcardsPage] Параметры:', {
-      moduleId,
-      collectionId,
-      category,
-      prev: prevParams,
-      currentState: {
-        currentModule,
-        currentCollection,
-        currentCategory,
-      },
-    });
+      console.log('📋 [FlashcardsPage] Параметры:', {
+        moduleId,
+        collectionId,
+        category,
+        subcategory,
+        prev: prevParams,
+        currentState: {
+          currentModule,
+          currentCollection,
+          currentCategory,
+          currentSubcategory,
+        },
+        isIrregularVerbsMode,
+        shouldCheckIrregularVerbs,
+      });
     
     try {
       // Устанавливаем модуль только если он изменился И отличается от текущего в state
@@ -127,34 +150,72 @@ function FlashcardsPage() {
         });
       }
       
-      // Устанавливаем подборку только если она изменилась И отличается от текущей в state
-      if (collectionId && collectionId !== prevParams.collectionId && collectionId !== currentCollection) {
-        console.log('⚡ [FlashcardsPage] Диспатчу setCurrentCollection:', collectionId);
-        dispatch(setCurrentCollection(collectionId));
-        console.log('✅ [FlashcardsPage] setCurrentCollection выполнен');
+      // Специальная обработка для режима Irregular Verbs
+      if (isIrregularVerbsMode) {
+        // Устанавливаем collectionId, категорию и подкатегорию для Irregular Verbs
+        // Проверяем, нужно ли обновить состояние (даже если уже установлено, но параметры изменились)
+        const needsUpdate = 
+          currentCollection !== 'irregular-verbs' ||
+          currentCategory !== WORD_CATEGORIES.VERBS ||
+          currentSubcategory !== WORD_SUBCATEGORIES.IRREGULAR_VERBS;
+        
+        if (needsUpdate || shouldCheckIrregularVerbs) {
+          console.log('⚡ [FlashcardsPage] Устанавливаю состояние для Irregular Verbs', {
+            currentCollection,
+            currentCategory,
+            currentSubcategory,
+            needsUpdate,
+            shouldCheckIrregularVerbs,
+          });
+          dispatch(setCurrentCollection('irregular-verbs'));
+          dispatch(setCurrentCategory(WORD_CATEGORIES.VERBS));
+          dispatch(setCurrentSubcategory(WORD_SUBCATEGORIES.IRREGULAR_VERBS));
+          console.log('✅ [FlashcardsPage] Состояние для Irregular Verbs установлено');
+        } else {
+          console.log('⏭️ [FlashcardsPage] Состояние для Irregular Verbs уже установлено правильно');
+        }
       } else {
-        console.log('⏭️ [FlashcardsPage] Подборка не изменилась или уже установлена:', {
-          collectionId,
-          prevCollectionId: prevParams.collectionId,
-          currentCollection,
-        });
+        // Обычная логика для обычных подборок
+        // Устанавливаем подборку только если она изменилась И отличается от текущей в state
+        if (collectionId && collectionId !== prevParams.collectionId && collectionId !== currentCollection) {
+          console.log('⚡ [FlashcardsPage] Диспатчу setCurrentCollection:', collectionId);
+          dispatch(setCurrentCollection(collectionId));
+          console.log('✅ [FlashcardsPage] setCurrentCollection выполнен');
+        } else {
+          console.log('⏭️ [FlashcardsPage] Подборка не изменилась или уже установлена:', {
+            collectionId,
+            prevCollectionId: prevParams.collectionId,
+            currentCollection,
+          });
+        }
+        
+        // Устанавливаем категорию если она изменилась ИЛИ если она не установлена в state
+        // Это важно для первого рендера, когда category из URL есть, но currentCategory в Redux еще null
+        if (category && (category !== prevParams.category || category !== currentCategory)) {
+          console.log('⚡ [FlashcardsPage] Диспатчу setCurrentCategory:', category);
+          dispatch(setCurrentCategory(category as WordCategory));
+          console.log('✅ [FlashcardsPage] setCurrentCategory выполнен');
+        } else {
+          console.log('⏭️ [FlashcardsPage] Категория не изменилась или уже установлена:', {
+            category,
+            prevCategory: prevParams.category,
+            currentCategory,
+          });
+        }
+
+        // Устанавливаем подкатегорию, если она есть в URL
+        if (subcategory && subcategory !== prevParams.subcategory) {
+          console.log('⚡ [FlashcardsPage] Диспатчу setCurrentSubcategory:', subcategory);
+          dispatch(setCurrentSubcategory(subcategory as WordSubcategory | string));
+          console.log('✅ [FlashcardsPage] setCurrentSubcategory выполнен');
+        } else if (!subcategory && currentSubcategory) {
+          // Если в URL подкатегории нет, а в состоянии она установлена — сбрасываем
+          console.log('⚡ [FlashcardsPage] Сбрасываю currentSubcategory (подкатегория не указана в URL)');
+          dispatch(setCurrentSubcategory(null));
+        }
       }
-      
-      // Устанавливаем категорию если она изменилась ИЛИ если она не установлена в state
-      // Это важно для первого рендера, когда category из URL есть, но currentCategory в Redux еще null
-      if (category && (category !== prevParams.category || category !== currentCategory)) {
-        console.log('⚡ [FlashcardsPage] Диспатчу setCurrentCategory:', category);
-        dispatch(setCurrentCategory(category as WordCategory));
-        console.log('✅ [FlashcardsPage] setCurrentCategory выполнен');
-      } else {
-        console.log('⏭️ [FlashcardsPage] Категория не изменилась или уже установлена:', {
-          category,
-          prevCategory: prevParams.category,
-          currentCategory,
-        });
-      }
-      
-      prevParamsRef.current = { moduleId, collectionId, category };
+
+      prevParamsRef.current = { moduleId, collectionId, category, subcategory };
       console.log('🏁 [FlashcardsPage] useEffect установки параметров завершен');
     } catch (error) {
       console.error('❌ [FlashcardsPage] Ошибка при установке параметров:', error);
@@ -211,18 +272,23 @@ function FlashcardsPage() {
             </h1>
             <div className="text-sm text-gray-600">
               <span className="font-medium">{vocabularyData.name}</span>
-              {collectionData && (
+              {isIrregularVerbsMode ? (
+                <>
+                  {' > '}
+                  <span className="font-medium">Irregular Verbs</span>
+                </>
+              ) : collectionData ? (
                 <>
                   {' > '}
                   <span className="font-medium">{collectionData.name}</span>
+                  {category && (
+                    <>
+                      {' > '}
+                      <span className="font-medium capitalize">{category}</span>
+                    </>
+                  )}
                 </>
-              )}
-              {category && (
-                <>
-                  {' > '}
-                  <span className="font-medium capitalize">{category}</span>
-                </>
-              )}
+              ) : null}
             </div>
           </div>
           <button

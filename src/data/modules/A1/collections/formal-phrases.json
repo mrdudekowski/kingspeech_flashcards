@@ -1,0 +1,33 @@
+{
+  "id": "formal-phrases",
+  "name": "Formal Phrases",
+  "description": "Формальные фразы для официального общения уровня A1",
+  "categories": {
+    "phrases": [
+      {
+        "id": "can-you-help-me-1",
+        "english": "Can you help me, please?",
+        "translation": "Вы можете мне помочь, пожалуйста?",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "formal-phrases"
+        ]
+      },
+      {
+        "id": "do-you-speak-english-1",
+        "english": "Do you speak English?",
+        "translation": "Вы говорите по-английски?",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "common",
+          "common-phrases",
+          "formal-phrases"
+        ]
+      }
+    ]
+  }
+}

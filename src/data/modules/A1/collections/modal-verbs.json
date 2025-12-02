@@ -1,0 +1,97 @@
+{
+  "id": "modal-verbs",
+  "name": "Modal Verbs",
+  "description": "Модальные глаголы уровня A1",
+  "categories": {
+    "verbs": [
+      {
+        "id": "can-1",
+        "english": "can",
+        "translation": "мочь / уметь",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      },
+      {
+        "id": "cant-1",
+        "english": "can't",
+        "translation": "не мочь",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      },
+      {
+        "id": "must-1",
+        "english": "must",
+        "translation": "должен",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      },
+      {
+        "id": "mustnt-1",
+        "english": "mustn't",
+        "translation": "нельзя",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      },
+      {
+        "id": "should-1",
+        "english": "should",
+        "translation": "следует",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      },
+      {
+        "id": "shouldnt-1",
+        "english": "shouldn't",
+        "translation": "не следует",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      },
+      {
+        "id": "will-1",
+        "english": "will",
+        "translation": "буду (в будущем времени)",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      },
+      {
+        "id": "wont-1",
+        "english": "won't",
+        "translation": "не буду",
+        "category": "verbs",
+        "subcategory": "modalVerbs",
+        "tags": [
+          "common",
+          "modal-verbs"
+        ]
+      }
+    ]
+  }
+}

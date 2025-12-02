@@ -8,7 +8,6 @@ import type { RootState } from '@/app/store';
 import type { ModuleId, WordCategory, WordSubcategory } from '@/app/constants';
 import type { VocabularyModule, Word } from '@/shared/types';
 import type { VocabularyState } from './types';
-import { getWordsForCollection } from '@/shared/utils/tags';
 import { loadModule, VocabularyLoadError } from '@/services/vocabularyLoader';
 
 const initialState: VocabularyState = {
@@ -70,8 +69,12 @@ const vocabularySlice = createSlice({
     setCurrentCollection: (state, action: PayloadAction<string | null>) => {
       state.currentCollection = action.payload;
       // При смене подборки сбрасываем категорию и подкатегорию
-      state.currentCategory = null;
-      state.currentSubcategory = null;
+      // НО: если это специальная подборка 'irregular-verbs', не сбрасываем
+      // (категория и подкатегория будут установлены отдельно)
+      if (action.payload !== 'irregular-verbs') {
+        state.currentCategory = null;
+        state.currentSubcategory = null;
+      }
     },
 
     // Выбор текущей категории (phrases, verbs, etc.)
@@ -189,9 +192,11 @@ export const selectAllWordsInModule = createSelector([selectVocabularyData], (vo
   // Собираем все слова из всех подборок
   const allWords: Word[] = [];
   vocabularyData.collections.forEach((collection) => {
-    Object.values(collection.categories).forEach((words) => {
-      allWords.push(...words);
-    });
+    if (collection.categories) {
+      Object.values(collection.categories).forEach((words) => {
+        allWords.push(...words);
+      });
+    }
   });
 
   return allWords;
@@ -199,16 +204,15 @@ export const selectAllWordsInModule = createSelector([selectVocabularyData], (vo
 
 /**
  * Селектор для всех слов текущей подборки (без фильтрации по категории)
- * Использует теги для поиска слов, если они есть
+ * Использует структуру коллекций напрямую (Single Source of Truth)
  */
 export const selectCurrentCollectionWords = createSelector(
-  [selectCurrentCollectionData, selectAllWordsInModule, selectCurrentCollectionId],
-  (collectionData, allWords, currentCollection) => {
+  [selectCurrentCollectionData, selectCurrentCollectionId],
+  (collectionData, currentCollection) => {
     if (process.env.NODE_ENV === 'development') {
       console.log('🔄 [selectCurrentCollectionWords] Пересчет:', {
         hasCollectionData: !!collectionData,
         currentCollection,
-        allWordsCount: allWords.length,
       });
     }
     
@@ -220,36 +224,24 @@ export const selectCurrentCollectionWords = createSelector(
       return [];
     }
 
-    // Пытаемся найти слова по тегам (без фильтрации по категории)
-    const taggedWords = getWordsForCollection(allWords, currentCollection);
-    if (process.env.NODE_ENV === 'development') {
-      console.log('🔍 [selectCurrentCollectionWords] Слова по тегам:', taggedWords.length);
-    }
-
-    // Если нашли слова с тегами, возвращаем их
-    if (taggedWords.length > 0) {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('✅ [selectCurrentCollectionWords] Возвращаем слова по тегам:', taggedWords.length);
-      }
-      return taggedWords;
-    }
-
-    // Fallback: собираем все слова из всех категорий подборки
+    // Собираем все слова из всех категорий подборки напрямую из структуры
     const allCollectionWords: Word[] = [];
-    if (process.env.NODE_ENV === 'development') {
-      console.log('🔍 [selectCurrentCollectionWords] Fallback: собираем слова из categories');
-      console.log('📋 [selectCurrentCollectionWords] collectionData.categories:', Object.keys(collectionData.categories));
+    if (collectionData.categories) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('🔍 [selectCurrentCollectionWords] Собираем слова из categories');
+        console.log('📋 [selectCurrentCollectionWords] collectionData.categories:', Object.keys(collectionData.categories));
+      }
+      
+      Object.values(collectionData.categories).forEach((words) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('📦 [selectCurrentCollectionWords] Категория содержит:', words.length, 'слов');
+        }
+        allCollectionWords.push(...words);
+      });
     }
     
-    Object.values(collectionData.categories).forEach((words) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('📦 [selectCurrentCollectionWords] Категория содержит:', words.length, 'слов');
-      }
-      allCollectionWords.push(...words);
-    });
-    
     if (process.env.NODE_ENV === 'development') {
-      console.log('✅ [selectCurrentCollectionWords] Fallback: возвращаем', allCollectionWords.length, 'слов из всех категорий');
+      console.log('✅ [selectCurrentCollectionWords] Возвращаем', allCollectionWords.length, 'слов из всех категорий');
     }
     return allCollectionWords;
   }
@@ -322,11 +314,24 @@ export const selectCurrentSubcategoryWords = createSelector(
 );
 
 /**
- * Селектор для получения слов по тегу подборки (для использования в других компонентах)
+ * Селектор для получения слов по ID коллекции (для использования в других компонентах)
+ * Использует структуру коллекций напрямую
  */
-export const selectWordsByCollectionTag = createSelector(
-  [selectAllWordsInModule, (_: RootState, collectionId: string) => collectionId],
-  (allWords, collectionId) => getWordsForCollection(allWords, collectionId)
+export const selectWordsByCollectionId = createSelector(
+  [selectVocabularyData, (_: RootState, collectionId: string) => collectionId],
+  (vocabularyData, collectionId) => {
+    if (!vocabularyData) return [];
+    
+    const collection = vocabularyData.collections.find(c => c.id === collectionId);
+    if (!collection || !collection.categories) return [];
+    
+    const words: Word[] = [];
+    Object.values(collection.categories).forEach(categoryWords => {
+      words.push(...categoryWords);
+    });
+    
+    return words;
+  }
 );
 
 // Селектор для получения доступных подкатегорий текущей категории
@@ -343,6 +348,78 @@ export const selectAvailableSubcategories = createSelector(
     });
 
     return Array.from(subcategories);
+  }
+);
+
+/**
+ * Селектор для всех неправильных глаголов модуля (из всех коллекций)
+ */
+export const selectAllIrregularVerbsInModule = createSelector(
+  [selectVocabularyData],
+  (vocabularyData) => {
+    if (!vocabularyData) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('⚠️ [selectAllIrregularVerbsInModule] vocabularyData отсутствует');
+      }
+      return [];
+    }
+
+    const irregularVerbs: Word[] = [];
+    vocabularyData.collections.forEach((collection) => {
+      if (collection.categories) {
+        Object.values(collection.categories).forEach((words) => {
+          words.forEach((word) => {
+            if (
+              word.category === 'verbs' &&
+              word.subcategory === 'irregularVerbs' &&
+              word.irregularForms
+            ) {
+              irregularVerbs.push(word);
+            }
+          });
+        });
+      }
+    });
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 [selectAllIrregularVerbsInModule] Найдено неправильных глаголов:', irregularVerbs.length);
+      if (irregularVerbs.length > 0) {
+        console.log('📝 [selectAllIrregularVerbsInModule] Первые 3 глагола:', irregularVerbs.slice(0, 3).map(w => w.english));
+      }
+    }
+
+    return irregularVerbs;
+  }
+);
+
+/**
+ * Селектор для слов, которые должны отображаться в FlashcardDeck
+ * Поддерживает специальный режим Irregular Verbs (когда collectionId === 'irregular-verbs')
+ */
+export const selectWordsForFlashcards = createSelector(
+  [selectCurrentSubcategoryWords, selectAllIrregularVerbsInModule, selectCurrentCollectionId],
+  (subcategoryWords, allIrregularVerbs, currentCollectionId) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔄 [selectWordsForFlashcards] Пересчет:', {
+        currentCollectionId,
+        isIrregularVerbsMode: currentCollectionId === 'irregular-verbs',
+        allIrregularVerbsCount: allIrregularVerbs.length,
+        subcategoryWordsCount: subcategoryWords.length,
+      });
+    }
+
+    // Если мы в режиме Irregular Verbs, возвращаем все неправильные глаголы модуля
+    if (currentCollectionId === 'irregular-verbs') {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('✅ [selectWordsForFlashcards] Режим Irregular Verbs, возвращаем', allIrregularVerbs.length, 'глаголов');
+      }
+      return allIrregularVerbs;
+    }
+    // Иначе используем стандартную логику
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ [selectWordsForFlashcards] Обычный режим, возвращаем', subcategoryWords.length, 'слов');
+    }
+    return subcategoryWords;
   }
 );
 

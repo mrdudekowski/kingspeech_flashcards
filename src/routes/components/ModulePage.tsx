@@ -9,6 +9,8 @@ import {
   selectAllWordsInModule,
   selectVocabularyData,
   setCurrentCollection,
+  setCurrentCategory,
+  setCurrentSubcategory,
 } from '@/features/vocabulary/vocabularySlice';
 import {
   resetWordsProgress,
@@ -16,6 +18,7 @@ import {
   selectCurrentModuleStats,
 } from '@/features/progress/progressSlice';
 import { resetWordStatusesForIds } from '@/features/flashcards/flashcardsSlice';
+import { WORD_CATEGORIES, WORD_SUBCATEGORIES } from '@/app/constants';
 
 function ModulePage() {
   const { moduleId } = useParams<{ moduleId: string }>();
@@ -27,8 +30,15 @@ function ModulePage() {
   const moduleWords = useAppSelector(selectAllWordsInModule);
 
   const handleCollectionSelect = (collectionId: string) => {
-    dispatch(setCurrentCollection(collectionId));
-    navigate(`/module/${moduleId}/${collectionId}`);
+    // Если это irregular-verbs, переходим сразу на flashcards
+    if (collectionId === 'irregular-verbs') {
+      dispatch(setCurrentCategory(WORD_CATEGORIES.VERBS));
+      dispatch(setCurrentSubcategory(WORD_SUBCATEGORIES.IRREGULAR_VERBS));
+      navigate(`/flashcards/${moduleId}/irregular-verbs`);
+    } else {
+      dispatch(setCurrentCollection(collectionId));
+      navigate(`/module/${moduleId}/${collectionId}`);
+    }
   };
 
   const handleResetModuleProgress = () => {

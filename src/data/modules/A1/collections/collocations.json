@@ -1,0 +1,293 @@
+{
+  "id": "collocations",
+  "name": "Collocations",
+  "description": "Коллокации - устойчивые словосочетания уровня A1",
+  "categories": {
+    "phrases": [
+      {
+        "id": "have-breakfast-1",
+        "english": "have breakfast",
+        "translation": "завтракать",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "have-lunch-1",
+        "english": "have lunch",
+        "translation": "обедать",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "have-dinner-1",
+        "english": "have dinner",
+        "translation": "ужинать",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "have-shower-1",
+        "english": "have a shower",
+        "translation": "принимать душ",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "have-bath-1",
+        "english": "have a bath",
+        "translation": "принимать ванну",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "do-homework-1",
+        "english": "do homework",
+        "translation": "делать домашнее задание",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "brush-teeth-1",
+        "english": "brush your teeth",
+        "translation": "чистить зубы",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "go-to-school-1",
+        "english": "go to school",
+        "translation": "идти в школу",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "go-to-work-1",
+        "english": "go to work",
+        "translation": "идти на работу",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "go-home-1",
+        "english": "go home",
+        "translation": "идти домой",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "play-football-1",
+        "english": "play football",
+        "translation": "играть в футбол",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "play-tennis-1",
+        "english": "play tennis",
+        "translation": "играть в теннис",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "play-games-1",
+        "english": "play games",
+        "translation": "играть в игры",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "listen-to-music-1",
+        "english": "listen to music",
+        "translation": "слушать музыку",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "watch-tv-1",
+        "english": "watch TV",
+        "translation": "смотреть телевизор",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "drink-water-1",
+        "english": "drink water",
+        "translation": "пить воду",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "drink-milk-1",
+        "english": "drink milk",
+        "translation": "пить молоко",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "drink-coffee-1",
+        "english": "drink coffee",
+        "translation": "пить кофе",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "eat-apple-1",
+        "english": "eat an apple",
+        "translation": "есть яблоко",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "eat-bread-1",
+        "english": "eat bread",
+        "translation": "есть хлеб",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "eat-rice-1",
+        "english": "eat rice",
+        "translation": "есть рис",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "food",
+          "collocations"
+        ]
+      },
+      {
+        "id": "read-book-1",
+        "english": "read a book",
+        "translation": "читать книгу",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "open-door-1",
+        "english": "open the door",
+        "translation": "открывать дверь",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "close-door-1",
+        "english": "close the door",
+        "translation": "закрывать дверь",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      },
+      {
+        "id": "clean-house-1",
+        "english": "clean the house",
+        "translation": "убирать дом",
+        "category": "phrases",
+        "subcategory": "collocations",
+        "tags": [
+          "common",
+          "collocations"
+        ]
+      }
+    ]
+  }
+}

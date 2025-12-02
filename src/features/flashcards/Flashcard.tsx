@@ -15,10 +15,28 @@ import {
   selectIsReviewingCard,
   selectSpotlightActive,
 } from './flashcardsSlice';
-import { selectCurrentSubcategory } from '@/features/vocabulary/vocabularySlice';
 import { WORD_SUBCATEGORIES } from '@/app/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+
+interface IrregularVerbFormProps {
+  formType: 'past' | 'pastParticiple';
+  value: string;
+  title: string;
+}
+
+function IrregularVerbForm({ value, title }: IrregularVerbFormProps) {
+  return (
+    <div className="glass flex flex-col items-center justify-center px-4 py-3 rounded-xl transition-all duration-200 hover:scale-105">
+      <span className="text-xs font-semibold tracking-wide uppercase text-gray-600 dark:text-gray-400 mb-1">
+        {title}
+      </span>
+      <span className="text-xl font-bold text-gray-800 dark:text-gray-100">
+        {value}
+      </span>
+    </div>
+  );
+}
 
 function Flashcard() {
   const dispatch = useAppDispatch();
@@ -27,7 +45,6 @@ function Flashcard() {
   const displayMode = useAppSelector(selectDisplayMode);
   const wordStatus = useAppSelector(selectCurrentWordStatus);
   const isReviewingCard = useAppSelector(selectIsReviewingCard);
-  const currentSubcategory = useAppSelector(selectCurrentSubcategory);
   const spotlightActive = useAppSelector(selectSpotlightActive);
   const showEnglishOnFront = displayMode === 'english-first';
   
@@ -73,17 +90,58 @@ function Flashcard() {
       return <></>;
     }
 
-    const firstLetter = answerWord[0].toLowerCase();
-    const remainingLetters = answerWord.length - 1;
-    // Создаем подчеркивания с пробелами между ними: "_ _ _"
-    const underscores = remainingLetters > 0 ? '_ '.repeat(remainingLetters).trim() : '';
+    // Обрабатываем каждый символ: буквы заменяем на подчеркивания (кроме первой), 
+    // запятые оставляем, точки заменяем на подчеркивания, пробелы удваиваем
+    let result = '';
+    let isFirstLetter = true;
+    
+    for (let i = 0; i < answerWord.length; i++) {
+      const char = answerWord[i];
+      
+      // Проверяем, является ли символ буквой (латиница или кириллица)
+      const isLetter = /[a-zA-Zа-яА-ЯёЁ]/.test(char);
+      
+      if (isLetter) {
+        if (isFirstLetter) {
+          // Первая буква показывается
+          result += char.toLowerCase();
+          isFirstLetter = false;
+        } else {
+          // Остальные буквы заменяем на подчеркивание (без пробела)
+          result += '_';
+        }
+      } else if (char === ' ') {
+        // Пробел заменяем на два пробела
+        result += '  ';
+        // После пробела следующая буква будет первой в новом слове
+        isFirstLetter = true;
+      } else if (char === ',') {
+        // Запятые оставляем как есть
+        result += char;
+        // После запятой следующая буква будет первой в новом слове
+        isFirstLetter = true;
+      } else if (char === '.') {
+        // Точки заменяем на подчеркивания
+        result += '_';
+        // После точки следующая буква будет первой в новом слове
+        isFirstLetter = true;
+      } else {
+        // Остальные знаки препинания заменяем на подчеркивания
+        result += '_';
+        // После знака препинания следующая буква будет первой в новом слове
+        isFirstLetter = true;
+      }
+    }
+
+    const firstChar = result[0] || '';
+    const remaining = result.slice(1);
 
     return (
-      <span className="text-[1.575rem] font-bold text-yellow-400 dark:text-yellow-300 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] animate-levitation">
-        {firstLetter}
-        {remainingLetters > 0 && (
+      <span className="text-[1.575rem] font-bold text-yellow-400 dark:text-yellow-300 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] animate-levitation whitespace-pre">
+        {firstChar}
+        {remaining && (
           <span className="text-yellow-400 dark:text-yellow-300 opacity-70">
-            {underscores}
+            {remaining}
           </span>
         )}
       </span>
@@ -117,9 +175,7 @@ function Flashcard() {
 
   // Проверяем, является ли карточка неправильным глаголом
   const isIrregularVerb = currentCard?.subcategory === WORD_SUBCATEGORIES.IRREGULAR_VERBS;
-  // Формы показываем только если пользователь находится в категории Irregular Verbs
-  const isInIrregularVerbsCategory = currentSubcategory === WORD_SUBCATEGORIES.IRREGULAR_VERBS;
-  const hasIrregularForms = isIrregularVerb && currentCard?.irregularForms && isInIrregularVerbsCategory;
+  const hasIrregularForms = isIrregularVerb && currentCard?.irregularForms;
 
   if (!currentCard) {
     return (
@@ -170,9 +226,6 @@ function Flashcard() {
             )}
           </div>
           <div className="text-center">
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-              {showEnglishOnFront ? 'Английский' : 'Перевод'}
-            </p>
             <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">
               {showEnglishOnFront ? currentCard.english : currentCard.translation}
             </h2>
@@ -229,18 +282,24 @@ function Flashcard() {
             )}
           </div>
           <div className="text-center">
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-              {showEnglishOnFront ? 'Перевод' : 'Английский'}
-            </p>
             <h2 className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">
               {showEnglishOnFront ? currentCard.translation : currentCard.english}
             </h2>
-            {/* Для неправильных глаголов показываем вторую и третью формы на back side */}
+            {/* Для неправильных глаголов на обратной стороне показываем блок с формами */}
             {hasIrregularForms && (
-              <div className="mt-4 p-4 bg-orange-50 dark:bg-orange-900/30 rounded-lg border-2 border-orange-200 dark:border-orange-700">
-                <p className="text-2xl font-bold text-orange-800 dark:text-orange-200">
-                  {currentCard.irregularForms!.past} - {currentCard.irregularForms!.pastParticiple}
-                </p>
+              <div className="mt-4">
+                <div className="flex flex-col sm:flex-row items-stretch justify-center gap-3">
+                  <IrregularVerbForm
+                    formType="past"
+                    value={currentCard.irregularForms!.past}
+                    title="Past Simple"
+                  />
+                  <IrregularVerbForm
+                    formType="pastParticiple"
+                    value={currentCard.irregularForms!.pastParticiple}
+                    title="Past Participle"
+                  />
+                </div>
               </div>
             )}
             {!showEnglishOnFront && !isIrregularVerb && currentCard.definition && (

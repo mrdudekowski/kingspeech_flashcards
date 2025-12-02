@@ -46,12 +46,15 @@ export interface CategoryData {
 
 /**
  * Подборка слов (тематическая группа)
+ * Может быть определена либо через поле file (ссылка на отдельный файл),
+ * либо через поле categories (встроенные данные)
  */
 export interface Collection {
   id: string; // travelling, food, work, etc.
   name: string; // Travelling, Food, Work, etc.
   description?: string; // Описание подборки
-  categories: CategoryData; // Категории с словами
+  file?: string; // Путь к файлу коллекции относительно папки модуля (например, './collections/basic-verbs.json')
+  categories?: CategoryData; // Категории с словами (опционально, если используется file)
 }
 
 /**

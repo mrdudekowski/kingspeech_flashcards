@@ -1,32 +1,39 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "vocabularyModule.schema.json",
-  "title": "Vocabulary Module Schema",
-  "description": "JSON Schema для валидации модулей словаря (A1, A2, B1, etc.)",
+  "$id": "vocabularyCollection.schema.json",
+  "title": "Vocabulary Collection Schema",
+  "description": "JSON Schema для валидации коллекций словаря (отдельные файлы коллекций)",
   "type": "object",
-  "required": ["moduleId", "name", "collections"],
+  "required": ["id", "name", "categories"],
   "properties": {
-    "moduleId": {
+    "id": {
       "type": "string",
-      "enum": ["A1", "A2", "B1", "B2", "C1", "C2"],
-      "description": "Идентификатор модуля (уровень сложности)"
+      "minLength": 1,
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Идентификатор подборки (только строчные буквы, цифры и дефисы)"
     },
     "name": {
       "type": "string",
       "minLength": 1,
-      "description": "Название модуля"
+      "description": "Название подборки"
     },
     "description": {
       "type": "string",
-      "description": "Описание модуля (опционально)"
+      "description": "Описание подборки (опционально)"
     },
-    "collections": {
-      "type": "array",
-      "minItems": 1,
-      "description": "Массив подборок слов",
-      "items": {
-        "$ref": "#/definitions/Collection"
-      }
+    "categories": {
+      "type": "object",
+      "description": "Объект категорий, где ключ - название категории, значение - массив слов",
+      "patternProperties": {
+        "^(phrases|verbs|nouns|adjectives)$": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/definitions/Word"
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "definitions": {
@@ -95,59 +102,6 @@
         }
       },
       "additionalProperties": false
-    },
-    "CategoryData": {
-      "type": "object",
-      "description": "Объект категорий, где ключ - название категории, значение - массив слов",
-      "patternProperties": {
-        "^(phrases|verbs|nouns|adjectives)$": {
-          "type": "array",
-          "minItems": 0,
-          "items": {
-            "$ref": "#/definitions/Word"
-          }
-        }
-      },
-      "additionalProperties": false
-    },
-    "Collection": {
-      "type": "object",
-      "required": ["id", "name"],
-      "properties": {
-        "id": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "^[a-z0-9-]+$",
-          "description": "Идентификатор подборки (только строчные буквы, цифры и дефисы)"
-        },
-        "name": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Название подборки"
-        },
-        "description": {
-          "type": "string",
-          "description": "Описание подборки (опционально)"
-        },
-        "file": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Путь к файлу коллекции относительно папки модуля (например, './collections/basic-verbs.json')"
-        },
-        "categories": {
-          "$ref": "#/definitions/CategoryData",
-          "description": "Категории слов (опционально, если используется file)"
-        }
-      },
-      "additionalProperties": false,
-      "oneOf": [
-        {
-          "required": ["file"]
-        },
-        {
-          "required": ["categories"]
-        }
-      ]
     }
   },
   "additionalProperties": false
