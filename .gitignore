@@ -24,4 +24,6 @@ node_modules
 /docs
 /vocabularyeditor
 
+# Vocabulary data backups (WORDSMITH)
+src/data/modules/**/collections/backups/
 

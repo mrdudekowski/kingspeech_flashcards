@@ -2,6 +2,7 @@
   "id": "formal-phrases",
   "name": "Formal Phrases",
   "description": "Формальные фразы для официального общения уровня A1",
+  "file": "./collections/formal-phrases.json",
   "categories": {
     "phrases": [
       {
@@ -27,6 +28,13 @@
           "common-phrases",
           "formal-phrases"
         ]
+      },
+      {
+        "id": "do-you-mind-1",
+        "english": "Do you mind? ",
+        "translation": "Вы не против? ",
+        "category": "phrases",
+        "subcategory": "phrasesCommon"
       }
     ]
   }

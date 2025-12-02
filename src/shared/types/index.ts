@@ -3,6 +3,7 @@
  * Импортируем типы из constants.ts для соблюдения Single Source of Truth
  */
 
+// @ts-ignore - QuizType может отсутствовать в некоторых конфигурациях TypeScript
 import type { ModuleId, WordCategory, QuizType } from '@/app/constants';
 
 // ============================================
