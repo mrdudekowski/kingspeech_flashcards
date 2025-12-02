@@ -97,6 +97,7 @@ export type QuizType = typeof QUIZ_TYPES[keyof typeof QUIZ_TYPES];
 export const STORAGE_KEYS = {
   PROGRESS: 'english-learning-progress',
   SETTINGS: 'english-learning-settings',
+  THEME: 'english-learning-theme',
 } as const;
 
 // Настройки приложения

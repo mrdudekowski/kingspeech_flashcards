@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'media', // Используем системные настройки пользователя
+  darkMode: 'class', // Используем класс для переключения темы
   theme: {
     extend: {
       // Настройки для glass-morphism
