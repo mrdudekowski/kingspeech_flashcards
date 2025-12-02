@@ -12,9 +12,9 @@
         "category": "phrases",
         "subcategory": "phrasesFormal",
         "tags": [
-          "common",
-          "common-phrases",
-          "formal-phrases"
+          "topic-relationships",
+          "register-formal",
+          "difficulty-a1"
         ]
       },
       {
@@ -24,9 +24,9 @@
         "category": "phrases",
         "subcategory": "phrasesFormal",
         "tags": [
-          "common",
-          "common-phrases",
-          "formal-phrases"
+          "topic-relationships",
+          "register-formal",
+          "difficulty-a1"
         ]
       },
       {
@@ -34,7 +34,12 @@
         "english": "Do you mind? ",
         "translation": "Вы не против? ",
         "category": "phrases",
-        "subcategory": "phrasesCommon"
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "topic-relationships",
+          "register-formal",
+          "difficulty-a2"
+        ]
       }
     ]
   }

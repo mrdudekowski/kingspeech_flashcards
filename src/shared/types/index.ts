@@ -1,10 +1,15 @@
 /**
- * Общие типы приложения
- * Импортируем типы из constants.ts для соблюдения Single Source of Truth
+ * Общие типы приложения.
+ * ВНИМАНИЕ: этот файл шарится между основным веб-приложением и WORDSMITH.
+ * Поэтому избегаем жёстких импортов типов, которые могут отсутствовать
+ * в разных сборках (например, QuizType, TagId и т.п.).
  */
 
-// @ts-ignore - QuizType может отсутствовать в некоторых конфигурациях TypeScript
-import type { ModuleId, WordCategory, QuizType } from '@/app/constants';
+import type { ModuleId, WordCategory } from '@/app/constants';
+
+// TagId определяется только в среде основного приложения; для WORDSMITH
+// типизированное поле tags здесь оставляем как string[], чтобы избежать
+// жёсткой связки по импорту типов.
 
 // ============================================
 // Типы для словаря
@@ -29,7 +34,7 @@ export interface Word {
   example?: string; // Пример использования (опционально)
   category: WordCategory; // Основная категория: phrases, verbs, nouns, adjectives, adverbs, pronouns, prepositions, conjunctions, interjections, articles, numerals, determiners
   subcategory?: string; // Подкатегория для более тонкой классификации (опционально)
-  tags?: string[]; // Теги для множественных связей с подборками (опционально)
+  tags?: string[]; // Семантические теги (topic/register/function/difficulty)
   irregularForms?: IrregularVerbForms; // Три формы неправильного глагола (опционально, только для irregularVerbs)
 }
 
@@ -85,11 +90,15 @@ export interface WordProgress {
 }
 
 /**
- * Результат квиза
+ * Результат квиза.
+ *
+ * Внимание: тип quizType не жёстко связан с QUIZ_TYPES из constants.ts,
+ * чтобы этот файл можно было переиспользовать в разных окружениях
+ * (основное приложение, WORDSMITH и т.п.).
  */
 export interface QuizResult {
   quizId: string;
-  quizType: QuizType; // multipleChoice или spelling (из constants)
+  quizType: string;
   moduleId: ModuleId;
   collectionId?: string;
   category?: WordCategory;

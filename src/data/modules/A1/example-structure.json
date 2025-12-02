@@ -14,14 +14,14 @@
             "english": "Where is the airport?",
             "translation": "Где аэропорт?",
             "category": "phrases",
-            "tags": ["travelling", "common", "A1"]
+            "tags": ["topic-travel-transport", "difficulty-a1"]
           },
           {
             "id": "need-taxi",
             "english": "I need a taxi",
             "translation": "Мне нужна такси",
             "category": "phrases",
-            "tags": ["travelling", "common", "A1"]
+            "tags": ["topic-travel-transport", "difficulty-a1"]
           }
         ],
         "verbs": [
@@ -31,7 +31,7 @@
             "translation": "спрашивать",
             "category": "verbs",
             "subcategory": "regularVerbs",
-            "tags": ["travelling", "basic-verbs", "common", "A1"]
+            "tags": ["topic-travel-transport", "difficulty-a1"]
           },
           {
             "id": "book-1",
@@ -39,7 +39,7 @@
             "translation": "бронировать",
             "category": "verbs",
             "subcategory": "regularVerbs",
-            "tags": ["travelling", "common", "A1"]
+            "tags": ["topic-travel-transport", "difficulty-a1"]
           }
         ],
         "nouns": [
@@ -49,7 +49,7 @@
             "translation": "паспорт",
             "category": "nouns",
             "subcategory": "countableNouns",
-            "tags": ["travelling", "common", "A1"]
+            "tags": ["topic-travel-transport", "difficulty-a1"]
           }
         ],
         "adjectives": [
@@ -59,7 +59,7 @@
             "translation": "удобный",
             "category": "adjectives",
             "subcategory": "descriptiveAdjectives",
-            "tags": ["travelling", "common", "A1"]
+            "tags": ["topic-travel-transport", "difficulty-a1"]
           }
         ]
       }
@@ -76,7 +76,7 @@
             "translation": "идти, ехать",
             "category": "verbs",
             "subcategory": "irregularVerbs",
-            "tags": ["basic-verbs", "common", "A1"]
+            "tags": ["difficulty-a1"]
           },
           {
             "id": "come-1",
@@ -84,7 +84,7 @@
             "translation": "приходить",
             "category": "verbs",
             "subcategory": "irregularVerbs",
-            "tags": ["basic-verbs", "common", "A1"]
+            "tags": ["difficulty-a1"]
           }
         ]
       }

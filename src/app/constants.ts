@@ -199,6 +199,88 @@ export const CATEGORY_SUBCATEGORIES_MAP: Record<WordCategory, WordSubcategory[]>
   ],
 };
 
+// ========================
+// Семантические теги (topics / register / function / difficulty)
+// Single Source of Truth для всех тегов
+// ========================
+
+export const TAG_TYPES = {
+  TOPIC: 'topic',
+  REGISTER: 'register',
+  FUNCTION: 'function',
+  DIFFICULTY: 'difficulty',
+} as const;
+
+export type TagType = typeof TAG_TYPES[keyof typeof TAG_TYPES];
+
+// Темы (о чём этот юнит/слово)
+export const TAG_TOPICS = {
+  DAILY_ROUTINE: 'topic-daily-routine',
+  HOME: 'topic-home',
+  FAMILY: 'topic-family',
+  FRIENDS_SOCIAL: 'topic-friends-social',
+  SCHOOL_EDUCATION: 'topic-school-education',
+  WORK_BUSINESS: 'topic-work-business',
+  SHOPPING: 'topic-shopping',
+  FOOD_DRINK: 'topic-food-drink',
+  HEALTH_BODY: 'topic-health-body',
+  TRAVEL_TRANSPORT: 'topic-travel-transport',
+  CITY_PLACES: 'topic-city-places',
+  NATURE_WEATHER: 'topic-nature-weather',
+  TECHNOLOGY_INTERNET: 'topic-technology-internet',
+  RELATIONSHIPS: 'topic-relationships',
+  MONEY_FINANCE: 'topic-money-finance',
+  TIME_DATES: 'topic-time-dates',
+} as const;
+
+export type TopicTagId = typeof TAG_TOPICS[keyof typeof TAG_TOPICS];
+
+// Регистр (формальность)
+export const TAG_REGISTERS = {
+  FORMAL: 'register-formal',
+  NEUTRAL: 'register-neutral',
+  INFORMAL: 'register-informal',
+} as const;
+
+export type RegisterTagId = typeof TAG_REGISTERS[keyof typeof TAG_REGISTERS];
+
+// Коммуникативные функции (что делает фраза в общении)
+export const TAG_FUNCTIONS = {
+  REQUEST: 'function-request',
+  PERMISSION: 'function-permission',
+  OFFER: 'function-offer',
+  SUGGESTION: 'function-suggestion',
+  AGREE: 'function-agree',
+  DISAGREE: 'function-disagree',
+  GREETING: 'function-greeting',
+  FAREWELL: 'function-farewell',
+  THANKS: 'function-thanks',
+  APOLOGY: 'function-apology',
+  INTRODUCTION: 'function-introduction',
+  SMALL_TALK: 'function-small-talk',
+  OPINION: 'function-opinion',
+  COMPLAINT: 'function-complaint',
+} as const;
+
+export type FunctionTagId = typeof TAG_FUNCTIONS[keyof typeof TAG_FUNCTIONS];
+
+// Сложность / уровень
+export const TAG_DIFFICULTY = {
+  A1: 'difficulty-a1',
+  A2: 'difficulty-a2',
+  B1: 'difficulty-b1',
+  B2: 'difficulty-b2',
+} as const;
+
+export type DifficultyTagId = typeof TAG_DIFFICULTY[keyof typeof TAG_DIFFICULTY];
+
+// Универсальный тип ID тега
+export type TagId =
+  | TopicTagId
+  | RegisterTagId
+  | FunctionTagId
+  | DifficultyTagId;
+
 // Типы квизов
 export const QUIZ_TYPES = {
   MULTIPLE_CHOICE: 'multipleChoice',

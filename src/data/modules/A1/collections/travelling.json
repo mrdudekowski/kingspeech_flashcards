@@ -1,0 +1,17 @@
+{
+  "id": "travelling",
+  "name": "Travelling",
+  "description": "Подборка для тех, кто хочет не оплошать, заказывая кофе в Лондоне, арендуя мотоцикл в Таиланде, или пересаживаясь на самолёт до Сеула.",
+  "file": "./collections/travelling.json",
+  "categories": {
+    "phrases": [
+      {
+        "id": "take-off-2",
+        "english": "take off ",
+        "translation": "взлететь",
+        "category": "phrases",
+        "subcategory": "phrasesCommon"
+      }
+    ]
+  }
+}

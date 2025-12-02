@@ -84,7 +84,11 @@ A1/
 
 - **НЕ** включать `collectionId` в теги (это дублирование)
 - **НЕ** включать `moduleId` в теги (это дублирование)
-- Использовать только семантические теги: `common`, `daily-life`, `food`, `travel`, и т.д.
+- Использовать только семантические теги по новой системе:
+  - **темы**: `topic-daily-routine`, `topic-food-drink`, `topic-travel-transport`, `topic-work-business` и т.д.
+  - **формальность**: `register-formal`, `register-neutral`, `register-informal`
+  - **коммуникативные функции**: `function-request`, `function-apology`, `function-greeting`, `function-small-talk` и т.п.
+  - **уровень сложности**: `difficulty-a1`, `difficulty-a2`, `difficulty-b1`, ...
 
 ### Генерация ID
 
