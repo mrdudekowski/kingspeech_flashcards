@@ -26,7 +26,7 @@ export interface Word {
   translation: string; // Перевод на русский
   definition?: string; // Определение на английском (опционально)
   example?: string; // Пример использования (опционально)
-  category: WordCategory; // Основная категория: phrases, verbs, nouns, adjectives
+  category: WordCategory; // Основная категория: phrases, verbs, nouns, adjectives, adverbs, pronouns, prepositions, conjunctions, interjections, articles, numerals, determiners
   subcategory?: string; // Подкатегория для более тонкой классификации (опционально)
   tags?: string[]; // Теги для множественных связей с подборками (опционально)
   irregularForms?: IrregularVerbForms; // Три формы неправильного глагола (опционально, только для irregularVerbs)

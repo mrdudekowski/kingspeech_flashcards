@@ -21,6 +21,14 @@ function CategorySelector({ currentCategory }: CategorySelectorProps) {
     verbs: 0,
     nouns: 0,
     adjectives: 0,
+    adverbs: 0,
+    pronouns: 0,
+    prepositions: 0,
+    conjunctions: 0,
+    interjections: 0,
+    articles: 0,
+    numerals: 0,
+    determiners: 0,
   };
 
   collectionWords.forEach((word) => {
@@ -32,6 +40,14 @@ function CategorySelector({ currentCategory }: CategorySelectorProps) {
     verbs: 'Глаголы',
     nouns: 'Существительные',
     adjectives: 'Прилагательные',
+    adverbs: 'Наречия',
+    pronouns: 'Местоимения',
+    prepositions: 'Предлоги',
+    conjunctions: 'Союзы',
+    interjections: 'Междометия',
+    articles: 'Артикли',
+    numerals: 'Числительные',
+    determiners: 'Определители',
   };
 
   const handleCategorySelect = (category: WordCategory) => {
