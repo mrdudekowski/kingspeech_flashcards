@@ -45,7 +45,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          English Learning App
+          English Learning
         </h1>
 
         {/* Redux Store Test */}
@@ -170,7 +170,7 @@ function App() {
               <p className="text-sm font-medium text-gray-700 mb-3">
                 Слова в подборке "{collectionData?.name || currentCollection}" ({collectionWords.length}):
               </p>
-              <div className="max-h-64 overflow-y-auto space-y-2">
+              <div className="max-h-64 overflow-y-auto scrollbar-hide space-y-2">
                 {collectionWords.slice(0, 20).map((word) => (
                   <div
                     key={word.id}
@@ -204,7 +204,7 @@ function App() {
           {/* Текущее состояние */}
           <div className="mt-6 p-4 bg-white rounded-lg">
             <p className="text-sm font-medium text-gray-700 mb-2">Текущее состояние Redux:</p>
-            <pre className="text-xs text-gray-600 overflow-x-auto max-h-64 overflow-y-auto">
+            <pre className="text-xs text-gray-600 overflow-x-auto max-h-64 overflow-y-auto scrollbar-hide">
               {JSON.stringify(
                 {
                   currentModule,

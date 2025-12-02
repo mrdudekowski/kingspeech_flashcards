@@ -407,8 +407,8 @@ function FlashcardDeck() {
       {/* Сообщение о завершении сессии */}
       {isSessionComplete && (
         <div className="mb-6 glass-strong rounded-xl p-6 shadow-lg text-center">
-          <div className="text-6xl mb-4">🎉</div>
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+          <div className="text-6xl text-gray-800 dark:text-gray-300 mb-4">🎉</div>
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
             Поздравляем! Все карточки изучены!
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
