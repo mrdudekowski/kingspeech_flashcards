@@ -1,0 +1,338 @@
+{
+  "id": "family-relationships",
+  "name": "Family and Relationships",
+  "description": "Семья и отношения уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "family-1",
+        "english": "family",
+        "translation": "семья",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a big family.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mother-1",
+        "english": "mother",
+        "translation": "мать",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My mother is a teacher.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mum-1",
+        "english": "mum",
+        "translation": "мама",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "British English informal",
+        "tags": [
+          "topic-family",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mom-1",
+        "english": "mom",
+        "translation": "мама",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English informal",
+        "tags": [
+          "topic-family",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "father-1",
+        "english": "father",
+        "translation": "отец",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My father works in a bank.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dad-1",
+        "english": "dad",
+        "translation": "папа",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My dad is 45 years old.",
+        "tags": [
+          "topic-family",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "parent-1",
+        "english": "parent",
+        "translation": "родитель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My parents live in London.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "child-1",
+        "english": "child",
+        "translation": "ребёнок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "They have one child.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "children-1",
+        "english": "children",
+        "translation": "дети",
+        "category": "nouns",
+        "subcategory": "pluralNouns",
+        "example": "How many children do you have?",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "son-1",
+        "english": "son",
+        "translation": "сын",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have one son.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "daughter-1",
+        "english": "daughter",
+        "translation": "дочь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She has two daughters.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "brother-1",
+        "english": "brother",
+        "translation": "брат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have one brother.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sister-1",
+        "english": "sister",
+        "translation": "сестра",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My sister is 10 years old.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "grandmother-1",
+        "english": "grandmother",
+        "translation": "бабушка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My grandmother is 70.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "grandma-1",
+        "english": "grandma",
+        "translation": "бабушка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "Informal",
+        "tags": [
+          "topic-family",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "grandfather-1",
+        "english": "grandfather",
+        "translation": "дедушка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My grandfather is 75.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "grandpa-1",
+        "english": "grandpa",
+        "translation": "дедушка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "Informal",
+        "tags": [
+          "topic-family",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "baby-1",
+        "english": "baby",
+        "translation": "малыш, младенец",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "They have a baby.",
+        "tags": [
+          "topic-family",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "man-1",
+        "english": "man",
+        "translation": "мужчина",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "That man is my father.",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "woman-1",
+        "english": "woman",
+        "translation": "женщина",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "That woman is my mother.",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "boy-1",
+        "english": "boy",
+        "translation": "мальчик",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The boy is 10 years old.",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "girl-1",
+        "english": "girl",
+        "translation": "девочка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The girl is my sister.",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "people-1",
+        "english": "people",
+        "translation": "люди",
+        "category": "nouns",
+        "subcategory": "pluralNouns",
+        "example": "There are many people here.",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "person-1",
+        "english": "person",
+        "translation": "человек",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Who is that person?",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "friend-1",
+        "english": "friend",
+        "translation": "друг",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She's my best friend.",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "name-1",
+        "english": "name",
+        "translation": "имя",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's your name?",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "age-1",
+        "english": "age",
+        "translation": "возраст",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's your age?",
+        "tags": [
+          "topic-relationships",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

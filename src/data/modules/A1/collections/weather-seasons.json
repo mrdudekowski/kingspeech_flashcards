@@ -1,0 +1,343 @@
+{
+  "id": "weather-seasons",
+  "name": "Weather and Seasons",
+  "description": "Погода и времена года уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "weather-1",
+        "english": "weather",
+        "translation": "погода",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "The weather is nice today.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "rain-1",
+        "english": "rain",
+        "translation": "дождь",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I don't like rain.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "snow-1",
+        "english": "snow",
+        "translation": "снег",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I love snow.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "wind-1",
+        "english": "wind",
+        "translation": "ветер",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "The wind is strong.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ice-1",
+        "english": "ice",
+        "translation": "лёд",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Be careful, there's ice!",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "storm-1",
+        "english": "storm",
+        "translation": "шторм, буря",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There's a storm coming.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "temperature-1",
+        "english": "temperature",
+        "translation": "температура",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's the temperature?",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "degree-1",
+        "english": "degree",
+        "translation": "градус",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "It's 20 degrees today.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "spring-2",
+        "english": "spring",
+        "translation": "весна",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I love spring.",
+        "tags": [
+          "topic-time-dates",
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "summer-2",
+        "english": "summer",
+        "translation": "лето",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Summer is hot.",
+        "tags": [
+          "topic-time-dates",
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "autumn-2",
+        "english": "autumn",
+        "translation": "осень",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "British English",
+        "example": "Autumn is beautiful.",
+        "tags": [
+          "topic-time-dates",
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fall-2",
+        "english": "fall",
+        "translation": "осень",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English",
+        "tags": [
+          "topic-time-dates",
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "winter-2",
+        "english": "winter",
+        "translation": "зима",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Winter is cold.",
+        "tags": [
+          "topic-time-dates",
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "adjectives": [
+      {
+        "id": "sunny-1",
+        "english": "sunny",
+        "translation": "солнечный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's a sunny day.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "rainy-1",
+        "english": "rainy",
+        "translation": "дождливый",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's a rainy day.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "snowy-1",
+        "english": "snowy",
+        "translation": "снежный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's snowy today.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cloudy-1",
+        "english": "cloudy",
+        "translation": "облачный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's cloudy.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "windy-1",
+        "english": "windy",
+        "translation": "ветреный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's very windy.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "foggy-1",
+        "english": "foggy",
+        "translation": "туманный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's foggy this morning.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hot-weather-1",
+        "english": "hot",
+        "translation": "жаркий",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's hot today.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cold-weather-1",
+        "english": "cold",
+        "translation": "холодный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's cold outside.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "warm-weather-1",
+        "english": "warm",
+        "translation": "тёплый",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "The weather is warm.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cool-weather-1",
+        "english": "cool",
+        "translation": "прохладный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's cool today.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dry-1",
+        "english": "dry",
+        "translation": "сухой",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "The weather is dry.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "wet-1",
+        "english": "wet",
+        "translation": "мокрый, влажный",
+        "category": "adjectives",
+        "subcategory": "descriptive",
+        "example": "It's wet outside.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "verbs": [
+      {
+        "id": "rain-2",
+        "english": "rain",
+        "translation": "идти (о дожде)",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "It's raining.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "snow-2",
+        "english": "snow",
+        "translation": "идти (о снеге)",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "It's snowing.",
+        "tags": [
+          "topic-weather",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

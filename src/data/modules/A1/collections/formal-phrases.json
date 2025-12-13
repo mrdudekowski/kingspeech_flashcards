@@ -2,9 +2,21 @@
   "id": "formal-phrases",
   "name": "Formal Phrases",
   "description": "Формальные фразы для официального общения уровня A1",
-  "file": "./collections/formal-phrases.json",
   "categories": {
     "phrases": [
+      {
+        "id": "good-morning-2",
+        "english": "Good morning, Sir/Madam.",
+        "translation": "Доброе утро, сэр/мадам.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-greeting",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
       {
         "id": "can-you-help-me-1",
         "english": "Can you help me, please?",
@@ -13,6 +25,20 @@
         "subcategory": "phrasesFormal",
         "tags": [
           "topic-relationships",
+          "function-request",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "could-you-help-me-1",
+        "english": "Could you help me?",
+        "translation": "Не могли бы вы мне помочь?",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-request",
           "register-formal",
           "difficulty-a1"
         ]
@@ -25,20 +51,165 @@
         "subcategory": "phrasesFormal",
         "tags": [
           "topic-relationships",
+          "function-question",
           "register-formal",
           "difficulty-a1"
         ]
       },
       {
-        "id": "do-you-mind-1",
-        "english": "Do you mind? ",
-        "translation": "Вы не против? ",
+        "id": "im-sorry-1",
+        "english": "I'm sorry.",
+        "translation": "Прошу прощения.",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "phrasesFormal",
         "tags": [
           "topic-relationships",
+          "function-apology",
           "register-formal",
-          "difficulty-a2"
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "i-beg-your-pardon-1",
+        "english": "I beg your pardon.",
+        "translation": "Прошу прощения.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-apology",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "may-i-1",
+        "english": "May I…?",
+        "translation": "Могу я…? / Можно…?",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-request",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "could-i-1",
+        "english": "Could I…?",
+        "translation": "Мог бы я…? / Можно…?",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-request",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "would-you-like-1",
+        "english": "Would you like…?",
+        "translation": "Не хотите ли…?",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-offer",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "yes-please-1",
+        "english": "Yes, please.",
+        "translation": "Да, пожалуйста.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-agreement",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "no-thank-you-1",
+        "english": "No, thank you.",
+        "translation": "Нет, спасибо.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-refusal",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "have-a-good-day-1",
+        "english": "Have a good day.",
+        "translation": "Хорошего дня.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-farewell",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thank-you-very-much-1",
+        "english": "Thank you very much.",
+        "translation": "Большое спасибо.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-thanks",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "im-afraid-1",
+        "english": "I'm afraid…",
+        "translation": "Боюсь, что…",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-refusal",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pardon-me-1",
+        "english": "Pardon me.",
+        "translation": "Простите.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-apology",
+          "register-formal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "certainly-1",
+        "english": "Certainly.",
+        "translation": "Конечно.",
+        "category": "phrases",
+        "subcategory": "phrasesFormal",
+        "tags": [
+          "topic-relationships",
+          "function-agreement",
+          "register-formal",
+          "difficulty-a1"
         ]
       }
     ]

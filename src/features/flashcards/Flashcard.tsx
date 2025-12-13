@@ -17,7 +17,7 @@ import {
 } from './flashcardsSlice';
 import { WORD_SUBCATEGORIES } from '@/app/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 interface IrregularVerbFormProps {
   formType: 'past' | 'pastParticiple';
@@ -51,6 +51,9 @@ function Flashcard() {
   // Состояние для анимации исчезновения буквы
   const [showLetter, setShowLetter] = useState(false);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+  
+  // Состояние для показа примера
+  const [showExample, setShowExample] = useState(false);
 
   // Управление показом буквы с анимацией
   useEffect(() => {
@@ -153,8 +156,15 @@ function Flashcard() {
     dispatch(toggleSpotlight());
   };
 
+  const handleExampleClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Предотвращаем переворот карточки при клике на кнопку
+    setShowExample(!showExample);
+  };
+
   const handleFlip = () => {
     dispatch(flipCard());
+    // Сбрасываем показ примера при перевороте
+    setShowExample(false);
   };
 
   // Определяем, какую плашку показывать
@@ -205,24 +215,40 @@ function Flashcard() {
               {statusBadge.text}
             </div>
           )}
-          {/* Кнопка spotlight и буква-подсказка */}
-          <div className="absolute top-4 left-4 flex items-center gap-3">
-            <button
-              onClick={handleSpotlightClick}
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
-                spotlightActive
-                  ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-950 shadow-lg shadow-yellow-400/50'
-                  : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
-              }`}
-              title="Подсказка: показать первую букву ответа"
-            >
-              <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
-            </button>
-            {/* Буква-подсказка с анимацией */}
-            {showLetter && (
-              <div className={`spotlight-letter ${isAnimatingOut ? 'animate-spotlight-out' : 'animate-spotlight-in'}`}>
-                {renderSpotlightHint()}
-              </div>
+          {/* Кнопки подсказок */}
+          <div className="absolute top-4 left-4 flex flex-col gap-2">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={handleSpotlightClick}
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                  spotlightActive
+                    ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-950 shadow-lg shadow-yellow-400/50'
+                    : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
+                }`}
+                title="Подсказка: показать первую букву ответа"
+              >
+                <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
+              </button>
+              {/* Буква-подсказка с анимацией */}
+              {showLetter && (
+                <div className={`spotlight-letter ${isAnimatingOut ? 'animate-spotlight-out' : 'animate-spotlight-in'}`}>
+                  {renderSpotlightHint()}
+                </div>
+              )}
+            </div>
+            {/* Кнопка примера */}
+            {currentCard.example && (
+              <button
+                onClick={handleExampleClick}
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                  showExample
+                    ? 'bg-blue-400 dark:bg-blue-500 text-white shadow-lg shadow-blue-400/50'
+                    : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
+                }`}
+                title="Показать пример предложения"
+              >
+                <FontAwesomeIcon icon={faQuoteLeft} className="w-4 h-4" />
+              </button>
             )}
           </div>
           <div className="text-center">
@@ -235,10 +261,11 @@ function Flashcard() {
                 {currentCard.definition}
               </p>
             )}
-            {!showEnglishOnFront && currentCard.example && (
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Пример:</p>
-                <p className="text-lg text-gray-800 dark:text-gray-200 italic">
+            {/* Пример предложения внизу при нажатии на кнопку */}
+            {showExample && currentCard.example && (
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg animate-fade-in">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1 font-semibold">Пример:</p>
+                <p className="text-base text-gray-800 dark:text-gray-200 italic">
                   {currentCard.example}
                 </p>
               </div>
@@ -261,24 +288,40 @@ function Flashcard() {
               {statusBadge.text}
             </div>
           )}
-          {/* Кнопка spotlight и буква-подсказка */}
-          <div className="absolute top-4 left-4 flex items-center gap-3">
-            <button
-              onClick={handleSpotlightClick}
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
-                spotlightActive
-                  ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-950 shadow-lg shadow-yellow-400/50'
-                  : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
-              }`}
-              title="Подсказка: показать первую букву ответа"
-            >
-              <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
-            </button>
-            {/* Буква-подсказка с анимацией */}
-            {showLetter && (
-              <div className={`spotlight-letter ${isAnimatingOut ? 'animate-spotlight-out' : 'animate-spotlight-in'}`}>
-                {renderSpotlightHint()}
-              </div>
+          {/* Кнопки подсказок */}
+          <div className="absolute top-4 left-4 flex flex-col gap-2">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={handleSpotlightClick}
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                  spotlightActive
+                    ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-950 shadow-lg shadow-yellow-400/50'
+                    : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
+                }`}
+                title="Подсказка: показать первую букву ответа"
+              >
+                <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
+              </button>
+              {/* Буква-подсказка с анимацией */}
+              {showLetter && (
+                <div className={`spotlight-letter ${isAnimatingOut ? 'animate-spotlight-out' : 'animate-spotlight-in'}`}>
+                  {renderSpotlightHint()}
+                </div>
+              )}
+            </div>
+            {/* Кнопка примера */}
+            {currentCard.example && (
+              <button
+                onClick={handleExampleClick}
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                  showExample
+                    ? 'bg-blue-400 dark:bg-blue-500 text-white shadow-lg shadow-blue-400/50'
+                    : 'bg-gray-200 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-slate-600'
+                }`}
+                title="Показать пример предложения"
+              >
+                <FontAwesomeIcon icon={faQuoteLeft} className="w-4 h-4" />
+              </button>
             )}
           </div>
           <div className="text-center">
@@ -307,10 +350,11 @@ function Flashcard() {
                 {currentCard.definition}
               </p>
             )}
-            {showEnglishOnFront && !isIrregularVerb && currentCard.example && (
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Пример:</p>
-                <p className="text-lg text-gray-800 dark:text-gray-200 italic">
+            {/* Пример предложения внизу при нажатии на кнопку */}
+            {showExample && currentCard.example && (
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg animate-fade-in">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1 font-semibold">Пример:</p>
+                <p className="text-base text-gray-800 dark:text-gray-200 italic">
                   {currentCard.example}
                 </p>
               </div>

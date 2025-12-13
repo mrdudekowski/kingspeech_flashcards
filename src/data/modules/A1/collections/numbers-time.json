@@ -1,0 +1,826 @@
+{
+  "id": "numbers-time",
+  "name": "Numbers and Time",
+  "description": "Числа, время и даты уровня A1",
+  "categories": {
+    "numerals": [
+      {
+        "id": "zero-1",
+        "english": "zero",
+        "translation": "ноль",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "one-1",
+        "english": "one",
+        "translation": "один",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "two-1",
+        "english": "two",
+        "translation": "два",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "three-1",
+        "english": "three",
+        "translation": "три",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "four-1",
+        "english": "four",
+        "translation": "четыре",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "five-1",
+        "english": "five",
+        "translation": "пять",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "six-1",
+        "english": "six",
+        "translation": "шесть",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "seven-1",
+        "english": "seven",
+        "translation": "семь",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "eight-1",
+        "english": "eight",
+        "translation": "восемь",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nine-1",
+        "english": "nine",
+        "translation": "девять",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ten-1",
+        "english": "ten",
+        "translation": "десять",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "eleven-1",
+        "english": "eleven",
+        "translation": "одиннадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "twelve-1",
+        "english": "twelve",
+        "translation": "двенадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thirteen-1",
+        "english": "thirteen",
+        "translation": "тринадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fourteen-1",
+        "english": "fourteen",
+        "translation": "четырнадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fifteen-1",
+        "english": "fifteen",
+        "translation": "пятнадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sixteen-1",
+        "english": "sixteen",
+        "translation": "шестнадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "seventeen-1",
+        "english": "seventeen",
+        "translation": "семнадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "eighteen-1",
+        "english": "eighteen",
+        "translation": "восемнадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nineteen-1",
+        "english": "nineteen",
+        "translation": "девятнадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "twenty-1",
+        "english": "twenty",
+        "translation": "двадцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thirty-1",
+        "english": "thirty",
+        "translation": "тридцать",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "forty-1",
+        "english": "forty",
+        "translation": "сорок",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fifty-1",
+        "english": "fifty",
+        "translation": "пятьдесят",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sixty-1",
+        "english": "sixty",
+        "translation": "шестьдесят",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "seventy-1",
+        "english": "seventy",
+        "translation": "семьдесят",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "eighty-1",
+        "english": "eighty",
+        "translation": "восемьдесят",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ninety-1",
+        "english": "ninety",
+        "translation": "девяносто",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hundred-1",
+        "english": "hundred",
+        "translation": "сто",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "example": "one hundred",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thousand-1",
+        "english": "thousand",
+        "translation": "тысяча",
+        "category": "numerals",
+        "subcategory": "cardinalNumbers",
+        "example": "one thousand",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "first-1",
+        "english": "first",
+        "translation": "первый",
+        "category": "numerals",
+        "subcategory": "ordinalNumbers",
+        "example": "My birthday is on the first of May.",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "second-1",
+        "english": "second",
+        "translation": "второй",
+        "category": "numerals",
+        "subcategory": "ordinalNumbers",
+        "example": "It's on the second floor.",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "third-1",
+        "english": "third",
+        "translation": "третий",
+        "category": "numerals",
+        "subcategory": "ordinalNumbers",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "nouns": [
+      {
+        "id": "number-1",
+        "english": "number",
+        "translation": "число, номер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's your phone number?",
+        "tags": [
+          "topic-numbers",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tuesday-1",
+        "english": "Tuesday",
+        "translation": "вторник",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "wednesday-1",
+        "english": "Wednesday",
+        "translation": "среда",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thursday-1",
+        "english": "Thursday",
+        "translation": "четверг",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "friday-1",
+        "english": "Friday",
+        "translation": "пятница",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "saturday-1",
+        "english": "Saturday",
+        "translation": "суббота",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sunday-1",
+        "english": "Sunday",
+        "translation": "воскресенье",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "february-1",
+        "english": "February",
+        "translation": "февраль",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "march-1",
+        "english": "March",
+        "translation": "март",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "april-1",
+        "english": "April",
+        "translation": "апрель",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "may-1",
+        "english": "May",
+        "translation": "май",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "june-1",
+        "english": "June",
+        "translation": "июнь",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "july-1",
+        "english": "July",
+        "translation": "июль",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "august-1",
+        "english": "August",
+        "translation": "август",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "september-1",
+        "english": "September",
+        "translation": "сентябрь",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "october-1",
+        "english": "October",
+        "translation": "октябрь",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "november-1",
+        "english": "November",
+        "translation": "ноябрь",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "december-1",
+        "english": "December",
+        "translation": "декабрь",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hour-1",
+        "english": "hour",
+        "translation": "час",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The lesson is one hour long.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "minute-1",
+        "english": "minute",
+        "translation": "минута",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Wait a minute!",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "second-2",
+        "english": "second",
+        "translation": "секунда",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Just a second, please.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "oclock-1",
+        "english": "o'clock",
+        "translation": "часов (ровно)",
+        "category": "nouns",
+        "example": "It's three o'clock.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "half-1",
+        "english": "half",
+        "translation": "половина",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "It's half past three.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "quarter-1",
+        "english": "quarter",
+        "translation": "четверть",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "It's quarter past five.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "morning-1",
+        "english": "morning",
+        "translation": "утро",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Good morning!",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "afternoon-1",
+        "english": "afternoon",
+        "translation": "день (после полудня)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "See you this afternoon.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "evening-1",
+        "english": "evening",
+        "translation": "вечер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I watch TV in the evening.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "night-1",
+        "english": "night",
+        "translation": "ночь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Good night!",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "today-1",
+        "english": "today",
+        "translation": "сегодня",
+        "category": "nouns",
+        "example": "What day is it today?",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tomorrow-1",
+        "english": "tomorrow",
+        "translation": "завтра",
+        "category": "nouns",
+        "example": "See you tomorrow!",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "yesterday-1",
+        "english": "yesterday",
+        "translation": "вчера",
+        "category": "nouns",
+        "example": "I saw him yesterday.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "week-1",
+        "english": "week",
+        "translation": "неделя",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I see my friends every week.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "weekend-1",
+        "english": "weekend",
+        "translation": "выходные",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What do you do at the weekend?",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "month-1",
+        "english": "month",
+        "translation": "месяц",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My birthday is next month.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "year-1",
+        "english": "year",
+        "translation": "год",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm 15 years old.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "date-1",
+        "english": "date",
+        "translation": "дата",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's the date today?",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "clock-1",
+        "english": "clock",
+        "translation": "часы (настенные)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Look at the clock on the wall.",
+        "tags": [
+          "topic-time-dates",
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "watch-2",
+        "english": "watch",
+        "translation": "часы (наручные)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a new watch.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "season-1",
+        "english": "season",
+        "translation": "сезон, время года",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My favorite season is summer.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

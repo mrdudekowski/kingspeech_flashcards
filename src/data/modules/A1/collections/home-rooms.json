@@ -1,0 +1,238 @@
+{
+  "id": "home-rooms",
+  "name": "Home and Rooms",
+  "description": "Дом, комнаты и мебель уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "home-1",
+        "english": "home",
+        "translation": "дом, жилище",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm at home.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "house-1",
+        "english": "house",
+        "translation": "дом",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I live in a big house.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "room-1",
+        "english": "room",
+        "translation": "комната",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My room is small.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bedroom-1",
+        "english": "bedroom",
+        "translation": "спальня",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There are three bedrooms in my house.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "kitchen-1",
+        "english": "kitchen",
+        "translation": "кухня",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We cook in the kitchen.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bathroom-1",
+        "english": "bathroom",
+        "translation": "ванная комната",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The bathroom is upstairs.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "living-room-1",
+        "english": "living room",
+        "translation": "гостиная",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We watch TV in the living room.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "door-1",
+        "english": "door",
+        "translation": "дверь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Close the door, please.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "window-1",
+        "english": "window",
+        "translation": "окно",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Open the window.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "floor-1",
+        "english": "floor",
+        "translation": "пол, этаж",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I live on the second floor.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "wall-1",
+        "english": "wall",
+        "translation": "стена",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There's a picture on the wall.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "table-1",
+        "english": "table",
+        "translation": "стол",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The book is on the table.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "chair-1",
+        "english": "chair",
+        "translation": "стул",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Sit on this chair.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bed-1",
+        "english": "bed",
+        "translation": "кровать",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to bed at 10 p.m.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sofa-1",
+        "english": "sofa",
+        "translation": "диван",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Sit on the sofa.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "desk-1",
+        "english": "desk",
+        "translation": "письменный стол",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I do my homework at my desk.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "lamp-1",
+        "english": "lamp",
+        "translation": "лампа",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Turn on the lamp.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tv-1",
+        "english": "TV",
+        "translation": "телевизор",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I watch TV every evening.",
+        "tags": [
+          "topic-home",
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "garden-1",
+        "english": "garden",
+        "translation": "сад",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We have a small garden.",
+        "tags": [
+          "topic-home",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

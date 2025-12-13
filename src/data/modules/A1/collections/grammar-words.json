@@ -1,0 +1,877 @@
+{
+  "id": "grammar-words",
+  "name": "Grammar Words",
+  "description": "Грамматические слова уровня A1: местоимения, предлоги, союзы, артикли, вопросительные слова, наречия",
+  "categories": {
+    "pronouns": [
+      {
+        "id": "i-1",
+        "english": "I",
+        "translation": "я",
+        "category": "pronouns",
+        "subcategory": "personalPronouns",
+        "example": "I am a student.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "you-1",
+        "english": "you",
+        "translation": "ты, вы",
+        "category": "pronouns",
+        "subcategory": "personalPronouns",
+        "example": "You are my friend.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "he-1",
+        "english": "he",
+        "translation": "он",
+        "category": "pronouns",
+        "subcategory": "personalPronouns",
+        "example": "He is a teacher.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "she-1",
+        "english": "she",
+        "translation": "она",
+        "category": "pronouns",
+        "subcategory": "personalPronouns",
+        "example": "She is my sister.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "it-1",
+        "english": "it",
+        "translation": "он, она, оно (для неодушевлённых)",
+        "category": "pronouns",
+        "subcategory": "personalPronouns",
+        "example": "It is a cat.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "we-1",
+        "english": "we",
+        "translation": "мы",
+        "category": "pronouns",
+        "subcategory": "personalPronouns",
+        "example": "We are students.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "they-1",
+        "english": "they",
+        "translation": "они",
+        "category": "pronouns",
+        "subcategory": "personalPronouns",
+        "example": "They are my friends.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "me-1",
+        "english": "me",
+        "translation": "мне, меня",
+        "category": "pronouns",
+        "subcategory": "objectPronouns",
+        "example": "Call me later.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "him-1",
+        "english": "him",
+        "translation": "ему, его",
+        "category": "pronouns",
+        "subcategory": "objectPronouns",
+        "example": "I like him.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "her-1",
+        "english": "her",
+        "translation": "ей, её",
+        "category": "pronouns",
+        "subcategory": "objectPronouns",
+        "example": "I know her.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "us-1",
+        "english": "us",
+        "translation": "нам, нас",
+        "category": "pronouns",
+        "subcategory": "objectPronouns",
+        "example": "Come with us.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "them-1",
+        "english": "them",
+        "translation": "им, их",
+        "category": "pronouns",
+        "subcategory": "objectPronouns",
+        "example": "I like them.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "my-1",
+        "english": "my",
+        "translation": "мой",
+        "category": "pronouns",
+        "subcategory": "possessiveAdjectives",
+        "example": "This is my book.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "your-1",
+        "english": "your",
+        "translation": "твой, ваш",
+        "category": "pronouns",
+        "subcategory": "possessiveAdjectives",
+        "example": "What's your name?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "his-1",
+        "english": "his",
+        "translation": "его",
+        "category": "pronouns",
+        "subcategory": "possessiveAdjectives",
+        "example": "This is his car.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "her-2",
+        "english": "her",
+        "translation": "её",
+        "category": "pronouns",
+        "subcategory": "possessiveAdjectives",
+        "example": "That's her bag.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "its-1",
+        "english": "its",
+        "translation": "его, её (для неодушевлённых)",
+        "category": "pronouns",
+        "subcategory": "possessiveAdjectives",
+        "example": "The dog is in its house.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "our-1",
+        "english": "our",
+        "translation": "наш",
+        "category": "pronouns",
+        "subcategory": "possessiveAdjectives",
+        "example": "This is our school.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "their-1",
+        "english": "their",
+        "translation": "их",
+        "category": "pronouns",
+        "subcategory": "possessiveAdjectives",
+        "example": "That's their house.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mine-1",
+        "english": "mine",
+        "translation": "мой",
+        "category": "pronouns",
+        "subcategory": "possessivePronouns",
+        "example": "This book is mine.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "yours-1",
+        "english": "yours",
+        "translation": "твой, ваш",
+        "category": "pronouns",
+        "subcategory": "possessivePronouns",
+        "example": "Is this pen yours?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "this-1",
+        "english": "this",
+        "translation": "это, этот",
+        "category": "pronouns",
+        "subcategory": "demonstrativePronouns",
+        "example": "This is my friend.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "that-1",
+        "english": "that",
+        "translation": "то, тот",
+        "category": "pronouns",
+        "subcategory": "demonstrativePronouns",
+        "example": "That is my house.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "these-1",
+        "english": "these",
+        "translation": "эти",
+        "category": "pronouns",
+        "subcategory": "demonstrativePronouns",
+        "example": "These are my books.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "those-1",
+        "english": "those",
+        "translation": "те",
+        "category": "pronouns",
+        "subcategory": "demonstrativePronouns",
+        "example": "Those are my friends.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "who-1",
+        "english": "who",
+        "translation": "кто",
+        "category": "pronouns",
+        "subcategory": "interrogativePronouns",
+        "example": "Who is that?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "what-1",
+        "english": "what",
+        "translation": "что, какой",
+        "category": "pronouns",
+        "subcategory": "interrogativePronouns",
+        "example": "What is this?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "where-1",
+        "english": "where",
+        "translation": "где, куда",
+        "category": "pronouns",
+        "subcategory": "interrogativePronouns",
+        "example": "Where are you from?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "when-1",
+        "english": "when",
+        "translation": "когда",
+        "category": "pronouns",
+        "subcategory": "interrogativePronouns",
+        "example": "When is your birthday?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "why-1",
+        "english": "why",
+        "translation": "почему",
+        "category": "pronouns",
+        "subcategory": "interrogativePronouns",
+        "example": "Why are you sad?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "how-1",
+        "english": "how",
+        "translation": "как",
+        "category": "pronouns",
+        "subcategory": "interrogativePronouns",
+        "example": "How are you?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "which-1",
+        "english": "which",
+        "translation": "который, какой",
+        "category": "pronouns",
+        "subcategory": "interrogativePronouns",
+        "example": "Which book do you want?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "prepositions": [
+      {
+        "id": "in-1",
+        "english": "in",
+        "translation": "в, через",
+        "category": "prepositions",
+        "example": "I live in London.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "on-1",
+        "english": "on",
+        "translation": "на",
+        "category": "prepositions",
+        "example": "The book is on the table.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "at-1",
+        "english": "at",
+        "translation": "в, у, на",
+        "category": "prepositions",
+        "example": "I'm at school.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "from-1",
+        "english": "from",
+        "translation": "из, от",
+        "category": "prepositions",
+        "example": "I'm from Russia.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "to-1",
+        "english": "to",
+        "translation": "к, в",
+        "category": "prepositions",
+        "example": "I go to school.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "with-1",
+        "english": "with",
+        "translation": "с",
+        "category": "prepositions",
+        "example": "I live with my parents.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "for-1",
+        "english": "for",
+        "translation": "для",
+        "category": "prepositions",
+        "example": "This is for you.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "about-1",
+        "english": "about",
+        "translation": "о, около",
+        "category": "prepositions",
+        "example": "Tell me about your family.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "of-1",
+        "english": "of",
+        "translation": "из, о",
+        "category": "prepositions",
+        "example": "A cup of tea.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "by-1",
+        "english": "by",
+        "translation": "у, около, посредством",
+        "category": "prepositions",
+        "example": "I go to work by bus.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "under-1",
+        "english": "under",
+        "translation": "под",
+        "category": "prepositions",
+        "example": "The cat is under the table.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "over-1",
+        "english": "over",
+        "translation": "над",
+        "category": "prepositions",
+        "example": "The picture is over the sofa.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "above-1",
+        "english": "above",
+        "translation": "над, выше",
+        "category": "prepositions",
+        "example": "The sky is above us.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "below-1",
+        "english": "below",
+        "translation": "под, ниже",
+        "category": "prepositions",
+        "example": "See below for more information.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "between-1",
+        "english": "between",
+        "translation": "между",
+        "category": "prepositions",
+        "example": "The shop is between the bank and the post office.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "next-to-1",
+        "english": "next to",
+        "translation": "рядом с",
+        "category": "prepositions",
+        "example": "I sit next to Anna.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "in-front-of-1",
+        "english": "in front of",
+        "translation": "перед",
+        "category": "prepositions",
+        "example": "The car is in front of the house.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "behind-1",
+        "english": "behind",
+        "translation": "за, позади",
+        "category": "prepositions",
+        "example": "The garden is behind the house.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "near-1",
+        "english": "near",
+        "translation": "рядом, около",
+        "category": "prepositions",
+        "example": "I live near the school.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "conjunctions": [
+      {
+        "id": "and-1",
+        "english": "and",
+        "translation": "и",
+        "category": "conjunctions",
+        "example": "I have a cat and a dog.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "but-1",
+        "english": "but",
+        "translation": "но",
+        "category": "conjunctions",
+        "example": "I like tea but I don't like coffee.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "or-1",
+        "english": "or",
+        "translation": "или",
+        "category": "conjunctions",
+        "example": "Tea or coffee?",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "because-1",
+        "english": "because",
+        "translation": "потому что",
+        "category": "conjunctions",
+        "example": "I'm happy because it's sunny.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "so-1",
+        "english": "so",
+        "translation": "поэтому, так",
+        "category": "conjunctions",
+        "example": "I'm tired, so I'm going to bed.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "if-1",
+        "english": "if",
+        "translation": "если",
+        "category": "conjunctions",
+        "example": "If you're hungry, eat something.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "articles": [
+      {
+        "id": "a-1",
+        "english": "a",
+        "translation": "(неопределённый артикль)",
+        "category": "articles",
+        "example": "I have a cat.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "an-1",
+        "english": "an",
+        "translation": "(неопределённый артикль перед гласными)",
+        "category": "articles",
+        "example": "I have an apple.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "the-1",
+        "english": "the",
+        "translation": "(определённый артикль)",
+        "category": "articles",
+        "example": "The sun is shining.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "adverbs": [
+      {
+        "id": "very-1",
+        "english": "very",
+        "translation": "очень",
+        "category": "adverbs",
+        "subcategory": "intensifiers",
+        "example": "I'm very happy.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "really-1",
+        "english": "really",
+        "translation": "действительно, очень",
+        "category": "adverbs",
+        "subcategory": "intensifiers",
+        "example": "It's really hot today.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "too-1",
+        "english": "too",
+        "translation": "слишком, тоже",
+        "category": "adverbs",
+        "subcategory": "intensifiers",
+        "example": "It's too cold.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "also-1",
+        "english": "also",
+        "translation": "также",
+        "category": "adverbs",
+        "subcategory": "additive",
+        "example": "I also like pizza.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "always-1",
+        "english": "always",
+        "translation": "всегда",
+        "category": "adverbs",
+        "subcategory": "frequency",
+        "example": "I always have breakfast.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "often-1",
+        "english": "often",
+        "translation": "часто",
+        "category": "adverbs",
+        "subcategory": "frequency",
+        "example": "I often go to the cinema.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sometimes-1",
+        "english": "sometimes",
+        "translation": "иногда",
+        "category": "adverbs",
+        "subcategory": "frequency",
+        "example": "I sometimes eat pizza.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "never-1",
+        "english": "never",
+        "translation": "никогда",
+        "category": "adverbs",
+        "subcategory": "frequency",
+        "example": "I never eat meat.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "usually-1",
+        "english": "usually",
+        "translation": "обычно",
+        "category": "adverbs",
+        "subcategory": "frequency",
+        "example": "I usually have lunch at 1 p.m.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "here-1",
+        "english": "here",
+        "translation": "здесь",
+        "category": "adverbs",
+        "subcategory": "place",
+        "example": "Come here!",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "there-1",
+        "english": "there",
+        "translation": "там",
+        "category": "adverbs",
+        "subcategory": "place",
+        "example": "My house is over there.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "now-1",
+        "english": "now",
+        "translation": "сейчас",
+        "category": "adverbs",
+        "subcategory": "time",
+        "example": "I'm busy now.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "then-1",
+        "english": "then",
+        "translation": "тогда, затем",
+        "category": "adverbs",
+        "subcategory": "time",
+        "example": "I'll see you then.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "again-1",
+        "english": "again",
+        "translation": "снова, опять",
+        "category": "adverbs",
+        "subcategory": "time",
+        "example": "Say that again, please.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

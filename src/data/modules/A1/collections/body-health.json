@@ -1,0 +1,436 @@
+{
+  "id": "body-health",
+  "name": "Body and Health",
+  "description": "Части тела и здоровье уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "body-1",
+        "english": "body",
+        "translation": "тело",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The human body has many parts.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "head-1",
+        "english": "head",
+        "translation": "голова",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My head hurts.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hair-1",
+        "english": "hair",
+        "translation": "волосы",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "She has long hair.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "face-1",
+        "english": "face",
+        "translation": "лицо",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Wash your face.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "eye-1",
+        "english": "eye",
+        "translation": "глаз",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She has blue eyes.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ear-1",
+        "english": "ear",
+        "translation": "ухо",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have pain in my ear.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nose-1",
+        "english": "nose",
+        "translation": "нос",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My nose is cold.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mouth-1",
+        "english": "mouth",
+        "translation": "рот",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Open your mouth.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tooth-1",
+        "english": "tooth",
+        "translation": "зуб",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a bad tooth.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "teeth-1",
+        "english": "teeth",
+        "translation": "зубы",
+        "category": "nouns",
+        "subcategory": "pluralNouns",
+        "example": "Brush your teeth.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "neck-1",
+        "english": "neck",
+        "translation": "шея",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My neck hurts.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "shoulder-1",
+        "english": "shoulder",
+        "translation": "плечо",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She touched my shoulder.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "arm-1",
+        "english": "arm",
+        "translation": "рука (от плеча до кисти)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Raise your arms.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hand-1",
+        "english": "hand",
+        "translation": "рука (кисть)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Wash your hands.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "finger-1",
+        "english": "finger",
+        "translation": "палец (на руке)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I hurt my finger.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "leg-1",
+        "english": "leg",
+        "translation": "нога",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My legs are tired.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "foot-1",
+        "english": "foot",
+        "translation": "ступня",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My foot hurts.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "knee-1",
+        "english": "knee",
+        "translation": "колено",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I fell and hurt my knee.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "back-1",
+        "english": "back",
+        "translation": "спина",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My back hurts.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "stomach-1",
+        "english": "stomach",
+        "translation": "живот, желудок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a stomach ache.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "doctor-1",
+        "english": "doctor",
+        "translation": "врач",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I need to see a doctor.",
+        "tags": [
+          "topic-health-body",
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nurse-1",
+        "english": "nurse",
+        "translation": "медсестра, медбрат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The nurse is very kind.",
+        "tags": [
+          "topic-health-body",
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hospital-1",
+        "english": "hospital",
+        "translation": "больница",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is in the hospital.",
+        "tags": [
+          "topic-health-body",
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "medicine-1",
+        "english": "medicine",
+        "translation": "лекарство",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Take your medicine.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pain-1",
+        "english": "pain",
+        "translation": "боль",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I have pain in my leg.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cold-2",
+        "english": "cold",
+        "translation": "простуда",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a cold.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fever-1",
+        "english": "fever",
+        "translation": "температура, лихорадка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She has a fever.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "headache-1",
+        "english": "headache",
+        "translation": "головная боль",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a terrible headache.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "toothache-1",
+        "english": "toothache",
+        "translation": "зубная боль",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a toothache.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "adjectives": [
+      {
+        "id": "sick-1",
+        "english": "sick",
+        "translation": "больной",
+        "category": "adjectives",
+        "subcategory": "healthState",
+        "example": "I feel sick.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ill-1",
+        "english": "ill",
+        "translation": "больной",
+        "category": "adjectives",
+        "subcategory": "healthState",
+        "example": "She is ill today.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "healthy-1",
+        "english": "healthy",
+        "translation": "здоровый",
+        "category": "adjectives",
+        "subcategory": "healthState",
+        "example": "I want to be healthy.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "well-1",
+        "english": "well",
+        "translation": "здоровый, хорошо себя чувствующий",
+        "category": "adjectives",
+        "subcategory": "healthState",
+        "example": "I don't feel well.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "verbs": [
+      {
+        "id": "hurt-1",
+        "english": "hurt",
+        "translation": "болеть, причинять боль",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "My head hurts.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "feel-1",
+        "english": "feel",
+        "translation": "чувствовать себя",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I feel tired.",
+        "tags": [
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

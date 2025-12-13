@@ -1,0 +1,265 @@
+{
+  "id": "colors-shapes",
+  "name": "Colors and Shapes",
+  "description": "Основные цвета и геометрические фигуры уровня A1",
+  "categories": {
+    "adjectives": [
+      {
+        "id": "red-1",
+        "english": "red",
+        "translation": "красный",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "I have a red car.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "blue-1",
+        "english": "blue",
+        "translation": "синий / голубой",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "The sky is blue.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "green-1",
+        "english": "green",
+        "translation": "зелёный",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "I like green apples.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "yellow-1",
+        "english": "yellow",
+        "translation": "жёлтый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "The sun is yellow.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "orange-1",
+        "english": "orange",
+        "translation": "оранжевый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "I have an orange T-shirt.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "purple-1",
+        "english": "purple",
+        "translation": "фиолетовый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "She likes purple flowers.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pink-1",
+        "english": "pink",
+        "translation": "розовый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "My bag is pink.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "brown-1",
+        "english": "brown",
+        "translation": "коричневый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "He has brown eyes.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "black-1",
+        "english": "black",
+        "translation": "чёрный",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "I wear black shoes.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "white-1",
+        "english": "white",
+        "translation": "белый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "The snow is white.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "grey-1",
+        "english": "grey",
+        "translation": "серый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "example": "The sky is grey today.",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "gray-1",
+        "english": "gray",
+        "translation": "серый",
+        "category": "adjectives",
+        "subcategory": "colors",
+        "definition": "American spelling of grey",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "nouns": [
+      {
+        "id": "color-1",
+        "english": "color",
+        "translation": "цвет",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's your favorite color?",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "colour-1",
+        "english": "colour",
+        "translation": "цвет",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "British spelling of color",
+        "tags": [
+          "topic-colors",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "circle-1",
+        "english": "circle",
+        "translation": "круг",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Draw a circle.",
+        "tags": [
+          "topic-shapes",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "square-1",
+        "english": "square",
+        "translation": "квадрат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "A square has four sides.",
+        "tags": [
+          "topic-shapes",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "triangle-1",
+        "english": "triangle",
+        "translation": "треугольник",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "A triangle has three sides.",
+        "tags": [
+          "topic-shapes",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "rectangle-1",
+        "english": "rectangle",
+        "translation": "прямоугольник",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The table is a rectangle.",
+        "tags": [
+          "topic-shapes",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "star-1",
+        "english": "star",
+        "translation": "звезда",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I can see the stars at night.",
+        "tags": [
+          "topic-shapes",
+          "topic-nature-weather",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "heart-1",
+        "english": "heart",
+        "translation": "сердце",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Draw a heart shape.",
+        "tags": [
+          "topic-shapes",
+          "topic-health-body",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "shape-1",
+        "english": "shape",
+        "translation": "форма",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What shape is it?",
+        "tags": [
+          "topic-shapes",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

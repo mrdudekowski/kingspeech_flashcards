@@ -1,0 +1,513 @@
+{
+  "id": "animals-nature",
+  "name": "Animals and Nature",
+  "description": "Животные и природа уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "animal-1",
+        "english": "animal",
+        "translation": "животное",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I like animals.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dog-1",
+        "english": "dog",
+        "translation": "собака",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a dog.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cat-1",
+        "english": "cat",
+        "translation": "кошка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My cat is black.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bird-1",
+        "english": "bird",
+        "translation": "птица",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I see a bird.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fish-2",
+        "english": "fish",
+        "translation": "рыба",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have three fish.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "horse-1",
+        "english": "horse",
+        "translation": "лошадь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I can ride a horse.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cow-1",
+        "english": "cow",
+        "translation": "корова",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Cows give milk.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pig-1",
+        "english": "pig",
+        "translation": "свинья",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Pigs live on a farm.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sheep-1",
+        "english": "sheep",
+        "translation": "овца",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I see many sheep.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "chicken-1",
+        "english": "chicken",
+        "translation": "курица",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We have chickens.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "rabbit-1",
+        "english": "rabbit",
+        "translation": "кролик",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a pet rabbit.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mouse-1",
+        "english": "mouse",
+        "translation": "мышь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There's a mouse!",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "elephant-1",
+        "english": "elephant",
+        "translation": "слон",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Elephants are big.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "lion-1",
+        "english": "lion",
+        "translation": "лев",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Lions are strong.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tiger-1",
+        "english": "tiger",
+        "translation": "тигр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I see a tiger at the zoo.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "monkey-1",
+        "english": "monkey",
+        "translation": "обезьяна",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Monkeys are funny.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bear-1",
+        "english": "bear",
+        "translation": "медведь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I saw a bear.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "snake-1",
+        "english": "snake",
+        "translation": "змея",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I don't like snakes.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "butterfly-1",
+        "english": "butterfly",
+        "translation": "бабочка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The butterfly is beautiful.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bee-1",
+        "english": "bee",
+        "translation": "пчела",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Bees make honey.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pet-1",
+        "english": "pet",
+        "translation": "домашнее животное",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Do you have a pet?",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "zoo-1",
+        "english": "zoo",
+        "translation": "зоопарк",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's go to the zoo.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "farm-1",
+        "english": "farm",
+        "translation": "ферма",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I live on a farm.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nature-1",
+        "english": "nature",
+        "translation": "природа",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I love nature.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tree-1",
+        "english": "tree",
+        "translation": "дерево",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There's a big tree.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "flower-1",
+        "english": "flower",
+        "translation": "цветок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I like flowers.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "grass-1",
+        "english": "grass",
+        "translation": "трава",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "The grass is green.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "plant-1",
+        "english": "plant",
+        "translation": "растение",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have many plants.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "leaf-1",
+        "english": "leaf",
+        "translation": "лист",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The leaf is yellow.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "forest-1",
+        "english": "forest",
+        "translation": "лес",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We walk in the forest.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mountain-1",
+        "english": "mountain",
+        "translation": "гора",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I see a mountain.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "river-1",
+        "english": "river",
+        "translation": "река",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The river is long.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "lake-1",
+        "english": "lake",
+        "translation": "озеро",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There's a lake near here.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sea-1",
+        "english": "sea",
+        "translation": "море",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I love the sea.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ocean-1",
+        "english": "ocean",
+        "translation": "океан",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The ocean is big.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "island-1",
+        "english": "island",
+        "translation": "остров",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I live on an island.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sky-1",
+        "english": "sky",
+        "translation": "небо",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The sky is blue.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sun-1",
+        "english": "sun",
+        "translation": "солнце",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The sun is hot.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "moon-1",
+        "english": "moon",
+        "translation": "луна",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I see the moon.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "star-2",
+        "english": "star",
+        "translation": "звезда",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There are many stars.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cloud-1",
+        "english": "cloud",
+        "translation": "облако",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I see white clouds.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "world-1",
+        "english": "world",
+        "translation": "мир",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I travel the world.",
+        "tags": [
+          "topic-nature",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

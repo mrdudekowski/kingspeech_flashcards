@@ -1,16 +1,509 @@
 {
   "id": "travelling",
-  "name": "Travelling",
-  "description": "Подборка для тех, кто хочет не оплошать, заказывая кофе в Лондоне, арендуя мотоцикл в Таиланде, или пересаживаясь на самолёт до Сеула.",
-  "file": "./collections/travelling.json",
+  "name": "Travel and Transport",
+  "description": "Путешествия и транспорт уровня A1",
   "categories": {
+    "nouns": [
+      {
+        "id": "car-2",
+        "english": "car",
+        "translation": "машина, автомобиль",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to work by car.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bus-1",
+        "english": "bus",
+        "translation": "автобус",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I take the bus to school.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "train-1",
+        "english": "train",
+        "translation": "поезд",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The train leaves at 8 o'clock.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "plane-1",
+        "english": "plane",
+        "translation": "самолёт",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm going to Paris by plane.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bike-2",
+        "english": "bike",
+        "translation": "велосипед",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I ride my bike every day.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bicycle-1",
+        "english": "bicycle",
+        "translation": "велосипед",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She has a new bicycle.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "taxi-1",
+        "english": "taxi",
+        "translation": "такси",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's take a taxi.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "metro-1",
+        "english": "metro",
+        "translation": "метро",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I go by metro.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "subway-1",
+        "english": "subway",
+        "translation": "метро",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "definition": "American English for metro",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ship-1",
+        "english": "ship",
+        "translation": "корабль",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We travelled by ship.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "boat-1",
+        "english": "boat",
+        "translation": "лодка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "They have a small boat.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "airport-1",
+        "english": "airport",
+        "translation": "аэропорт",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm at the airport.",
+        "tags": [
+          "topic-travel-transport",
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "station-1",
+        "english": "station",
+        "translation": "станция, вокзал",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Meet me at the station.",
+        "tags": [
+          "topic-travel-transport",
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "stop-1",
+        "english": "stop",
+        "translation": "остановка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The bus stop is near my house.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ticket-1",
+        "english": "ticket",
+        "translation": "билет",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I need to buy a ticket.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hotel-1",
+        "english": "hotel",
+        "translation": "гостиница, отель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We're staying at a hotel.",
+        "tags": [
+          "topic-travel-transport",
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tourist-1",
+        "english": "tourist",
+        "translation": "турист",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There are many tourists here.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "passport-1",
+        "english": "passport",
+        "translation": "паспорт",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I need my passport.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "luggage-1",
+        "english": "luggage",
+        "translation": "багаж",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Where's my luggage?",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "suitcase-1",
+        "english": "suitcase",
+        "translation": "чемодан",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have two suitcases.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "trip-1",
+        "english": "trip",
+        "translation": "поездка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Have a nice trip!",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "journey-1",
+        "english": "journey",
+        "translation": "путешествие, поездка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "It's a long journey.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "holiday-1",
+        "english": "holiday",
+        "translation": "отпуск, каникулы",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm on holiday.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "vacation-1",
+        "english": "vacation",
+        "translation": "отпуск, каникулы",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English for holiday",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "map-1",
+        "english": "map",
+        "translation": "карта",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I need a map of the city.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "driver-1",
+        "english": "driver",
+        "translation": "водитель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The bus driver is nice.",
+        "tags": [
+          "topic-travel-transport",
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "road-1",
+        "english": "road",
+        "translation": "дорога",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The road is busy.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "street-1",
+        "english": "street",
+        "translation": "улица",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I live on Main Street.",
+        "tags": [
+          "topic-travel-transport",
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "verbs": [
+      {
+        "id": "travel-1",
+        "english": "travel",
+        "translation": "путешествовать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I love to travel.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "visit-2",
+        "english": "visit",
+        "translation": "посещать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I want to visit London.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "arrive-1",
+        "english": "arrive",
+        "translation": "прибывать, приезжать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "What time do we arrive?",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "leave-1",
+        "english": "leave",
+        "translation": "уезжать, покидать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "What time does the train leave?",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ride-1",
+        "english": "ride",
+        "translation": "ехать (на велосипеде, лошади)",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I can ride a bike.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "drive-1",
+        "english": "drive",
+        "translation": "водить (машину)",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I can't drive.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fly-1",
+        "english": "fly",
+        "translation": "летать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I'm flying to New York.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      }
+    ],
     "phrases": [
       {
-        "id": "take-off-2",
-        "english": "take off ",
-        "translation": "взлететь",
+        "id": "by-car-1",
+        "english": "by car",
+        "translation": "на машине",
         "category": "phrases",
-        "subcategory": "phrasesCommon"
+        "subcategory": "phrasesCommon",
+        "example": "I go to work by car.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "by-bus-1",
+        "english": "by bus",
+        "translation": "на автобусе",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "example": "I go to school by bus.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "by-train-1",
+        "english": "by train",
+        "translation": "на поезде",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "example": "We travelled by train.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "by-plane-1",
+        "english": "by plane",
+        "translation": "на самолёте",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "example": "I'm going by plane.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "on-foot-1",
+        "english": "on foot",
+        "translation": "пешком",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "example": "I go to school on foot.",
+        "tags": [
+          "topic-travel-transport",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "have-a-nice-trip-1",
+        "english": "Have a nice trip!",
+        "translation": "Счастливого пути!",
+        "category": "phrases",
+        "subcategory": "phrasesCommon",
+        "tags": [
+          "topic-travel-transport",
+          "function-wishes",
+          "difficulty-a1"
+        ]
       }
     ]
   }

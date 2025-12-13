@@ -4,22 +4,112 @@
   "description": "Базовый уровень английского языка - основные слова и фразы для начинающих",
   "collections": [
     {
-      "id": "basic-verbs",
-      "name": "Basic English Verbs",
-      "description": "Основные английские глаголы уровня A1",
-      "file": "./collections/basic-verbs.json"
+      "id": "grammar-words",
+      "name": "Grammar Words",
+      "description": "Грамматические слова уровня A1: местоимения, предлоги, союзы, артикли, вопросительные слова, наречия",
+      "file": "./collections/grammar-words.json"
     },
     {
-      "id": "daily-life",
-      "name": "Daily Life",
-      "description": "Слова и фразы для повседневной жизни",
-      "file": "./collections/daily-life.json"
+      "id": "numbers-time",
+      "name": "Numbers and Time",
+      "description": "Числа, время и даты уровня A1",
+      "file": "./collections/numbers-time.json"
     },
     {
-      "id": "irregular-verbs",
-      "name": "Irregular Verbs",
-      "description": "Неправильные глаголы уровня A1",
-      "file": "./collections/irregular-verbs.json"
+      "id": "colors-shapes",
+      "name": "Colors and Shapes",
+      "description": "Основные цвета и геометрические фигуры уровня A1",
+      "file": "./collections/colors-shapes.json"
+    },
+    {
+      "id": "family-relationships",
+      "name": "Family and Relationships",
+      "description": "Семья и отношения уровня A1",
+      "file": "./collections/family-relationships.json"
+    },
+    {
+      "id": "home-rooms",
+      "name": "Home and Rooms",
+      "description": "Дом, комнаты и мебель уровня A1",
+      "file": "./collections/home-rooms.json"
+    },
+    {
+      "id": "food-drink",
+      "name": "Food and Drink",
+      "description": "Еда и напитки уровня A1",
+      "file": "./collections/food-drink.json"
+    },
+    {
+      "id": "clothes-accessories",
+      "name": "Clothes and Accessories",
+      "description": "Одежда и аксессуары уровня A1",
+      "file": "./collections/clothes-accessories.json"
+    },
+    {
+      "id": "body-health",
+      "name": "Body and Health",
+      "description": "Части тела и здоровье уровня A1",
+      "file": "./collections/body-health.json"
+    },
+    {
+      "id": "feelings-descriptions",
+      "name": "Feelings and Descriptions",
+      "description": "Чувства, эмоции и описательные прилагательные уровня A1",
+      "file": "./collections/feelings-descriptions.json"
+    },
+    {
+      "id": "education-school",
+      "name": "Education and School",
+      "description": "Образование и школа уровня A1",
+      "file": "./collections/education-school.json"
+    },
+    {
+      "id": "work-professions",
+      "name": "Work and Professions",
+      "description": "Работа и профессии уровня A1",
+      "file": "./collections/work-professions.json"
+    },
+    {
+      "id": "sports-hobbies",
+      "name": "Sports and Hobbies",
+      "description": "Спорт и хобби уровня A1",
+      "file": "./collections/sports-hobbies.json"
+    },
+    {
+      "id": "places-town",
+      "name": "Places and Town",
+      "description": "Места и город уровня A1",
+      "file": "./collections/places-town.json"
+    },
+    {
+      "id": "animals-nature",
+      "name": "Animals and Nature",
+      "description": "Животные и природа уровня A1",
+      "file": "./collections/animals-nature.json"
+    },
+    {
+      "id": "weather-seasons",
+      "name": "Weather and Seasons",
+      "description": "Погода и времена года уровня A1",
+      "file": "./collections/weather-seasons.json"
+    },
+    {
+      "id": "technology-communication",
+      "name": "Technology and Communication",
+      "description": "Технологии и коммуникация уровня A1",
+      "file": "./collections/technology-communication.json"
+    },
+    {
+      "id": "travelling",
+      "name": "Travel and Transport",
+      "description": "Путешествия и транспорт уровня A1",
+      "file": "./collections/travelling.json"
+    },
+    {
+      "id": "everyday-verbs",
+      "name": "Everyday Verbs",
+      "description": "Повседневные глаголы уровня A1 - правильные, неправильные и фразовые",
+      "file": "./collections/everyday-verbs.json"
     },
     {
       "id": "modal-verbs",
@@ -28,27 +118,9 @@
       "file": "./collections/modal-verbs.json"
     },
     {
-      "id": "phrasal-verbs",
-      "name": "Phrasal Verbs",
-      "description": "Фразовые глаголы уровня A1",
-      "file": "./collections/phrasal-verbs.json"
-    },
-    {
-      "id": "expressions",
-      "name": "Expressions",
-      "description": "Выражения и фразы для общения уровня A1",
-      "file": "./collections/expressions.json"
-    },
-    {
-      "id": "collocations",
-      "name": "Collocations",
-      "description": "Коллокации - устойчивые словосочетания уровня A1",
-      "file": "./collections/collocations.json"
-    },
-    {
       "id": "common-phrases",
       "name": "Common Phrases",
-      "description": "Обычные фразы для повседневного общения уровня A1",
+      "description": "Распространённые фразы для повседневного общения уровня A1",
       "file": "./collections/common-phrases.json"
     },
     {
@@ -64,16 +136,10 @@
       "file": "./collections/informal-phrases.json"
     },
     {
-      "id": "clothes-accessories",
-      "name": "Clothes and accessories",
-      "description": "Одежда и аксессуары",
-      "file": "./collections/clothes-accessories.json"
-    },
-    {
-      "id": "travelling",
-      "name": "Travelling",
-      "description": "Подборка для тех, кто хочет не оплошать, заказывая кофе в Лондоне, арендуя мотоцикл в Таиланде, или пересаживаясь на самолёт до Сеула.",
-      "file": "./collections/travelling.json"
+      "id": "collocations",
+      "name": "Collocations",
+      "description": "Коллокации - устойчивые словосочетания уровня A1",
+      "file": "./collections/collocations.json"
     }
   ]
 }

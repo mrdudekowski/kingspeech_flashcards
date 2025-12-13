@@ -1,0 +1,393 @@
+{
+  "id": "work-professions",
+  "name": "Work and Professions",
+  "description": "Работа и профессии уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "work-2",
+        "english": "work",
+        "translation": "работа",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I have a lot of work.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "job-1",
+        "english": "job",
+        "translation": "работа, должность",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a new job.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "office-1",
+        "english": "office",
+        "translation": "офис",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I work in an office.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "boss-1",
+        "english": "boss",
+        "translation": "начальник",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My boss is nice.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "manager-1",
+        "english": "manager",
+        "translation": "менеджер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She is a manager.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "worker-1",
+        "english": "worker",
+        "translation": "работник",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is a factory worker.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "doctor-2",
+        "english": "doctor",
+        "translation": "врач",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I want to be a doctor.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nurse-2",
+        "english": "nurse",
+        "translation": "медсестра, медбрат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The nurse is very kind.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "teacher-2",
+        "english": "teacher",
+        "translation": "учитель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She is a teacher.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "engineer-1",
+        "english": "engineer",
+        "translation": "инженер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My brother is an engineer.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "driver-2",
+        "english": "driver",
+        "translation": "водитель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is a bus driver.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cook-3",
+        "english": "cook",
+        "translation": "повар",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She works as a cook.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "waiter-1",
+        "english": "waiter",
+        "translation": "официант",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The waiter is friendly.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "waitress-1",
+        "english": "waitress",
+        "translation": "официантка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She is a waitress.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "shop-assistant-1",
+        "english": "shop assistant",
+        "translation": "продавец",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm a shop assistant.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "police-officer-1",
+        "english": "police officer",
+        "translation": "полицейский",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is a police officer.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "firefighter-1",
+        "english": "firefighter",
+        "translation": "пожарный",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Firefighters are brave.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "lawyer-1",
+        "english": "lawyer",
+        "translation": "юрист, адвокат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My sister is a lawyer.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "artist-1",
+        "english": "artist",
+        "translation": "художник",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She is an artist.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "musician-1",
+        "english": "musician",
+        "translation": "музыкант",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is a musician.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "actor-1",
+        "english": "actor",
+        "translation": "актёр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I want to be an actor.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "actress-1",
+        "english": "actress",
+        "translation": "актриса",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She is a famous actress.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "writer-1",
+        "english": "writer",
+        "translation": "писатель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My mother is a writer.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "businessman-1",
+        "english": "businessman",
+        "translation": "бизнесмен",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is a businessman.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "businesswoman-1",
+        "english": "businesswoman",
+        "translation": "бизнесвумен",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She is a businesswoman.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "farmer-1",
+        "english": "farmer",
+        "translation": "фермер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My grandfather is a farmer.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hairdresser-1",
+        "english": "hairdresser",
+        "translation": "парикмахер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to the hairdresser.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dentist-1",
+        "english": "dentist",
+        "translation": "стоматолог",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I visit the dentist.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pilot-1",
+        "english": "pilot",
+        "translation": "пилот",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is a pilot.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "company-1",
+        "english": "company",
+        "translation": "компания",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I work for a big company.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "business-1",
+        "english": "business",
+        "translation": "бизнес, дело",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He has his own business.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "money-1",
+        "english": "money",
+        "translation": "деньги",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I need money.",
+        "tags": [
+          "topic-money-finance",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

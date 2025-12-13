@@ -1,0 +1,430 @@
+{
+  "id": "education-school",
+  "name": "Education and School",
+  "description": "Образование и школа уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "school-1",
+        "english": "school",
+        "translation": "школа",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to school every day.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "student-1",
+        "english": "student",
+        "translation": "студент, ученик",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I am a student.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "teacher-1",
+        "english": "teacher",
+        "translation": "учитель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My teacher is very good.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "class-1",
+        "english": "class",
+        "translation": "класс, урок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have English class today.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "lesson-1",
+        "english": "lesson",
+        "translation": "урок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The lesson starts at 9 a.m.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "classroom-1",
+        "english": "classroom",
+        "translation": "классная комната",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Our classroom is big.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "book-1",
+        "english": "book",
+        "translation": "книга",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I read this book.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "notebook-1",
+        "english": "notebook",
+        "translation": "тетрадь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I write in my notebook.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pen-1",
+        "english": "pen",
+        "translation": "ручка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I need a pen.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pencil-1",
+        "english": "pencil",
+        "translation": "карандаш",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Write with a pencil.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "paper-1",
+        "english": "paper",
+        "translation": "бумага",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I need some paper.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "homework-1",
+        "english": "homework",
+        "translation": "домашняя работа",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I do my homework every evening.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "test-1",
+        "english": "test",
+        "translation": "тест, контрольная",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We have a test tomorrow.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "exam-1",
+        "english": "exam",
+        "translation": "экзамен",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The exam is on Friday.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "question-1",
+        "english": "question",
+        "translation": "вопрос",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a question.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "answer-2",
+        "english": "answer",
+        "translation": "ответ",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's the answer?",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "word-1",
+        "english": "word",
+        "translation": "слово",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I know this word.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "language-1",
+        "english": "language",
+        "translation": "язык",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "English is a language.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "english-1",
+        "english": "English",
+        "translation": "английский язык",
+        "category": "nouns",
+        "subcategory": "properNouns",
+        "example": "I study English.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "math-1",
+        "english": "math",
+        "translation": "математика",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "definition": "American English",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "maths-1",
+        "english": "maths",
+        "translation": "математика",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "definition": "British English",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "history-1",
+        "english": "history",
+        "translation": "история",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I like history.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "science-1",
+        "english": "science",
+        "translation": "наука",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Science is interesting.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "art-1",
+        "english": "art",
+        "translation": "искусство, рисование",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I have art class today.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "music-1",
+        "english": "music",
+        "translation": "музыка",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I love music.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "subject-1",
+        "english": "subject",
+        "translation": "предмет (учебный)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My favourite subject is English.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "university-1",
+        "english": "university",
+        "translation": "университет",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She goes to university.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "college-1",
+        "english": "college",
+        "translation": "колледж",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is in college.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "library-1",
+        "english": "library",
+        "translation": "библиотека",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to the library.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dictionary-1",
+        "english": "dictionary",
+        "translation": "словарь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Use a dictionary.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "desk-2",
+        "english": "desk",
+        "translation": "парта, письменный стол",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Sit at your desk.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "board-1",
+        "english": "board",
+        "translation": "доска",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Write on the board.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "computer-1",
+        "english": "computer",
+        "translation": "компьютер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I use a computer.",
+        "tags": [
+          "topic-school-education",
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bag-1",
+        "english": "bag",
+        "translation": "сумка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My bag is heavy.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "backpack-1",
+        "english": "backpack",
+        "translation": "рюкзак",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I carry a backpack.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

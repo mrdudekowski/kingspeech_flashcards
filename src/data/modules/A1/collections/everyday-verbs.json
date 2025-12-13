@@ -1,0 +1,875 @@
+{
+  "id": "everyday-verbs",
+  "name": "Everyday Verbs",
+  "description": "Повседневные глаголы уровня A1 - правильные, неправильные и фразовые",
+  "categories": {
+    "verbs": [
+      {
+        "id": "be-1",
+        "english": "be",
+        "translation": "быть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I am a student.",
+        "tags": [
+          "topic-grammar",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "have-1",
+        "english": "have",
+        "translation": "иметь",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I have a cat.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "do-1",
+        "english": "do",
+        "translation": "делать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "What do you do?",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "go-1",
+        "english": "go",
+        "translation": "идти, ехать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I go to school every day.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "see-1",
+        "english": "see",
+        "translation": "видеть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I see a bird.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "say-1",
+        "english": "say",
+        "translation": "говорить, сказать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "What did you say?",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "get-1",
+        "english": "get",
+        "translation": "получать, становиться",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I get up at 7 a.m.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "make-1",
+        "english": "make",
+        "translation": "делать, готовить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I make breakfast.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "take-1",
+        "english": "take",
+        "translation": "брать, взять",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Take your book.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "come-1",
+        "english": "come",
+        "translation": "приходить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Come here!",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "give-1",
+        "english": "give",
+        "translation": "давать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Give me your book.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "eat-1",
+        "english": "eat",
+        "translation": "есть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I eat breakfast at 7.",
+        "tags": [
+          "topic-food-drink",
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "drink-1",
+        "english": "drink",
+        "translation": "пить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I drink water every day.",
+        "tags": [
+          "topic-food-drink",
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sleep-1",
+        "english": "sleep",
+        "translation": "спать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I sleep 8 hours a day.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "read-1",
+        "english": "read",
+        "translation": "читать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I read books.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "buy-1",
+        "english": "buy",
+        "translation": "покупать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I buy food every week.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "play-1",
+        "english": "play",
+        "translation": "играть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I play football.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "watch-1",
+        "english": "watch",
+        "translation": "смотреть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I watch TV every evening.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "listen-1",
+        "english": "listen",
+        "translation": "слушать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I listen to music.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "talk-1",
+        "english": "talk",
+        "translation": "говорить, разговаривать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I talk to my friends.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "work-1",
+        "english": "work",
+        "translation": "работать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I work every day.",
+        "tags": [
+          "topic-work-business",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "like-1",
+        "english": "like",
+        "translation": "нравиться",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I like pizza.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "love-2",
+        "english": "love",
+        "translation": "любить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I love chocolate.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hate-1",
+        "english": "hate",
+        "translation": "ненавидеть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I hate Mondays.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "want-1",
+        "english": "want",
+        "translation": "хотеть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I want some water.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "need-1",
+        "english": "need",
+        "translation": "нуждаться",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I need help.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "live-1",
+        "english": "live",
+        "translation": "жить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I live in Moscow.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "clean-1",
+        "english": "clean",
+        "translation": "убирать, чистить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I clean my room.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "open-1",
+        "english": "open",
+        "translation": "открывать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Open the window.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "close-1",
+        "english": "close",
+        "translation": "закрывать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Close the door.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "help-1",
+        "english": "help",
+        "translation": "помогать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Can you help me?",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "start-1",
+        "english": "start",
+        "translation": "начинать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Let's start!",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "finish-1",
+        "english": "finish",
+        "translation": "заканчивать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I finish work at 5 p.m.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "visit-1",
+        "english": "visit",
+        "translation": "навещать, посещать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I visit my grandmother.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "call-1",
+        "english": "call",
+        "translation": "звонить, называть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Call me later.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "look-1",
+        "english": "look",
+        "translation": "смотреть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Look at me!",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "walk-1",
+        "english": "walk",
+        "translation": "идти пешком, ходить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I walk to school.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "wait-1",
+        "english": "wait",
+        "translation": "ждать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Wait for me!",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cook-1",
+        "english": "cook",
+        "translation": "готовить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I cook dinner.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dance-1",
+        "english": "dance",
+        "translation": "танцевать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I love to dance.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "get-up-1",
+        "english": "get up",
+        "translation": "вставать",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "I get up at 7 a.m.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "wake-up-1",
+        "english": "wake up",
+        "translation": "просыпаться",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "I wake up early.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "go-out-1",
+        "english": "go out",
+        "translation": "выходить, выходить гулять",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Let's go out tonight.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "come-in-1",
+        "english": "come in",
+        "translation": "входить",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Come in!",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sit-down-1",
+        "english": "sit down",
+        "translation": "садиться",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Sit down, please.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "stand-up-1",
+        "english": "stand up",
+        "translation": "вставать (на ноги)",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Stand up!",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "put-on-1",
+        "english": "put on",
+        "translation": "надевать",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Put on your jacket.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "take-off-1",
+        "english": "take off",
+        "translation": "снимать (одежду)",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Take off your shoes.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "turn-on-1",
+        "english": "turn on",
+        "translation": "включать",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Turn on the TV.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "turn-off-1",
+        "english": "turn off",
+        "translation": "выключать",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "Turn off the light.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "look-for-1",
+        "english": "look for",
+        "translation": "искать",
+        "category": "verbs",
+        "subcategory": "phrasalVerbs",
+        "example": "I'm looking for my keys.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "write-1",
+        "english": "write",
+        "translation": "писать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I write emails.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "speak-1",
+        "english": "speak",
+        "translation": "говорить (на языке)",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I speak English.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "know-1",
+        "english": "know",
+        "translation": "знать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I know him.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "think-1",
+        "english": "think",
+        "translation": "думать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I think it's good.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "run-1",
+        "english": "run",
+        "translation": "бегать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I run every morning.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "swim-1",
+        "english": "swim",
+        "translation": "плавать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I can swim.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sit-1",
+        "english": "sit",
+        "translation": "сидеть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Sit here.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "stand-1",
+        "english": "stand",
+        "translation": "стоять",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Stand up!",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sing-1",
+        "english": "sing",
+        "translation": "петь",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I sing in the shower.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tell-1",
+        "english": "tell",
+        "translation": "рассказывать, говорить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Tell me a story.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ask-1",
+        "english": "ask",
+        "translation": "спрашивать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Ask the teacher.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "answer-1",
+        "english": "answer",
+        "translation": "отвечать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Answer the question.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "study-1",
+        "english": "study",
+        "translation": "учиться, изучать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I study English.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "learn-1",
+        "english": "learn",
+        "translation": "учиться, учить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I learn new words.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "teach-1",
+        "english": "teach",
+        "translation": "учить, преподавать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "She teaches English.",
+        "tags": [
+          "topic-school-education",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "draw-1",
+        "english": "draw",
+        "translation": "рисовать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I like to draw.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "understand-1",
+        "english": "understand",
+        "translation": "понимать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I understand you.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "find-1",
+        "english": "find",
+        "translation": "находить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I can't find my keys.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "meet-1",
+        "english": "meet",
+        "translation": "встречать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Let's meet at 5 p.m.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "wear-1",
+        "english": "wear",
+        "translation": "носить (одежду)",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I wear jeans every day.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "feel-2",
+        "english": "feel",
+        "translation": "чувствовать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I feel happy.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

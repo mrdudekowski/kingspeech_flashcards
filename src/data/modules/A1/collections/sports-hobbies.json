@@ -1,0 +1,383 @@
+{
+  "id": "sports-hobbies",
+  "name": "Sports and Hobbies",
+  "description": "Спорт и хобби уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "sport-1",
+        "english": "sport",
+        "translation": "спорт",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I like sport.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "football-1",
+        "english": "football",
+        "translation": "футбол",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I play football.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "soccer-1",
+        "english": "soccer",
+        "translation": "футбол",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "definition": "American English",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "basketball-1",
+        "english": "basketball",
+        "translation": "баскетбол",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "He plays basketball.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tennis-1",
+        "english": "tennis",
+        "translation": "теннис",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I play tennis on Saturdays.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "volleyball-1",
+        "english": "volleyball",
+        "translation": "волейбол",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "We play volleyball.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "swimming-1",
+        "english": "swimming",
+        "translation": "плавание",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Swimming is fun.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "running-1",
+        "english": "running",
+        "translation": "бег",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I go running every morning.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cycling-1",
+        "english": "cycling",
+        "translation": "велоспорт",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I like cycling.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dancing-1",
+        "english": "dancing",
+        "translation": "танцы",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "She likes dancing.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "game-1",
+        "english": "game",
+        "translation": "игра",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's play a game.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "team-1",
+        "english": "team",
+        "translation": "команда",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm in the school team.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "player-1",
+        "english": "player",
+        "translation": "игрок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He is a good player.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ball-1",
+        "english": "ball",
+        "translation": "мяч",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Kick the ball!",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hobby-1",
+        "english": "hobby",
+        "translation": "хобби",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's your hobby?",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "reading-1",
+        "english": "reading",
+        "translation": "чтение",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I like reading.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "painting-1",
+        "english": "painting",
+        "translation": "рисование (красками)",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "She likes painting.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "drawing-1",
+        "english": "drawing",
+        "translation": "рисование",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Drawing is my hobby.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cooking-1",
+        "english": "cooking",
+        "translation": "готовка",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I love cooking.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "singing-1",
+        "english": "singing",
+        "translation": "пение",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I enjoy singing.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "photography-1",
+        "english": "photography",
+        "translation": "фотография",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Photography is interesting.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "guitar-1",
+        "english": "guitar",
+        "translation": "гитара",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I play the guitar.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "piano-1",
+        "english": "piano",
+        "translation": "пианино",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She plays the piano.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "song-1",
+        "english": "song",
+        "translation": "песня",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I know this song.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "movie-1",
+        "english": "movie",
+        "translation": "фильм",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English",
+        "example": "I watch movies.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "film-1",
+        "english": "film",
+        "translation": "фильм",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "British English",
+        "example": "I like films.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cinema-1",
+        "english": "cinema",
+        "translation": "кинотеатр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's go to the cinema.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "video-game-1",
+        "english": "video game",
+        "translation": "видеоигра",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "He plays video games.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "party-1",
+        "english": "party",
+        "translation": "вечеринка",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm going to a party.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "concert-1",
+        "english": "concert",
+        "translation": "концерт",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We went to a concert.",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fun-1",
+        "english": "fun",
+        "translation": "веселье",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Have fun!",
+        "tags": [
+          "topic-friends-social",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

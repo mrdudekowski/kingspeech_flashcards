@@ -1,0 +1,480 @@
+{
+  "id": "places-town",
+  "name": "Places and Town",
+  "description": "Места и город уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "place-1",
+        "english": "place",
+        "translation": "место",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "This is a nice place.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "city-1",
+        "english": "city",
+        "translation": "город",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I live in a big city.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "town-1",
+        "english": "town",
+        "translation": "город (небольшой)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "It's a small town.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "village-1",
+        "english": "village",
+        "translation": "деревня",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm from a village.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "country-1",
+        "english": "country",
+        "translation": "страна",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What country are you from?",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "street-2",
+        "english": "street",
+        "translation": "улица",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I live on Main Street.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "road-2",
+        "english": "road",
+        "translation": "дорога",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Cross the road.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "address-1",
+        "english": "address",
+        "translation": "адрес",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's your address?",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "shop-1",
+        "english": "shop",
+        "translation": "магазин",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to the shop.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "store-1",
+        "english": "store",
+        "translation": "магазин",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English",
+        "example": "I'm going to the store.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "supermarket-1",
+        "english": "supermarket",
+        "translation": "супермаркет",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I buy food at the supermarket.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "market-1",
+        "english": "market",
+        "translation": "рынок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's go to the market.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bank-1",
+        "english": "bank",
+        "translation": "банк",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to the bank.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "post-office-1",
+        "english": "post office",
+        "translation": "почта",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Where is the post office?",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hospital-2",
+        "english": "hospital",
+        "translation": "больница",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She works at a hospital.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "restaurant-1",
+        "english": "restaurant",
+        "translation": "ресторан",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's go to a restaurant.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cafe-1",
+        "english": "cafe",
+        "translation": "кафе",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm at the cafe.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bar-1",
+        "english": "bar",
+        "translation": "бар",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "They meet at a bar.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hotel-2",
+        "english": "hotel",
+        "translation": "отель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We stay at a hotel.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "park-1",
+        "english": "park",
+        "translation": "парк",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I walk in the park.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "museum-1",
+        "english": "museum",
+        "translation": "музей",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I visit the museum.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "theatre-1",
+        "english": "theatre",
+        "translation": "театр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "British English",
+        "example": "We go to the theatre.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "theater-1",
+        "english": "theater",
+        "translation": "театр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cinema-2",
+        "english": "cinema",
+        "translation": "кинотеатр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's go to the cinema.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "library-2",
+        "english": "library",
+        "translation": "библиотека",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I study at the library.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "church-1",
+        "english": "church",
+        "translation": "церковь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There's a church near here.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "police-station-1",
+        "english": "police station",
+        "translation": "полицейский участок",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Where is the police station?",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fire-station-1",
+        "english": "fire station",
+        "translation": "пожарная станция",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The fire station is on Oak Street.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "station-2",
+        "english": "station",
+        "translation": "станция, вокзал",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I wait at the station.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "airport-2",
+        "english": "airport",
+        "translation": "аэропорт",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm at the airport.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bridge-1",
+        "english": "bridge",
+        "translation": "мост",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Cross the bridge.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "building-1",
+        "english": "building",
+        "translation": "здание",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "It's a tall building.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "center-1",
+        "english": "center",
+        "translation": "центр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English",
+        "example": "I live in the city center.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "centre-1",
+        "english": "centre",
+        "translation": "центр",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "British English",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "square-2",
+        "english": "square",
+        "translation": "площадь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "The square is beautiful.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "corner-1",
+        "english": "corner",
+        "translation": "угол",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Turn at the corner.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "gym-1",
+        "english": "gym",
+        "translation": "спортзал",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I go to the gym.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pool-1",
+        "english": "pool",
+        "translation": "бассейн",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "There's a pool near my house.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "beach-1",
+        "english": "beach",
+        "translation": "пляж",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I love the beach.",
+        "tags": [
+          "topic-city-places",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

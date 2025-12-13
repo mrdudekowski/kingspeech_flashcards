@@ -1,0 +1,360 @@
+{
+  "id": "technology-communication",
+  "name": "Technology and Communication",
+  "description": "Технологии и коммуникация уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "phone-1",
+        "english": "phone",
+        "translation": "телефон",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My phone is new.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "telephone-1",
+        "english": "telephone",
+        "translation": "телефон",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Answer the telephone.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mobile-phone-1",
+        "english": "mobile phone",
+        "translation": "мобильный телефон",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "British English",
+        "example": "I have a mobile phone.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cell-phone-1",
+        "english": "cell phone",
+        "translation": "мобильный телефон",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "definition": "American English",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "smartphone-1",
+        "english": "smartphone",
+        "translation": "смартфон",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I use a smartphone.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "computer-2",
+        "english": "computer",
+        "translation": "компьютер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I work on a computer.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "laptop-1",
+        "english": "laptop",
+        "translation": "ноутбук",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a laptop.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tablet-1",
+        "english": "tablet",
+        "translation": "планшет",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "She has a tablet.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "internet-1",
+        "english": "internet",
+        "translation": "интернет",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I use the internet every day.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "email-1",
+        "english": "email",
+        "translation": "электронная почта",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Send me an email.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "message-1",
+        "english": "message",
+        "translation": "сообщение",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a message for you.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "text-message-1",
+        "english": "text message",
+        "translation": "текстовое сообщение",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Send me a text message.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "website-1",
+        "english": "website",
+        "translation": "веб-сайт",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I visit this website.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "app-1",
+        "english": "app",
+        "translation": "приложение",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I use this app.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "screen-1",
+        "english": "screen",
+        "translation": "экран",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Look at the screen.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "keyboard-1",
+        "english": "keyboard",
+        "translation": "клавиатура",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "My keyboard is broken.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "mouse-2",
+        "english": "mouse",
+        "translation": "мышь (компьютерная)",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Click the mouse.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "camera-1",
+        "english": "camera",
+        "translation": "камера, фотоаппарат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have a camera.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "photo-1",
+        "english": "photo",
+        "translation": "фотография",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Take a photo!",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "picture-1",
+        "english": "picture",
+        "translation": "картинка, фото",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Show me the picture.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "video-1",
+        "english": "video",
+        "translation": "видео",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I watch videos online.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tv-2",
+        "english": "TV",
+        "translation": "телевизор",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I watch TV.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "radio-1",
+        "english": "radio",
+        "translation": "радио",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I listen to the radio.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "letter-1",
+        "english": "letter",
+        "translation": "письмо",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I write a letter.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "number-2",
+        "english": "number",
+        "translation": "номер",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's your phone number?",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "verbs": [
+      {
+        "id": "call-2",
+        "english": "call",
+        "translation": "звонить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Call me tonight.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "text-1",
+        "english": "text",
+        "translation": "писать сообщение",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Text me later.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "send-1",
+        "english": "send",
+        "translation": "отправлять",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "Send me a message.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "receive-1",
+        "english": "receive",
+        "translation": "получать",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I receive many emails.",
+        "tags": [
+          "topic-technology-internet",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

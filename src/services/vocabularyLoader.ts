@@ -156,9 +156,24 @@ function validateCollection(collection: unknown): collection is Collection {
 
   const categories = coll.categories as Record<string, unknown>;
 
-  // Проверка категорий (phrases, verbs, nouns, adjectives)
+  // Проверка категорий - все поддерживаемые части речи
+  const validCategories = [
+    'phrases',
+    'verbs',
+    'nouns',
+    'adjectives',
+    'adverbs',
+    'pronouns',
+    'prepositions',
+    'conjunctions',
+    'interjections',
+    'articles',
+    'numerals',
+    'determiners',
+  ];
+
   for (const [categoryKey, words] of Object.entries(categories)) {
-    if (!['phrases', 'verbs', 'nouns', 'adjectives'].includes(categoryKey)) {
+    if (!validCategories.includes(categoryKey)) {
       return false;
     }
 
@@ -204,7 +219,23 @@ function validateWord(word: unknown): word is Word {
     return false;
   }
 
-  if (!['phrases', 'verbs', 'nouns', 'adjectives'].includes(w.category)) {
+  // Проверка валидности категории слова
+  const validWordCategories = [
+    'phrases',
+    'verbs',
+    'nouns',
+    'adjectives',
+    'adverbs',
+    'pronouns',
+    'prepositions',
+    'conjunctions',
+    'interjections',
+    'articles',
+    'numerals',
+    'determiners',
+  ];
+
+  if (!validWordCategories.includes(w.category)) {
     return false;
   }
 

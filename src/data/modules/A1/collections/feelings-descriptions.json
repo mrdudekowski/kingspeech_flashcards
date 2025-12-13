@@ -1,0 +1,693 @@
+{
+  "id": "feelings-descriptions",
+  "name": "Feelings and Descriptions",
+  "description": "Чувства, эмоции и описательные прилагательные уровня A1",
+  "categories": {
+    "adjectives": [
+      {
+        "id": "happy-1",
+        "english": "happy",
+        "translation": "счастливый, радостный",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "I'm happy today!",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sad-1",
+        "english": "sad",
+        "translation": "грустный",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "Why are you sad?",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "angry-1",
+        "english": "angry",
+        "translation": "злой, сердитый",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "Don't be angry!",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tired-1",
+        "english": "tired",
+        "translation": "уставший",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "I'm very tired.",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hungry-1",
+        "english": "hungry",
+        "translation": "голодный",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "I'm hungry. Let's eat!",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thirsty-1",
+        "english": "thirsty",
+        "translation": "испытывающий жажду",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "I'm thirsty. Can I have some water?",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "afraid-1",
+        "english": "afraid",
+        "translation": "испуганный",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "Don't be afraid.",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "scared-1",
+        "english": "scared",
+        "translation": "испуганный",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "I'm scared of dogs.",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "worried-1",
+        "english": "worried",
+        "translation": "обеспокоенный",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "She looks worried.",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "excited-1",
+        "english": "excited",
+        "translation": "взволнованный (в хорошем смысле)",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "I'm excited about the party!",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bored-1",
+        "english": "bored",
+        "translation": "скучающий",
+        "category": "adjectives",
+        "subcategory": "feelings",
+        "example": "I'm bored. Let's do something!",
+        "tags": [
+          "topic-feelings-emotions",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nice-1",
+        "english": "nice",
+        "translation": "милый, приятный",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "She's a nice person.",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "kind-1",
+        "english": "kind",
+        "translation": "добрый",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "He's very kind.",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "friendly-1",
+        "english": "friendly",
+        "translation": "дружелюбный",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "The people here are friendly.",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "smart-1",
+        "english": "smart",
+        "translation": "умный",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "She's a smart girl.",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "clever-1",
+        "english": "clever",
+        "translation": "умный, сообразительный",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "That's a clever idea!",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "funny-1",
+        "english": "funny",
+        "translation": "смешной",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "He tells funny jokes.",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "shy-1",
+        "english": "shy",
+        "translation": "застенчивый",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "I'm too shy to speak.",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "lazy-1",
+        "english": "lazy",
+        "translation": "ленивый",
+        "category": "adjectives",
+        "subcategory": "personality",
+        "example": "Don't be lazy!",
+        "tags": [
+          "topic-personality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tall-1",
+        "english": "tall",
+        "translation": "высокий",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "He's very tall.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "short-1",
+        "english": "short",
+        "translation": "низкий, короткий",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "She's quite short.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thin-1",
+        "english": "thin",
+        "translation": "худой",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "He's tall and thin.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fat-1",
+        "english": "fat",
+        "translation": "толстый",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "My cat is fat.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "old-1",
+        "english": "old",
+        "translation": "старый",
+        "category": "adjectives",
+        "subcategory": "age",
+        "example": "My grandmother is old.",
+        "tags": [
+          "topic-age",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "young-1",
+        "english": "young",
+        "translation": "молодой",
+        "category": "adjectives",
+        "subcategory": "age",
+        "example": "She's very young.",
+        "tags": [
+          "topic-age",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "beautiful-1",
+        "english": "beautiful",
+        "translation": "красивый",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "What a beautiful dress!",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pretty-1",
+        "english": "pretty",
+        "translation": "красивый, милый",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "She's very pretty.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ugly-1",
+        "english": "ugly",
+        "translation": "некрасивый",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "That's an ugly color.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "strong-1",
+        "english": "strong",
+        "translation": "сильный",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "He's very strong.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "weak-1",
+        "english": "weak",
+        "translation": "слабый",
+        "category": "adjectives",
+        "subcategory": "physicalAppearance",
+        "example": "I feel weak.",
+        "tags": [
+          "topic-physical-appearance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "good-1",
+        "english": "good",
+        "translation": "хороший",
+        "category": "adjectives",
+        "subcategory": "quality",
+        "example": "That's a good idea!",
+        "tags": [
+          "topic-quality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bad-1",
+        "english": "bad",
+        "translation": "плохой",
+        "category": "adjectives",
+        "subcategory": "quality",
+        "example": "The weather is bad today.",
+        "tags": [
+          "topic-quality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "great-1",
+        "english": "great",
+        "translation": "отличный, великолепный",
+        "category": "adjectives",
+        "subcategory": "quality",
+        "example": "That's great news!",
+        "tags": [
+          "topic-quality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "big-1",
+        "english": "big",
+        "translation": "большой",
+        "category": "adjectives",
+        "subcategory": "size",
+        "example": "I live in a big house.",
+        "tags": [
+          "topic-size",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "small-1",
+        "english": "small",
+        "translation": "маленький",
+        "category": "adjectives",
+        "subcategory": "size",
+        "example": "It's a small car.",
+        "tags": [
+          "topic-size",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "large-1",
+        "english": "large",
+        "translation": "большой",
+        "category": "adjectives",
+        "subcategory": "size",
+        "example": "They have a large garden.",
+        "tags": [
+          "topic-size",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "little-1",
+        "english": "little",
+        "translation": "маленький",
+        "category": "adjectives",
+        "subcategory": "size",
+        "example": "I have a little sister.",
+        "tags": [
+          "topic-size",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "new-1",
+        "english": "new",
+        "translation": "новый",
+        "category": "adjectives",
+        "subcategory": "age",
+        "example": "I have a new phone.",
+        "tags": [
+          "topic-age",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hot-1",
+        "english": "hot",
+        "translation": "горячий, жаркий",
+        "category": "adjectives",
+        "subcategory": "temperature",
+        "example": "The coffee is hot.",
+        "tags": [
+          "topic-temperature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cold-1",
+        "english": "cold",
+        "translation": "холодный",
+        "category": "adjectives",
+        "subcategory": "temperature",
+        "example": "It's cold today.",
+        "tags": [
+          "topic-temperature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "warm-1",
+        "english": "warm",
+        "translation": "тёплый",
+        "category": "adjectives",
+        "subcategory": "temperature",
+        "example": "The water is warm.",
+        "tags": [
+          "topic-temperature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cool-2",
+        "english": "cool",
+        "translation": "прохладный",
+        "category": "adjectives",
+        "subcategory": "temperature",
+        "example": "It's cool in the evening.",
+        "tags": [
+          "topic-temperature",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "easy-1",
+        "english": "easy",
+        "translation": "лёгкий, простой",
+        "category": "adjectives",
+        "subcategory": "difficulty",
+        "example": "This test is easy.",
+        "tags": [
+          "topic-difficulty",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "difficult-1",
+        "english": "difficult",
+        "translation": "трудный, сложный",
+        "category": "adjectives",
+        "subcategory": "difficulty",
+        "example": "English is difficult.",
+        "tags": [
+          "topic-difficulty",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hard-1",
+        "english": "hard",
+        "translation": "трудный, твёрдый",
+        "category": "adjectives",
+        "subcategory": "difficulty",
+        "example": "This work is hard.",
+        "tags": [
+          "topic-difficulty",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fast-1",
+        "english": "fast",
+        "translation": "быстрый",
+        "category": "adjectives",
+        "subcategory": "speed",
+        "example": "He's a fast runner.",
+        "tags": [
+          "topic-speed",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "slow-1",
+        "english": "slow",
+        "translation": "медленный",
+        "category": "adjectives",
+        "subcategory": "speed",
+        "example": "The train is slow.",
+        "tags": [
+          "topic-speed",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "clean-2",
+        "english": "clean",
+        "translation": "чистый",
+        "category": "adjectives",
+        "subcategory": "quality",
+        "example": "My room is clean.",
+        "tags": [
+          "topic-quality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dirty-1",
+        "english": "dirty",
+        "translation": "грязный",
+        "category": "adjectives",
+        "subcategory": "quality",
+        "example": "Your hands are dirty.",
+        "tags": [
+          "topic-quality",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "long-1",
+        "english": "long",
+        "translation": "длинный",
+        "category": "adjectives",
+        "subcategory": "size",
+        "example": "She has long hair.",
+        "tags": [
+          "topic-size",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "expensive-1",
+        "english": "expensive",
+        "translation": "дорогой",
+        "category": "adjectives",
+        "subcategory": "price",
+        "example": "This car is expensive.",
+        "tags": [
+          "topic-money-finance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cheap-1",
+        "english": "cheap",
+        "translation": "дешёвый",
+        "category": "adjectives",
+        "subcategory": "price",
+        "example": "These shoes are cheap.",
+        "tags": [
+          "topic-money-finance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "free-1",
+        "english": "free",
+        "translation": "бесплатный, свободный",
+        "category": "adjectives",
+        "subcategory": "price",
+        "example": "The museum is free on Sundays.",
+        "tags": [
+          "topic-money-finance",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "busy-1",
+        "english": "busy",
+        "translation": "занятой",
+        "category": "adjectives",
+        "subcategory": "state",
+        "example": "I'm busy now.",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ready-1",
+        "english": "ready",
+        "translation": "готовый",
+        "category": "adjectives",
+        "subcategory": "state",
+        "example": "Are you ready?",
+        "tags": [
+          "topic-daily-routine",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "late-1",
+        "english": "late",
+        "translation": "поздний, опоздавший",
+        "category": "adjectives",
+        "subcategory": "time",
+        "example": "I'm late for school!",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "early-1",
+        "english": "early",
+        "translation": "ранний",
+        "category": "adjectives",
+        "subcategory": "time",
+        "example": "It's too early to go to bed.",
+        "tags": [
+          "topic-time-dates",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

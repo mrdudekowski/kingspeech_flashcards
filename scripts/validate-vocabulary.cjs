@@ -23,7 +23,20 @@ function validateWord(word, collectionId) {
     errors.push(`Слово ${word.id || 'без ID'} без translation в коллекции ${collectionId}`);
   }
   
-  const validCategories = ['phrases', 'verbs', 'nouns', 'adjectives'];
+  const validCategories = [
+    'phrases', 
+    'verbs', 
+    'nouns', 
+    'adjectives',
+    'adverbs',
+    'pronouns',
+    'prepositions',
+    'conjunctions',
+    'interjections',
+    'articles',
+    'numerals',
+    'determiners'
+  ];
   if (!word.category || !validCategories.includes(word.category)) {
     errors.push(`Слово ${word.id || 'без ID'} имеет невалидную category "${word.category}" в коллекции ${collectionId}`);
   }

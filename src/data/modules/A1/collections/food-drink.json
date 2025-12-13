@@ -1,0 +1,467 @@
+{
+  "id": "food-drink",
+  "name": "Food and Drink",
+  "description": "Еда и напитки уровня A1",
+  "categories": {
+    "nouns": [
+      {
+        "id": "food-1",
+        "english": "food",
+        "translation": "еда",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I like Italian food.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "drink-2",
+        "english": "drink",
+        "translation": "напиток",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Can I have a drink?",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "meal-1",
+        "english": "meal",
+        "translation": "приём пищи, еда",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We have three meals a day.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "breakfast-1",
+        "english": "breakfast",
+        "translation": "завтрак",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have breakfast at 7 a.m.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "lunch-1",
+        "english": "lunch",
+        "translation": "обед",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's have lunch together.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "dinner-1",
+        "english": "dinner",
+        "translation": "ужин",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "What's for dinner?",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "apple-1",
+        "english": "apple",
+        "translation": "яблоко",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I eat an apple every day.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "banana-1",
+        "english": "banana",
+        "translation": "банан",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Bananas are yellow.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "orange-2",
+        "english": "orange",
+        "translation": "апельсин",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'd like an orange.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tomato-1",
+        "english": "tomato",
+        "translation": "помидор",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I need some tomatoes.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "potato-1",
+        "english": "potato",
+        "translation": "картофель",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I like potatoes.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "carrot-1",
+        "english": "carrot",
+        "translation": "морковь",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Carrots are good for you.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "egg-1",
+        "english": "egg",
+        "translation": "яйцо",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I have eggs for breakfast.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "meat-1",
+        "english": "meat",
+        "translation": "мясо",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I don't eat meat.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "chicken-2",
+        "english": "chicken",
+        "translation": "курица (мясо)",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I like chicken.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "fish-1",
+        "english": "fish",
+        "translation": "рыба",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "We eat fish on Fridays.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "bread-1",
+        "english": "bread",
+        "translation": "хлеб",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Can you buy some bread?",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "rice-1",
+        "english": "rice",
+        "translation": "рис",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I eat rice every day.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pasta-1",
+        "english": "pasta",
+        "translation": "паста, макароны",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I love pasta.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cheese-1",
+        "english": "cheese",
+        "translation": "сыр",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I like cheese on my sandwich.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "butter-1",
+        "english": "butter",
+        "translation": "масло (сливочное)",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Put some butter on the bread.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sugar-1",
+        "english": "sugar",
+        "translation": "сахар",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Do you take sugar in your coffee?",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "salt-1",
+        "english": "salt",
+        "translation": "соль",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Pass me the salt, please.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cake-1",
+        "english": "cake",
+        "translation": "торт, пирожное",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Would you like some cake?",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "chocolate-1",
+        "english": "chocolate",
+        "translation": "шоколад",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I love chocolate.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ice-cream-1",
+        "english": "ice cream",
+        "translation": "мороженое",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Let's have ice cream.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "water-1",
+        "english": "water",
+        "translation": "вода",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Can I have some water?",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "milk-1",
+        "english": "milk",
+        "translation": "молоко",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I drink milk every morning.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "juice-1",
+        "english": "juice",
+        "translation": "сок",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I'd like orange juice.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "coffee-1",
+        "english": "coffee",
+        "translation": "кофе",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "I drink coffee every morning.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "tea-1",
+        "english": "tea",
+        "translation": "чай",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "Would you like tea or coffee?",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sandwich-1",
+        "english": "sandwich",
+        "translation": "сэндвич, бутерброд",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'm making a sandwich.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "pizza-1",
+        "english": "pizza",
+        "translation": "пицца",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "Let's order a pizza.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "salad-1",
+        "english": "salad",
+        "translation": "салат",
+        "category": "nouns",
+        "subcategory": "countableNouns",
+        "example": "I'll have a salad.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "soup-1",
+        "english": "soup",
+        "translation": "суп",
+        "category": "nouns",
+        "subcategory": "uncountableNouns",
+        "example": "The soup is hot.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      }
+    ],
+    "verbs": [
+      {
+        "id": "eat-2",
+        "english": "eat",
+        "translation": "есть",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I eat breakfast at 7 a.m.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "drink-3",
+        "english": "drink",
+        "translation": "пить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I drink water every day.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "cook-2",
+        "english": "cook",
+        "translation": "готовить",
+        "category": "verbs",
+        "subcategory": "regularVerbs",
+        "example": "I cook dinner every evening.",
+        "tags": [
+          "topic-food-drink",
+          "difficulty-a1"
+        ]
+      }
+    ]
+  }
+}

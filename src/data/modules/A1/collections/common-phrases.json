@@ -1,18 +1,266 @@
 {
   "id": "common-phrases",
   "name": "Common Phrases",
-  "description": "Обычные фразы для повседневного общения уровня A1",
+  "description": "Распространённые фразы для повседневного общения уровня A1",
   "categories": {
     "phrases": [
+      {
+        "id": "hello-1",
+        "english": "Hello!",
+        "translation": "Здравствуйте!",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-greeting",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hi-1",
+        "english": "Hi!",
+        "translation": "Привет!",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-greeting",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "good-morning-1",
+        "english": "Good morning",
+        "translation": "Доброе утро",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-greeting",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "good-afternoon-1",
+        "english": "Good afternoon",
+        "translation": "Добрый день",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-greeting",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "good-evening-1",
+        "english": "Good evening",
+        "translation": "Добрый вечер",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-greeting",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "goodbye-1",
+        "english": "Goodbye!",
+        "translation": "До свидания!",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-farewell",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "see-you-1",
+        "english": "See you!",
+        "translation": "Увидимся!",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-farewell",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "how-are-you-1",
+        "english": "How are you?",
+        "translation": "Как дела?",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-small-talk",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "im-fine-1",
+        "english": "I'm fine, thank you.",
+        "translation": "Хорошо, спасибо.",
+        "category": "phrases",
+        "subcategory": "greetings",
+        "tags": [
+          "topic-relationships",
+          "function-small-talk",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "nice-to-meet-you-1",
+        "english": "Nice to meet you.",
+        "translation": "Рад(а) познакомиться.",
+        "category": "phrases",
+        "subcategory": "introductions",
+        "tags": [
+          "topic-relationships",
+          "function-introduction",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thank-you-1",
+        "english": "Thank you!",
+        "translation": "Спасибо!",
+        "category": "phrases",
+        "subcategory": "polite",
+        "tags": [
+          "topic-relationships",
+          "function-thanks",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "youre-welcome-1",
+        "english": "You're welcome.",
+        "translation": "Пожалуйста.",
+        "category": "phrases",
+        "subcategory": "polite",
+        "tags": [
+          "topic-relationships",
+          "function-response",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "please-1",
+        "english": "Please.",
+        "translation": "Пожалуйста.",
+        "category": "phrases",
+        "subcategory": "polite",
+        "tags": [
+          "topic-relationships",
+          "function-request",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "sorry-1",
+        "english": "Sorry.",
+        "translation": "Извини(те).",
+        "category": "phrases",
+        "subcategory": "polite",
+        "tags": [
+          "topic-relationships",
+          "function-apology",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "excuse-me-1",
+        "english": "Excuse me.",
+        "translation": "Извините.",
+        "category": "phrases",
+        "subcategory": "polite",
+        "tags": [
+          "topic-relationships",
+          "function-attention",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "yes-1",
+        "english": "Yes",
+        "translation": "Да",
+        "category": "phrases",
+        "subcategory": "responses",
+        "tags": [
+          "topic-relationships",
+          "function-agreement",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "no-1",
+        "english": "No",
+        "translation": "Нет",
+        "category": "phrases",
+        "subcategory": "responses",
+        "tags": [
+          "topic-relationships",
+          "function-disagreement",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "i-dont-understand-1",
+        "english": "I don't understand.",
+        "translation": "Я не понимаю.",
+        "category": "phrases",
+        "subcategory": "communication",
+        "tags": [
+          "topic-relationships",
+          "function-clarification",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "can-you-repeat-1",
+        "english": "Can you repeat, please?",
+        "translation": "Повторите, пожалуйста.",
+        "category": "phrases",
+        "subcategory": "communication",
+        "tags": [
+          "topic-relationships",
+          "function-request",
+          "register-neutral",
+          "difficulty-a1"
+        ]
+      },
       {
         "id": "my-name-is-1",
         "english": "My name is…",
         "translation": "Меня зовут…",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "introductions",
         "tags": [
           "topic-relationships",
           "function-introduction",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -21,10 +269,11 @@
         "english": "What's your name?",
         "translation": "Как тебя зовут?",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "introductions",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-question",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -33,10 +282,11 @@
         "english": "Where are you from?",
         "translation": "Откуда ты?",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "introductions",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-question",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -45,10 +295,11 @@
         "english": "I'm from…",
         "translation": "Я из…",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "introductions",
         "tags": [
           "topic-relationships",
           "function-introduction",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -57,10 +308,11 @@
         "english": "How old are you?",
         "translation": "Сколько тебе лет?",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "introductions",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-question",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -69,10 +321,11 @@
         "english": "I'm … years old.",
         "translation": "Мне … лет.",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "introductions",
         "tags": [
           "topic-relationships",
           "function-introduction",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -81,10 +334,11 @@
         "english": "I live in…",
         "translation": "Я живу в…",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "introductions",
         "tags": [
           "topic-relationships",
           "function-introduction",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -93,10 +347,11 @@
         "english": "What's this?",
         "translation": "Что это?",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "questions",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-question",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -105,10 +360,11 @@
         "english": "How much is it?",
         "translation": "Сколько это стоит?",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "questions",
         "tags": [
-          "topic-relationships",
-          "function-introduction",
+          "topic-money-finance",
+          "function-question",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -117,10 +373,11 @@
         "english": "I like…",
         "translation": "Мне нравится…",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "opinions",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-opinion",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -129,10 +386,11 @@
         "english": "I don't like…",
         "translation": "Мне не нравится…",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "opinions",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-opinion",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -141,10 +399,11 @@
         "english": "Do you like…?",
         "translation": "Тебе нравится…?",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "questions",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-question",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -153,10 +412,11 @@
         "english": "Yes, I do.",
         "translation": "Да.",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "responses",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-agreement",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -165,10 +425,11 @@
         "english": "No, I don't.",
         "translation": "Нет.",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "responses",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-disagreement",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -177,10 +438,11 @@
         "english": "I can…",
         "translation": "Я умею… / Я могу…",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "abilities",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-statement",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -189,10 +451,11 @@
         "english": "I can't…",
         "translation": "Я не умею… / Я не могу…",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "abilities",
         "tags": [
           "topic-relationships",
-          "function-introduction",
+          "function-statement",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -201,9 +464,11 @@
         "english": "What time is it?",
         "translation": "Который час?",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "questions",
         "tags": [
           "topic-time-dates",
+          "function-question",
+          "register-neutral",
           "difficulty-a1"
         ]
       },
@@ -212,9 +477,11 @@
         "english": "It's … o'clock.",
         "translation": "… часов.",
         "category": "phrases",
-        "subcategory": "phrasesCommon",
+        "subcategory": "responses",
         "tags": [
           "topic-time-dates",
+          "function-statement",
+          "register-neutral",
           "difficulty-a1"
         ]
       }

@@ -5,6 +5,32 @@
   "categories": {
     "phrases": [
       {
+        "id": "hi-2",
+        "english": "Hi there!",
+        "translation": "Привет!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-greeting",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "hey-1",
+        "english": "Hey!",
+        "translation": "Эй! / Привет!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-greeting",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
         "id": "bye-1",
         "english": "Bye!",
         "translation": "Пока!",
@@ -12,6 +38,20 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-farewell",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "see-ya-1",
+        "english": "See ya!",
+        "translation": "Увидимся!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-farewell",
           "register-informal",
           "difficulty-a1"
         ]
@@ -24,6 +64,20 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-small-talk",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "how-are-you-doing-1",
+        "english": "How are you doing?",
+        "translation": "Как дела?",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-small-talk",
           "register-informal",
           "difficulty-a1"
         ]
@@ -36,6 +90,20 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-reaction",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "awesome-1",
+        "english": "Awesome!",
+        "translation": "Потрясающе!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-reaction",
           "register-informal",
           "difficulty-a1"
         ]
@@ -48,6 +116,7 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-agreement",
           "register-informal",
           "difficulty-a1"
         ]
@@ -60,6 +129,33 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-disagreement",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "yep-1",
+        "english": "Yep!",
+        "translation": "Ага!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-agreement",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "ok-1",
+        "english": "OK!",
+        "translation": "Окей! / Хорошо!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-agreement",
           "register-informal",
           "difficulty-a1"
         ]
@@ -72,6 +168,7 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-suggestion",
           "register-informal",
           "difficulty-a1"
         ]
@@ -84,6 +181,7 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-reaction",
           "register-informal",
           "difficulty-a1"
         ]
@@ -96,6 +194,46 @@
         "subcategory": "phrasesInformal",
         "tags": [
           "topic-friends-social",
+          "function-reaction",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "no-way-1",
+        "english": "No way!",
+        "translation": "Ни за что! / Не может быть!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-reaction",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "thanks-1",
+        "english": "Thanks!",
+        "translation": "Спасибо!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-thanks",
+          "register-informal",
+          "difficulty-a1"
+        ]
+      },
+      {
+        "id": "no-problem-1",
+        "english": "No problem!",
+        "translation": "Без проблем!",
+        "category": "phrases",
+        "subcategory": "phrasesInformal",
+        "tags": [
+          "topic-friends-social",
+          "function-response",
           "register-informal",
           "difficulty-a1"
         ]
