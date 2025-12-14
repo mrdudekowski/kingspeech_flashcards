@@ -128,6 +128,14 @@ function ModulePage() {
               </div>
             </div>
 
+            {/* Кнопка "Пройти квиз" */}
+            <button
+              onClick={() => navigate(`/quiz/${moduleId}/setup`)}
+              className="mt-6 w-full px-4 py-3 rounded-lg text-sm font-semibold transition-all bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl"
+            >
+              🎯 Пройти квиз
+            </button>
+
             <button
               onClick={handleResetModuleProgress}
               disabled={!moduleWords || moduleWords.length === 0}
