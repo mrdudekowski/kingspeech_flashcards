@@ -1,11 +1,19 @@
 /**
  * Vocabulary Loader Service
  * Сервис для загрузки модулей словаря из JSON файлов
+ * 
+ * Особенности:
+ * - Автоматическая загрузка коллекций для модуля A1
+ * - Retry с exponential backoff для устойчивости к сетевым проблемам
+ * - Кэширование загруженных модулей
+ * - Валидация структуры данных
  */
 
 import type { ModuleId } from '@/app/constants';
 import { AVAILABLE_MODULES } from '@/app/constants';
 import type { VocabularyModule, Collection, Word } from '@/shared/types';
+import { retryWithBackoff, retryPresets } from '@/shared/utils/retry';
+import { log } from '@/shared/utils';
 
 // Статический импорт корневого модуля A1 для Vite
 // Коллекции этого модуля подхватываем автоматически через import.meta.glob
@@ -21,6 +29,12 @@ import A1Module from '@/data/modules/A1/index.json';
 const A1_COLLECTIONS_FILES = import.meta.glob('@/data/modules/A1/collections/*.json', {
   eager: true,
 });
+
+/**
+ * Кэш загруженных модулей (в памяти)
+ * Предотвращает повторную загрузку и парсинг одних и тех же данных
+ */
+const modulesCache = new Map<ModuleId, VocabularyModule>();
 
 /**
  * Маппинг модулей для быстрого доступа
@@ -404,10 +418,18 @@ async function validateAndReturnData(data: unknown, moduleId: ModuleId): Promise
 /**
  * Загружает модуль словаря по его ID
  * @param moduleId - ID модуля (A1, A2, B1, etc.)
+ * @param options - Опции загрузки
+ * @param options.forceReload - Принудительная перезагрузка (игнорировать кэш)
+ * @param options.useRetry - Использовать retry логику (по умолчанию true)
  * @returns Promise с данными модуля
  * @throws VocabularyLoadError если модуль не найден или невалиден
  */
-export async function loadModule(moduleId: ModuleId): Promise<VocabularyModule> {
+export async function loadModule(
+  moduleId: ModuleId,
+  options: { forceReload?: boolean; useRetry?: boolean } = {}
+): Promise<VocabularyModule> {
+  const { forceReload = false, useRetry = true } = options;
+
   // Проверка, что moduleId валиден
   if (!AVAILABLE_MODULES.includes(moduleId)) {
     throw new VocabularyLoadError(
@@ -415,6 +437,17 @@ export async function loadModule(moduleId: ModuleId): Promise<VocabularyModule> 
       moduleId
     );
   }
+
+  // Проверяем кэш (если не форсируем перезагрузку)
+  if (!forceReload && modulesCache.has(moduleId)) {
+    log.debug('VocabularyLoader', `Модуль ${moduleId} взят из кэша`);
+    return modulesCache.get(moduleId)!;
+  }
+
+  log.info('VocabularyLoader', `Начинаем загрузку модуля ${moduleId}`, {
+    forceReload,
+    useRetry,
+  });
 
   try {
     // Получаем функцию загрузки модуля из маппинга
@@ -427,14 +460,59 @@ export async function loadModule(moduleId: ModuleId): Promise<VocabularyModule> 
       );
     }
 
-    // Загружаем модуль
-    const data = await loadModuleFn();
+    // Функция загрузки и валидации
+    const loadAndValidate = async (): Promise<VocabularyModule> => {
+      log.debug('VocabularyLoader', `Загружаем данные модуля ${moduleId}`);
+      
+      // Загружаем модуль
+      const data = await loadModuleFn();
 
-    // Валидация и возврат данных (теперь асинхронная, т.к. может загружать коллекции)
-    return await validateAndReturnData(data, moduleId);
+      log.debug('VocabularyLoader', `Валидируем модуль ${moduleId}`);
+      
+      // Валидация и возврат данных
+      return await validateAndReturnData(data, moduleId);
+    };
+
+    // Загружаем с retry или без
+    let module: VocabularyModule;
+    if (useRetry) {
+      log.debug('VocabularyLoader', `Используем retry логику для модуля ${moduleId}`);
+      
+      module = await retryWithBackoff(loadAndValidate, {
+        ...retryPresets.standard,
+        shouldRetry: (error) => {
+          // Не повторяем для VocabularyLoadError (это логические ошибки, не сетевые)
+          if (error instanceof VocabularyLoadError) {
+            log.warn('VocabularyLoader', 'VocabularyLoadError не подлежит retry', error);
+            return false;
+          }
+          return true;
+        },
+        onRetry: (attempt, error) => {
+          log.warn(
+            'VocabularyLoader',
+            `Попытка ${attempt} загрузки модуля ${moduleId} не удалась`,
+            error
+          );
+        },
+      });
+    } else {
+      module = await loadAndValidate();
+    }
+
+    // Кэшируем успешно загруженный модуль
+    modulesCache.set(moduleId, module);
+    
+    log.info('VocabularyLoader', `Модуль ${moduleId} успешно загружен`, {
+      collectionsCount: module.collections.length,
+      cached: true,
+    });
+
+    return module;
   } catch (error) {
     // Обработка различных типов ошибок
     if (error instanceof VocabularyLoadError) {
+      log.error('VocabularyLoader', `VocabularyLoadError для модуля ${moduleId}`, error);
       throw error;
     }
 
@@ -442,24 +520,44 @@ export async function loadModule(moduleId: ModuleId): Promise<VocabularyModule> 
     if (error instanceof Error) {
       // Ошибка парсинга JSON
       if (error.message.includes('JSON') || error.message.includes('parse')) {
-        throw new VocabularyLoadError(
+        const vocabError = new VocabularyLoadError(
           `Ошибка парсинга JSON модуля "${moduleId}": ${error.message}`,
           moduleId
         );
+        log.error('VocabularyLoader', 'Ошибка парсинга JSON', vocabError);
+        throw vocabError;
       }
 
       // Другие ошибки
-      throw new VocabularyLoadError(
+      const vocabError = new VocabularyLoadError(
         `Ошибка загрузки модуля "${moduleId}": ${error.message}`,
         moduleId
       );
+      log.error('VocabularyLoader', 'Ошибка загрузки', vocabError);
+      throw vocabError;
     }
 
     // Неизвестная ошибка
-    throw new VocabularyLoadError(
+    const vocabError = new VocabularyLoadError(
       `Неизвестная ошибка при загрузке модуля "${moduleId}"`,
       moduleId
     );
+    log.error('VocabularyLoader', 'Неизвестная ошибка', vocabError);
+    throw vocabError;
+  }
+}
+
+/**
+ * Очистить кэш загруженных модулей
+ * @param moduleId - ID модуля для очистки (если не указан, очищается весь кэш)
+ */
+export function clearModuleCache(moduleId?: ModuleId): void {
+  if (moduleId) {
+    modulesCache.delete(moduleId);
+    log.debug('VocabularyLoader', `Кэш модуля ${moduleId} очищен`);
+  } else {
+    modulesCache.clear();
+    log.debug('VocabularyLoader', 'Весь кэш модулей очищен');
   }
 }
 

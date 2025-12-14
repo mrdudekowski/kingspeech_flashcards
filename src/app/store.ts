@@ -7,6 +7,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import vocabularyReducer from '@/features/vocabulary/vocabularySlice';
 import flashcardsReducer from '@/features/flashcards/flashcardsSlice';
 import progressReducer from '@/features/progress/progressSlice';
+import quizzesReducer from '@/features/quizzes/quizzesSlice';
 import { progressMiddleware } from './middleware/progressMiddleware';
 import { loadProgress } from '@/services/progressStorage';
 import { loadProgress as loadProgressAction } from '@/features/progress/progressSlice';
@@ -16,8 +17,7 @@ export const store = configureStore({
     vocabulary: vocabularyReducer,
     flashcards: flashcardsReducer,
     progress: progressReducer,
-    // Будут добавлены по мере создания:
-    // quizzes: quizzesReducer,
+    quizzes: quizzesReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(progressMiddleware),

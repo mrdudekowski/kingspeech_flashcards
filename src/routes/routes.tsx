@@ -10,6 +10,8 @@ import ModuleLayout from './components/ModuleLayout';
 import ModulePage from './components/ModulePage';
 import CollectionPage from './components/CollectionPage';
 import FlashcardsPage from './components/FlashcardsPage';
+import QuizPage from './components/QuizPage';
+import QuizSetupPage from './components/QuizSetupPage';
 
 export const router = createBrowserRouter(
   [
@@ -38,6 +40,18 @@ export const router = createBrowserRouter(
         {
           path: ROUTES.FLASHCARDS,
           element: <FlashcardsPage />,
+        },
+        {
+          path: '/quiz/:moduleId/setup',
+          element: <QuizSetupPage />,
+        },
+        {
+          path: '/quiz/:moduleId/:collectionId?/setup',
+          element: <QuizSetupPage />,
+        },
+        {
+          path: ROUTES.QUIZ,
+          element: <QuizPage />,
         },
       ],
     },

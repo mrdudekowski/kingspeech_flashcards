@@ -284,10 +284,22 @@ export type TagId =
 // Типы квизов
 export const QUIZ_TYPES = {
   MULTIPLE_CHOICE: 'multipleChoice',
-  SPELLING: 'spelling',
+  TRUE_FALSE: 'trueFalse',
+  MATCHING: 'matching',
+  FILL_IN_THE_BLANK: 'fillInTheBlank',
+  LISTENING: 'listening',
 } as const;
 
 export type QuizType = typeof QUIZ_TYPES[keyof typeof QUIZ_TYPES];
+
+// Массив типов квизов для итерации
+export const QUIZ_TYPES_ARRAY: QuizType[] = [
+  'multipleChoice',
+  'trueFalse',
+  'matching',
+  'fillInTheBlank',
+  'listening',
+];
 
 // LocalStorage ключи
 export const STORAGE_KEYS = {

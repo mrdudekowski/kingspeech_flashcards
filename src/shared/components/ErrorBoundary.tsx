@@ -1,5 +1,6 @@
 /**
- * Error Boundary - перехватывает ошибки React и отображает информацию для дебага
+ * Error Boundary
+ * Ловит ошибки в дереве компонентов и показывает fallback UI
  */
 
 import { Component, ErrorInfo, ReactNode } from 'react';
@@ -7,6 +8,7 @@ import { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -25,116 +27,51 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    // Обновляем состояние, чтобы показать fallback UI
     return {
       hasError: true,
       error,
-      errorInfo: null,
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Логируем ошибку в консоль для дебага
-    console.error('🚨 ErrorBoundary перехватил ошибку:', error);
-    console.error('📋 Error Info:', errorInfo);
-    console.error('📍 Component Stack:', errorInfo.componentStack);
-    console.error('🔍 Error Stack:', error.stack);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+    // Логируем ошибку
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
 
+    // Сохраняем errorInfo в state
     this.setState({
-      error,
       errorInfo,
     });
 
-    // В development режиме показываем детальную информацию
-    if (process.env.NODE_ENV === 'development') {
-      // Можно отправить на сервер для логирования
-      // logErrorToService(error, errorInfo);
+    // Вызываем кастомный обработчик, если он передан
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
     }
   }
 
-  render() {
+  handleReset = (): void => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+    });
+  };
+
+  render(): ReactNode {
     if (this.state.hasError) {
+      // Используем кастомный fallback, если передан
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Иначе показываем дефолтный UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
-          <div className="max-w-4xl w-full glass-strong rounded-2xl p-8 shadow-lg">
-            <div className="text-center mb-6">
-              <div className="text-6xl mb-4">💥</div>
-              <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-                Произошла ошибка
-              </h1>
-              <p className="text-gray-600 dark:text-gray-400">
-                Приложение столкнулось с неожиданной ошибкой
-              </p>
-            </div>
-
-            {this.state.error && (
-              <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800">
-                <h2 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-2">
-                  Ошибка:
-                </h2>
-                <p className="text-sm text-red-700 dark:text-red-300 font-mono mb-2">
-                  {this.state.error.name}: {this.state.error.message}
-                </p>
-                {this.state.error.stack && (
-                  <details className="mt-2">
-                    <summary className="text-sm text-red-600 dark:text-red-400 cursor-pointer hover:underline">
-                      Показать стек вызовов
-                    </summary>
-                    <pre className="mt-2 text-xs text-red-600 dark:text-red-400 overflow-x-auto p-2 bg-red-100 dark:bg-red-900/30 rounded">
-                      {this.state.error.stack}
-                    </pre>
-                  </details>
-                )}
-              </div>
-            )}
-
-            {this.state.errorInfo && (
-              <div className="mb-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
-                <h2 className="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
-                  Информация об ошибке:
-                </h2>
-                <details className="mt-2">
-                  <summary className="text-sm text-yellow-600 dark:text-yellow-400 cursor-pointer hover:underline">
-                    Показать детали
-                  </summary>
-                  <pre className="mt-2 text-xs text-yellow-600 dark:text-yellow-400 overflow-x-auto p-2 bg-yellow-100 dark:bg-yellow-900/30 rounded">
-                    {this.state.errorInfo.componentStack}
-                  </pre>
-                </details>
-              </div>
-            )}
-
-            <div className="flex gap-4 justify-center">
-              <button
-                onClick={() => window.location.reload()}
-                className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
-              >
-                Перезагрузить страницу
-              </button>
-              <button
-                onClick={() => this.setState({ hasError: false, error: null, errorInfo: null })}
-                className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors font-medium"
-              >
-                Попробовать снова
-              </button>
-            </div>
-
-            {process.env.NODE_ENV === 'development' && (
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                <p className="text-sm text-blue-800 dark:text-blue-200 mb-2">
-                  💡 <strong>Режим разработки:</strong> Откройте консоль браузера (F12) для детальной информации об ошибке
-                </p>
-                <p className="text-xs text-blue-600 dark:text-blue-400">
-                  Проверьте вкладки Console, Network и Redux DevTools
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
+        <ErrorFallback
+          error={this.state.error}
+          errorInfo={this.state.errorInfo}
+          onReset={this.handleReset}
+        />
       );
     }
 
@@ -142,5 +79,108 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary;
+// Дефолтный fallback компонент
+interface ErrorFallbackProps {
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  onReset: () => void;
+}
 
+function ErrorFallback({ error, errorInfo, onReset }: ErrorFallbackProps) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-slate-900 px-4">
+      <div className="max-w-2xl w-full glass-strong rounded-2xl p-8 shadow-2xl">
+        {/* Иконка */}
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-100 dark:bg-red-900/30 mb-4">
+            <svg
+              className="w-10 h-10 text-red-600 dark:text-red-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              />
+            </svg>
+          </div>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            Упс! Что-то пошло не так
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            Произошла непредвиденная ошибка. Не волнуйтесь, ваш прогресс сохранен.
+          </p>
+        </div>
+
+        {/* Информация об ошибке (только в dev режиме) */}
+        {process.env.NODE_ENV === 'development' && error && (
+          <div className="mb-6">
+            <details className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4 border border-red-200 dark:border-red-800">
+              <summary className="cursor-pointer font-semibold text-red-900 dark:text-red-200 mb-2">
+                Детали ошибки (только в dev режиме)
+              </summary>
+              <div className="mt-4 space-y-2">
+                <div>
+                  <p className="text-sm font-medium text-red-800 dark:text-red-300 mb-1">
+                    Сообщение:
+                  </p>
+                  <p className="text-sm text-red-700 dark:text-red-400 font-mono bg-red-100 dark:bg-red-900/40 p-2 rounded">
+                    {error.message}
+                  </p>
+                </div>
+                {error.stack && (
+                  <div>
+                    <p className="text-sm font-medium text-red-800 dark:text-red-300 mb-1">
+                      Stack trace:
+                    </p>
+                    <pre className="text-xs text-red-700 dark:text-red-400 font-mono bg-red-100 dark:bg-red-900/40 p-2 rounded overflow-x-auto whitespace-pre-wrap">
+                      {error.stack}
+                    </pre>
+                  </div>
+                )}
+                {errorInfo && errorInfo.componentStack && (
+                  <div>
+                    <p className="text-sm font-medium text-red-800 dark:text-red-300 mb-1">
+                      Component stack:
+                    </p>
+                    <pre className="text-xs text-red-700 dark:text-red-400 font-mono bg-red-100 dark:bg-red-900/40 p-2 rounded overflow-x-auto whitespace-pre-wrap">
+                      {errorInfo.componentStack}
+                    </pre>
+                  </div>
+                )}
+              </div>
+            </details>
+          </div>
+        )}
+
+        {/* Действия */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onClick={onReset}
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-xl"
+          >
+            Попробовать снова
+          </button>
+          <button
+            onClick={() => window.location.href = '/'}
+            className="px-6 py-3 bg-gray-200 dark:bg-slate-700 hover:bg-gray-300 dark:hover:bg-slate-600 text-gray-800 dark:text-gray-200 font-semibold rounded-lg transition-colors"
+          >
+            На главную
+          </button>
+        </div>
+
+        {/* Дополнительная информация */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Если проблема повторяется, попробуйте обновить страницу или очистить кэш браузера.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ErrorBoundary;
