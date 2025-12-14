@@ -256,9 +256,19 @@ function CollectionPage() {
           </p>
         </div>
 
-        <h2 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
-          Выберите категорию для изучения:
-        </h2>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+          <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+            Выберите категорию для изучения:
+          </h2>
+          
+          {/* Кнопка "Пройти квиз" */}
+          <button
+            onClick={() => navigate(`/quiz/${moduleId}/${collectionId}/setup`)}
+            className="px-6 py-3 rounded-lg text-sm font-semibold transition-all bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl whitespace-nowrap"
+          >
+            🎯 Пройти квиз
+          </button>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {(Object.keys(WORD_CATEGORIES) as Array<keyof typeof WORD_CATEGORIES>).map((key) => {
