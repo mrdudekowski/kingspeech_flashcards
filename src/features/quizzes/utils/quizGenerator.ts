@@ -102,7 +102,7 @@ export function generateMultipleChoiceQuestions(
  */
 export function generateTrueFalseQuestions(
   words: Word[],
-  allWords: Word[],
+  _allWords: Word[], // Префикс _ для неиспользуемого параметра
   settings: QuizSettings
 ): QuizQuestion[] {
   log.debug('QuizGenerator', 'Генерация True/False вопросов', {
@@ -124,13 +124,27 @@ export function generateTrueFalseQuestions(
       displayedTranslation = word.translation;
       correctAnswer = 'true';
     } else {
-      // Выбираем случайный неправильный перевод
-      const wrongWord = selectRandom(
-        allWords.filter((w) => w.id !== word.id),
-        1
-      )[0];
-      displayedTranslation = wrongWord.translation;
-      correctAnswer = 'false';
+      // Фильтруем слова из той же категории (исключая текущее слово)
+      const sameCategory = words.filter(
+        (w) => w.id !== word.id && w.category === word.category
+      );
+
+      // Если в категории есть другие слова, берем из неё
+      // Иначе берем из всех слов квиза (но не из allWords)
+      const candidateWords = sameCategory.length > 0 
+        ? sameCategory 
+        : words.filter((w) => w.id !== word.id);
+
+      // Если нет доступных слов, используем правильный перевод
+      if (candidateWords.length === 0) {
+        displayedTranslation = word.translation;
+        correctAnswer = 'true';
+        log.warn('QuizGenerator', `Нет слов для неправильного варианта: ${word.english}`);
+      } else {
+        const wrongWord = selectRandom(candidateWords, 1)[0];
+        displayedTranslation = wrongWord.translation;
+        correctAnswer = 'false';
+      }
     }
 
     // Создаем модифицированное слово для отображения
