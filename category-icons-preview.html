@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grammar Categories – Icon Preview</title>
+  <!-- Phosphor Icons via CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+  />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --bg-card: #020617;
+      --border: #1f2937;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --accent: #60a5fa;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p.subtitle {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1rem 1.1rem;
+      background: radial-gradient(circle at top left, #111827 0, #020617 45%, #020617 100%);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+      display: flex;
+      flex-direction: row;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 0%, #fb923c 0, #facc15 45%, #4b5563 100%);
+      color: #fffbeb;
+      box-shadow: 0 0 25px rgba(251, 146, 60, 0.55);
+      flex-shrink: 0;
+      transform-origin: top center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-icon {
+      transform: scale(0.6);
+    }
+
+    .card-icon i {
+      font-size: 1.3rem;
+    }
+
+    .card-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .badge-group {
+      display: inline-flex;
+      gap: 0.35rem;
+      align-items: baseline;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: #9ca3af;
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .badge.badge-main {
+      border-color: rgba(129, 140, 248, 0.7);
+      color: #c7d2fe;
+      background: rgba(30, 64, 175, 0.6);
+    }
+
+    .category-id {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 0.2rem;
+      word-break: break-all;
+    }
+
+    .label-en {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .label-ru {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-top: 0.15rem;
+    }
+
+    .group-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.35rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .group-title span {
+      opacity: 0.65;
+    }
+
+    .legend {
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .legend strong {
+      color: #e5e7eb;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.25rem;
+      }
+
+      .card {
+        padding: 0.85rem 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Grammar Categories – Icon Mapping Preview</h1>
+  <p class="subtitle">
+    Предпросмотр иконок для грамматических категорий из A1/grammar-words. 
+    Это только визуальное согласование; логика и данные берутся из плана.
+  </p>
+
+  <div class="legend">
+    <p><strong>Main category</strong> – верхний уровень (`category` в JSON: pronouns, prepositions, ...).</p>
+    <p><strong>Subcategory</strong> – уточнение (`subcategory` в JSON: personalPronouns, objectPronouns, ...). В UI флешкарточек планируется использовать именно подкатегорию, если она есть, иначе – основную категорию.</p>
+  </div>
+
+  <div id="app"></div>
+
+  <script>
+    // Карта категорий → иконки + человеко‑читаемые подписи.
+    // Это референс для дальнейшей реализации в TS-модуле categoryMeta.ts.
+    const CATEGORY_META = [
+      // PRONOUN SUBCATEGORIES (без общего Pronouns)
+      {
+        group: 'Pronouns',
+        id: 'personalPronouns',
+        icon: 'ph-user',
+        labelEn: 'Personal pronouns',
+        labelRu: 'Личные местоимения',
+        level: 'subcategory',
+      },
+      {
+        group: 'Pronouns',
+        id: 'objectPronouns',
+        icon: 'ph-arrow-right',
+        labelEn: 'Object pronouns',
+        labelRu: 'Объектные местоимения',
+        level: 'subcategory',
+      },
+      {
+        group: 'Pronouns',
+        id: 'possessiveAdjectives',
+        icon: 'ph-hand-heart',
+        labelEn: 'Possessive adjectives',
+        labelRu: 'Притяжательные прилагательные',
+        level: 'subcategory',
+      },
+      {
+        group: 'Pronouns',
+        id: 'possessivePronouns',
+        icon: 'ph-identification-badge',
+        labelEn: 'Possessive pronouns',
+        labelRu: 'Притяжательные местоимения',
+        level: 'subcategory',
+      },
+      {
+        group: 'Pronouns',
+        id: 'demonstrativePronouns',
+        icon: 'ph-hand-pointing',
+        labelEn: 'Demonstrative pronouns',
+        labelRu: 'Указательные местоимения',
+        level: 'subcategory',
+      },
+      {
+        group: 'Pronouns',
+        id: 'interrogativePronouns',
+        icon: 'ph-question',
+        labelEn: 'Interrogative pronouns',
+        labelRu: 'Вопросительные местоимения',
+        level: 'subcategory',
+      },
+
+      // PREPOSITIONS
+      {
+        group: 'Prepositions',
+        id: 'prepositions',
+        icon: 'ph-arrows-out-cardinal',
+        labelEn: 'Prepositions',
+        labelRu: 'Предлоги',
+        level: 'category',
+      },
+
+      // CONJUNCTIONS
+      {
+        group: 'Conjunctions',
+        id: 'conjunctions',
+        icon: 'ph-link-simple-horizontal',
+        labelEn: 'Conjunctions',
+        labelRu: 'Союзы',
+        level: 'category',
+      },
+
+      // ARTICLES
+      {
+        group: 'Articles',
+        id: 'articles',
+        icon: 'ph-text-aa',
+        labelEn: 'Articles',
+        labelRu: 'Артикли',
+        level: 'category',
+      },
+
+      // ADVERBS
+      {
+        group: 'Adverbs',
+        id: 'adverbs',
+        icon: 'ph-sparkle',
+        labelEn: 'Adverbs (general)',
+        labelRu: 'Наречия (общая группа)',
+        level: 'category',
+      },
+      {
+        group: 'Adverbs',
+        id: 'intensifiers',
+        icon: 'ph-lightning',
+        labelEn: 'Intensifiers',
+        labelRu: 'Усилительные наречия',
+        level: 'subcategory',
+      },
+      {
+        group: 'Adverbs',
+        id: 'additive',
+        icon: 'ph-plus',
+        labelEn: 'Additive adverbs',
+        labelRu: 'Добавочные наречия (also, too)',
+        level: 'subcategory',
+      },
+      {
+        group: 'Adverbs',
+        id: 'frequency',
+        icon: 'ph-clock-counter-clockwise',
+        labelEn: 'Adverbs of frequency',
+        labelRu: 'Наречия частоты',
+        level: 'subcategory',
+      },
+      {
+        group: 'Adverbs',
+        id: 'place',
+        icon: 'ph-map-pin',
+        labelEn: 'Adverbs of place',
+        labelRu: 'Наречия места',
+        level: 'subcategory',
+      },
+      {
+        group: 'Adverbs',
+        id: 'time',
+        icon: 'ph-clock',
+        labelEn: 'Adverbs of time',
+        labelRu: 'Наречия времени',
+        level: 'subcategory',
+      },
+    ];
+
+    const groups = Array.from(
+      CATEGORY_META.reduce((set, item) => set.add(item.group), new Set())
+    );
+
+    const app = document.getElementById('app');
+
+    groups.forEach((groupName) => {
+      const groupEl = document.createElement('section');
+
+      const title = document.createElement('div');
+      title.className = 'group-title';
+      title.innerHTML = `<span>${groupName}</span>`;
+      groupEl.appendChild(title);
+
+      const grid = document.createElement('div');
+      grid.className = 'grid';
+
+      CATEGORY_META.filter((item) => item.group === groupName).forEach((item) => {
+        const card = document.createElement('article');
+        card.className = 'card';
+
+        const icon = document.createElement('div');
+        icon.className = 'card-icon';
+        icon.innerHTML = `<i class="ph ${item.icon}" aria-hidden="true"></i>`;
+
+        const main = document.createElement('div');
+        main.className = 'card-main';
+
+        const badges = document.createElement('div');
+        badges.className = 'badge-group';
+        const mainBadge = document.createElement('span');
+        mainBadge.className = 'badge badge-main';
+        mainBadge.textContent = item.level === 'category' ? 'CATEGORY' : 'SUBCATEGORY';
+        badges.appendChild(mainBadge);
+
+        const catBadge = document.createElement('span');
+        catBadge.className = 'badge';
+        catBadge.textContent = item.group;
+        badges.appendChild(catBadge);
+
+        const labelEn = document.createElement('div');
+        labelEn.className = 'label-en';
+        labelEn.textContent = item.labelEn;
+
+        const labelRu = document.createElement('div');
+        labelRu.className = 'label-ru';
+        labelRu.textContent = item.labelRu;
+
+        const id = document.createElement('div');
+        id.className = 'category-id';
+        id.textContent = `key: ${item.id}`;
+
+        main.appendChild(badges);
+        main.appendChild(labelEn);
+        main.appendChild(labelRu);
+        main.appendChild(id);
+
+        card.appendChild(icon);
+        card.appendChild(main);
+
+        grid.appendChild(card);
+      });
+
+      groupEl.appendChild(grid);
+      app.appendChild(groupEl);
+    });
+  </script>
+</body>
+</html>

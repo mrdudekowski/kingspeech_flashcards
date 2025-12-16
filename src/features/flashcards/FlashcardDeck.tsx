@@ -32,6 +32,8 @@ import { selectWordsForFlashcards } from '@/features/vocabulary/vocabularySlice'
 import Flashcard from './Flashcard';
 import FlashcardActions from './FlashcardActions';
 import { useFlashcardHotkeys } from './useFlashcardHotkeys';
+import LanguageOrderSwitch from '@/shared/components/LanguageOrderSwitch';
+import ShuffleButton from '@/shared/components/ShuffleButton';
 
 function FlashcardDeck() {
   const dispatch = useAppDispatch();
@@ -84,7 +86,6 @@ function FlashcardDeck() {
 
   // Состояние для анимации кнопки перемешать
   const [isShuffleAnimating, setIsShuffleAnimating] = useState(false);
-  const [shuffleButtonText, setShuffleButtonText] = useState<'Перемешать' | 'Перемешано!'>('Перемешать');
   const shuffleTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Подключаем обработку горячих клавиш
@@ -178,11 +179,10 @@ function FlashcardDeck() {
 
   // Сбрасываем анимацию при изменении состояния перемешивания извне
   useEffect(() => {
-    if (!isShuffled && shuffleButtonText === 'Перемешано!') {
-      setShuffleButtonText('Перемешать');
+    if (!isShuffled && isShuffleAnimating) {
       setIsShuffleAnimating(false);
     }
-  }, [isShuffled, shuffleButtonText]);
+  }, [isShuffled, isShuffleAnimating]);
 
   // Cleanup для таймера при размонтировании компонента
   useEffect(() => {
@@ -204,25 +204,20 @@ function FlashcardDeck() {
   const handleShuffle = () => {
     if (isShuffleAnimating) return; // Блокируем повторные нажатия
     
-    // Очищаем предыдущий таймер, если он существует
-    if (shuffleTimeoutRef.current) {
-      clearTimeout(shuffleTimeoutRef.current);
-    }
-    
     setIsShuffleAnimating(true);
-    setShuffleButtonText('Перемешано!');
     dispatch(shuffleCards());
     
-    // Автоматически возвращаем текст обратно через 2 секунды
+    // Сбрасываем состояние анимации через время, достаточное для завершения анимации в компоненте
     shuffleTimeoutRef.current = setTimeout(() => {
-      setShuffleButtonText('Перемешать');
       setIsShuffleAnimating(false);
       shuffleTimeoutRef.current = null;
-    }, 2000);
+    }, 1200); // Время анимации шаффла (800ms) + fade-out (300ms) + небольшой запас
   };
 
-  const handleToggleOrder = () => {
-    dispatch(toggleDisplayMode());
+  const handleLanguageOrderChange = (checked: boolean) => {
+    if (checked !== isEnglishFirst) {
+      dispatch(toggleDisplayMode());
+    }
   };
 
   const handleResetProgress = () => {
@@ -305,26 +300,17 @@ function FlashcardDeck() {
       <div className="mb-6 glass-strong rounded-xl p-4 shadow-lg">
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between mb-4">
           <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Карточки для изучения</h2>
-          <div className="flex flex-col md:flex-row gap-2">
-            <button
-              onClick={handleToggleOrder}
-              className="px-4 py-2 rounded-lg font-medium transition-colors bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900/50"
-            >
-              Порядок: {isEnglishFirst ? 'EN → RU' : 'RU → EN'}
-            </button>
-            <button
+          <div className="flex flex-col md:flex-row gap-2 items-center md:items-stretch">
+            <div className="flex items-center justify-center md:justify-start">
+              <LanguageOrderSwitch checked={isEnglishFirst} onChange={handleLanguageOrderChange} />
+            </div>
+            <ShuffleButton
               onClick={handleShuffle}
-              disabled={isShuffleAnimating}
-              className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                isShuffleAnimating || shuffleButtonText === 'Перемешано!'
-                  ? 'bg-green-500 dark:bg-green-600 text-white scale-105'
-                  : 'bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-green-100 dark:hover:bg-green-900/50'
-              } ${isShuffleAnimating ? 'cursor-not-allowed opacity-90' : ''}`}
+              disabled={isShuffleAnimating || cards.length === 0}
+              isAnimating={isShuffleAnimating}
             >
-              <span className="inline-block transition-all duration-300 transform">
-                {shuffleButtonText}
-              </span>
-            </button>
+              Перемешать
+            </ShuffleButton>
             {(studiedCount > 0 || needsReviewCount > 0) && (
               <button
                 onClick={handleResetProgress}
