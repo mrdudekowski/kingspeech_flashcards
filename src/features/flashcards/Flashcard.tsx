@@ -16,6 +16,8 @@ import {
   selectSpotlightActive,
 } from './flashcardsSlice';
 import { WORD_SUBCATEGORIES } from '@/app/constants';
+import { resolveCategoryMeta } from '@/app/categoryMeta';
+import CategoryIconButton from '@/shared/components/CategoryIconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -183,10 +185,6 @@ function Flashcard() {
 
   const statusBadge = getStatusBadge();
 
-  // Проверяем, является ли карточка неправильным глаголом
-  const isIrregularVerb = currentCard?.subcategory === WORD_SUBCATEGORIES.IRREGULAR_VERBS;
-  const hasIrregularForms = isIrregularVerb && currentCard?.irregularForms;
-
   if (!currentCard) {
     return (
       <div className="flex items-center justify-center h-96">
@@ -194,6 +192,20 @@ function Flashcard() {
       </div>
     );
   }
+
+  // Проверяем, является ли карточка неправильным глаголом
+  const isIrregularVerb = currentCard.subcategory === WORD_SUBCATEGORIES.IRREGULAR_VERBS;
+  const hasIrregularForms = isIrregularVerb && currentCard.irregularForms;
+  const categoryMeta = resolveCategoryMeta({
+    category: currentCard.category,
+    subcategory: currentCard.subcategory ?? null,
+  });
+
+  const frontLabel =
+    categoryMeta !== null ? (showEnglishOnFront ? categoryMeta.labelEn : categoryMeta.labelRu) : undefined;
+
+  const backLabel =
+    categoryMeta !== null ? (showEnglishOnFront ? categoryMeta.labelRu : categoryMeta.labelEn) : undefined;
 
   return (
     <div className="perspective-1000">
@@ -209,6 +221,12 @@ function Flashcard() {
             isFlipped ? 'opacity-0' : 'opacity-100'
           }`}
         >
+          {/* Иконка грамматической категории (если есть) */}
+          {categoryMeta && (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
+              <CategoryIconButton icon={categoryMeta.icon} label={frontLabel} />
+            </div>
+          )}
           {/* Плашка статуса */}
           {statusBadge && (
             <div className={`absolute top-4 right-4 ${statusBadge.color} text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md`}>
@@ -282,6 +300,12 @@ function Flashcard() {
             isFlipped ? 'opacity-100' : 'opacity-0'
           }`}
         >
+          {/* Иконка грамматической категории (если есть) */}
+          {categoryMeta && (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
+              <CategoryIconButton icon={categoryMeta.icon} label={backLabel} />
+            </div>
+          )}
           {/* Плашка статуса */}
           {statusBadge && (
             <div className={`absolute top-4 right-4 ${statusBadge.color} text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md`}>

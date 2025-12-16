@@ -5,7 +5,7 @@
 
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { ROUTES } from '@/app/constants';
-import ThemeToggle from '@/shared/components/ThemeToggle';
+import ThemeSwitch from '@/shared/components/ThemeSwitch';
 
 function RootLayout() {
   const location = useLocation();
@@ -33,7 +33,7 @@ function RootLayout() {
               >
                 Home
               </Link>
-              <ThemeToggle />
+              <ThemeSwitch />
             </div>
           </div>
         </div>
