@@ -1,27 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
-import ruFlag from '@/assets/language-switch-icons/russia.webp';
-import ukFlag from '@/assets/language-switch-icons/united-kingdom.webp';
+import useTheme from '@/shared/hooks/useTheme';
 
-export interface LanguageOrderSwitchProps {
-  /** true = English first, false = Russian first (или наоборот, по договорённости выше по уровню). */
-  checked: boolean;
-  /** Колбэк изменения состояния переключателя. */
-  onChange: (checked: boolean) => void;
-}
+/**
+ * ThemeSwitch - анимированный переключатель темы (светлая/темная)
+ * 
+ * UI-особенности:
+ * - Солнце для светлой темы (слева)
+ * - Луна для темной темы (справа)
+ * - Анимация перехода с облаками и звездами
+ */
+function ThemeSwitch() {
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === 'dark';
 
-function LanguageOrderSwitch({ checked, onChange }: LanguageOrderSwitchProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.checked);
+    toggleTheme();
   };
 
   return (
     <StyledWrapper>
-      <label className="theme-switch" aria-label="Переключатель порядка языка" role="switch" aria-checked={checked}>
+      <label className="theme-switch" aria-label="Переключить тему" role="switch" aria-checked={isDark}>
         <input
           type="checkbox"
           className="theme-switch__checkbox"
-          checked={checked}
+          checked={isDark}
           onChange={handleChange}
         />
         <div className="theme-switch__container">
@@ -37,7 +40,10 @@ function LanguageOrderSwitch({ checked, onChange }: LanguageOrderSwitchProps) {
             </svg>
           </div>
           <div className="theme-switch__circle-container">
-            <div className="theme-switch__sun-moon-container" />
+            <div className="theme-switch__sun-moon-container">
+              <div className="theme-switch__moon" />
+              <div className="theme-switch__spot" />
+            </div>
           </div>
         </div>
       </label>
@@ -47,14 +53,14 @@ function LanguageOrderSwitch({ checked, onChange }: LanguageOrderSwitchProps) {
 
 const StyledWrapper = styled.div`
   .theme-switch {
-    --toggle-size: 20px;
-    --container-width: 4.5em;
-    --container-height: 2.1em;
+    --toggle-size: 17.8px;
+    --container-width: 4em;
+    --container-height: 1.87em;
     --container-radius: 5em;
     --container-light-bg: #3d7eae;
     --container-night-bg: #1d1f2c;
-    --circle-container-diameter: 3em;
-    --sun-moon-diameter: 1.8em;
+    --circle-container-diameter: 2.67em;
+    --sun-moon-diameter: 1.6em;
     --sun-bg: #ecca2f;
     --moon-bg: #c4c9d1;
     --spot-color: #959db1;
@@ -125,10 +131,29 @@ const StyledWrapper = styled.div`
     height: var(--sun-moon-diameter);
     margin: auto;
     border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--sun-bg);
     box-shadow: 0 0 0 0.05em rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+  }
+
+  .theme-switch__moon {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: var(--moon-bg);
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .theme-switch__spot {
+    position: absolute;
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    background-color: var(--spot-color);
+    top: 0.3em;
+    left: 0.5em;
+    opacity: 0;
     transition: var(--transition);
   }
 
@@ -187,15 +212,22 @@ const StyledWrapper = styled.div`
     transform: translateY(-50%);
   }
 
-  /* Флаги: unchecked (слева) — Россия, checked (справа) — Великобритания */
+  /* Солнце/луна: unchecked (слева) — солнце, checked (справа) — луна */
   .theme-switch__checkbox + .theme-switch__container .theme-switch__sun-moon-container {
-    background-image: url(${ruFlag});
+    background-color: var(--sun-bg);
   }
 
   .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__sun-moon-container {
-    background-image: url(${ukFlag});
+    background-color: var(--moon-bg);
+  }
+
+  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon {
+    opacity: 1;
+  }
+
+  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__spot {
+    opacity: 1;
   }
 `;
 
-export default LanguageOrderSwitch;
-
+export default ThemeSwitch;

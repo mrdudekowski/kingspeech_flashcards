@@ -107,72 +107,86 @@ export default function QuizQuestion({
     </div>
   );
 
-  const renderTrueFalse = () => (
-    <div className="space-y-4">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 text-center mb-4">
-        Правда или ложь?
-      </h2>
+  const handleTrueFalseAnswer = (answer: string) => {
+    if (hasAnswered) return;
+    setSelectedAnswer(answer);
+    setHasAnswered(true);
+    onAnswer(answer);
+  };
 
-      <div className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md text-center mb-6">
-        <p className="text-xl text-gray-700 dark:text-gray-300">
-          <span className="font-bold">{question.word.english}</span> ={' '}
-          <span className="font-bold text-blue-600 dark:text-blue-400">
-            {question.word.translation}
-          </span>
-        </p>
-      </div>
+  const renderTrueFalse = () => {
+    const isCorrect = hasAnswered && selectedAnswer === question.correctAnswer;
+    const isWrong = hasAnswered && selectedAnswer !== question.correctAnswer;
 
-      <div className="grid grid-cols-2 gap-4">
-        <button
-          onClick={() => handleSelectAnswer('true')}
-          disabled={hasAnswered}
-          className={`p-6 rounded-lg border-2 transition-all ${
-            selectedAnswer === 'true'
-              ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
-              : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
-          } ${hasAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-        >
-          <span className="text-2xl">✓</span>
-          <p className="mt-2 font-semibold text-gray-900 dark:text-gray-100">Правда</p>
-        </button>
+    return (
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 text-center mb-4">
+          Правда или ложь?
+        </h2>
 
-        <button
-          onClick={() => handleSelectAnswer('false')}
-          disabled={hasAnswered}
-          className={`p-6 rounded-lg border-2 transition-all ${
-            selectedAnswer === 'false'
-              ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
-              : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
-          } ${hasAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-        >
-          <span className="text-2xl">✗</span>
-          <p className="mt-2 font-semibold text-gray-900 dark:text-gray-100">Ложь</p>
-        </button>
-      </div>
-
-      {!hasAnswered && (
-        <button
-          onClick={handleSubmit}
-          disabled={!selectedAnswer}
-          className="w-full mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          Ответить
-        </button>
-      )}
-
-      {hasAnswered && (
-        <div className="mt-6 text-center">
-          <p className="text-lg font-medium">
-            {selectedAnswer === question.correctAnswer ? (
-              <span className="text-green-600">✓ Правильно!</span>
-            ) : (
-              <span className="text-red-600">✗ Неправильно</span>
-            )}
+        <div className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md text-center mb-6">
+          <p className="text-xl text-gray-700 dark:text-gray-300">
+            <span className="font-bold">{question.word.english}</span> ={' '}
+            <span className="font-bold text-blue-600 dark:text-blue-400">
+              {question.word.translation}
+            </span>
           </p>
         </div>
-      )}
-    </div>
-  );
+
+        <div className="grid grid-cols-2 gap-4">
+          <button
+            onClick={() => handleTrueFalseAnswer('true')}
+            disabled={hasAnswered}
+            className={`p-6 rounded-lg border-2 transition-all ${
+              hasAnswered && question.correctAnswer === 'true'
+                ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                : hasAnswered && selectedAnswer === 'true' && isWrong
+                  ? 'border-red-500 bg-red-50 dark:bg-red-900/20'
+                  : selectedAnswer === 'true'
+                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
+            } ${hasAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+          >
+            <div className="flex flex-col items-center">
+              <span className="text-4xl">{hasAnswered && question.correctAnswer === 'true' ? '✅' : '✓'}</span>
+              <p className="mt-2 font-semibold text-gray-900 dark:text-gray-100">Правда</p>
+            </div>
+          </button>
+
+          <button
+            onClick={() => handleTrueFalseAnswer('false')}
+            disabled={hasAnswered}
+            className={`p-6 rounded-lg border-2 transition-all ${
+              hasAnswered && question.correctAnswer === 'false'
+                ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                : hasAnswered && selectedAnswer === 'false' && isWrong
+                  ? 'border-red-500 bg-red-50 dark:bg-red-900/20'
+                  : selectedAnswer === 'false'
+                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
+            } ${hasAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+          >
+            <div className="flex flex-col items-center">
+              <span className="text-4xl">{hasAnswered && question.correctAnswer === 'false' ? '✅' : '✗'}</span>
+              <p className="mt-2 font-semibold text-gray-900 dark:text-gray-100">Ложь</p>
+            </div>
+          </button>
+        </div>
+
+        {hasAnswered && (
+          <div className="mt-6 text-center">
+            <p className="text-lg font-medium">
+              {isCorrect ? (
+                <span className="text-green-600 dark:text-green-400">✓ Правильно!</span>
+              ) : (
+                <span className="text-red-600 dark:text-red-400">✗ Неправильно</span>
+              )}
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   const renderFillInTheBlank = () => (
     <div className="space-y-4">

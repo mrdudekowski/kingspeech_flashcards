@@ -32,7 +32,7 @@ import { selectWordsForFlashcards } from '@/features/vocabulary/vocabularySlice'
 import Flashcard from './Flashcard';
 import FlashcardActions from './FlashcardActions';
 import { useFlashcardHotkeys } from './useFlashcardHotkeys';
-import LanguageOrderSwitch from '@/shared/components/LanguageOrderSwitch';
+import LanguageOrderToggle from '@/shared/components/LanguageOrderToggle';
 import ShuffleButton from '@/shared/components/ShuffleButton';
 
 function FlashcardDeck() {
@@ -214,10 +214,8 @@ function FlashcardDeck() {
     }, 1200); // Время анимации шаффла (800ms) + fade-out (300ms) + небольшой запас
   };
 
-  const handleLanguageOrderChange = (checked: boolean) => {
-    if (checked !== isEnglishFirst) {
-      dispatch(toggleDisplayMode());
-    }
+  const handleLanguageOrderChange = () => {
+    dispatch(toggleDisplayMode());
   };
 
   const handleResetProgress = () => {
@@ -301,9 +299,10 @@ function FlashcardDeck() {
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between mb-4">
           <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Карточки для изучения</h2>
           <div className="flex flex-col md:flex-row gap-2 items-center md:items-stretch">
-            <div className="flex items-center justify-center md:justify-start">
-              <LanguageOrderSwitch checked={isEnglishFirst} onChange={handleLanguageOrderChange} />
-            </div>
+            <LanguageOrderToggle
+              isEnglishFirst={isEnglishFirst}
+              onToggle={handleLanguageOrderChange}
+            />
             <ShuffleButton
               onClick={handleShuffle}
               disabled={isShuffleAnimating || cards.length === 0}
