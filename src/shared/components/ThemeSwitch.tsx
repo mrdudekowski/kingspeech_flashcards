@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import useTheme from '@/shared/hooks/useTheme';
 
@@ -14,7 +13,7 @@ function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === 'dark';
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = () => {
     toggleTheme();
   };
 
